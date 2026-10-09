@@ -1,0 +1,33 @@
+{
+  "source_url": "https://dummyjson.com/products?limit=0",
+  "ingested_at_utc": "2026-10-09T19:17:47+00:00",
+  "products_downloaded": 194,
+  "api_total": 194,
+  "categories": [
+    "beauty",
+    "fragrances",
+    "furniture",
+    "groceries",
+    "home-decoration",
+    "kitchen-accessories",
+    "laptops",
+    "mens-shirts",
+    "mens-shoes",
+    "mens-watches",
+    "mobile-accessories",
+    "motorcycle",
+    "skin-care",
+    "smartphones",
+    "sports-accessories",
+    "sunglasses",
+    "tablets",
+    "tops",
+    "vehicle",
+    "womens-bags",
+    "womens-dresses",
+    "womens-jewellery",
+    "womens-shoes",
+    "womens-watches"
+  ],
+  "file": "D:\\BTL_KDL_demo\\datalake\\raw\\dummyjson_products_raw.json"
+}

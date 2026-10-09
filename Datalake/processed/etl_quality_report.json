@@ -1,0 +1,309 @@
+{
+  "run_status": "success",
+  "generated_at": "2026-10-10T02:19:57",
+  "raw_directory": "D:\\BTL_KDL_demo\\datalake\\raw",
+  "processed_directory": "D:\\BTL_KDL_demo\\datalake\\processed",
+  "source_definition": "9 Olist CSV files + DummyJSON products JSON",
+  "fact_grains": {
+    "Fact_Sales": "one row per (order_id, order_item_id)",
+    "Fact_Payments": "one row per (order_id, payment_sequential)",
+    "Fact_Orders": "one row per order_id; review information aggregated to order grain"
+  },
+  "important_semantics": [
+    "DummyJSON category average Rating is contextual sample data, not actual Olist product/customer feedback.",
+    "Olist review_score is genuine review data contained in the Olist dataset and is separate from DummyJSON Rating.",
+    "For realized sales analysis, use a documented order-status filter (often delivered); fact tables retain statuses for transparency.",
+    "Full-refresh surrogate keys are deterministic for this complete source snapshot, but are not an incremental-ETL key strategy."
+  ],
+  "geolocation": {
+    "raw_geolocation_rows": 1000163,
+    "invalid_geolocation_rows_excluded": 0,
+    "unique_zip_prefix_centroids": 19015,
+    "aggregation": "mean latitude/longitude per normalized 5-digit zip prefix"
+  },
+  "source_rows_before_cleaning": {
+    "customers": 99441,
+    "geolocation_raw": 1000163,
+    "items": 112650,
+    "payments": 103886,
+    "reviews": 99224,
+    "orders": 99441,
+    "products": 32951,
+    "sellers": 3095,
+    "translation": 71,
+    "dummyjson_products": 194
+  },
+  "exact_duplicate_rows_removed": {
+    "customers": 0,
+    "items": 0,
+    "payments": 0,
+    "reviews": 0,
+    "orders": 0,
+    "products": 0,
+    "sellers": 0,
+    "translation": 0
+  },
+  "review_quality": {
+    "review_rows_after_exact_duplicate_removal": 99224,
+    "review_rows_missing_order_id": 0,
+    "review_scores_outside_1_to_5_set_to_na": 0,
+    "review_rows_whose_order_id_is_not_in_orders": 0,
+    "orders_with_at_least_one_review_summary": 98673,
+    "rule": "reviews are aggregated by order_id; review_score_avg averages valid 1-5 scores only"
+  },
+  "checks": {
+    "fact_sales_count_equals_deduplicated_item_source": true,
+    "fact_payments_count_equals_deduplicated_payment_source": true,
+    "fact_orders_count_equals_deduplicated_order_source": true,
+    "fact_sales_business_key_unique": true,
+    "fact_payments_business_key_unique": true,
+    "fact_orders_order_id_unique": true,
+    "item_price_sum_preserved": true,
+    "freight_sum_preserved": true,
+    "payment_value_sum_preserved_in_payment_fact": true,
+    "fact_sales_foreign_keys_complete": true,
+    "fact_payments_foreign_keys_complete": true,
+    "fact_orders_customer_purchase_date_keys_complete": true,
+    "fact_orders_all_present_event_dates_have_time_keys": true,
+    "dim_time_is_contiguous_daily_calendar": true,
+    "geolocation_joins_do_not_expand_customer_or_seller_rows": true,
+    "review_summary_is_one_row_per_order": true,
+    "all_measured_left_joins_preserved_sums": true
+  },
+  "join_audit": [
+    {
+      "join": "Dim_Customer -> geolocation centroid",
+      "left_rows_before": 99441,
+      "right_rows": 19015,
+      "left_rows_after": 99441,
+      "matched_left_rows": 99163,
+      "unmatched_left_rows": 278,
+      "measure_sums_before": {},
+      "measure_sums_after": {},
+      "measure_sums_preserved": {},
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Dim_Seller -> geolocation centroid",
+      "left_rows_before": 3095,
+      "right_rows": 19015,
+      "left_rows_after": 3095,
+      "matched_left_rows": 3088,
+      "unmatched_left_rows": 7,
+      "measure_sums_before": {},
+      "measure_sums_after": {},
+      "measure_sums_preserved": {},
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Dim_Product: products -> category translation",
+      "left_rows_before": 32951,
+      "right_rows": 71,
+      "left_rows_after": 32951,
+      "matched_left_rows": 32328,
+      "unmatched_left_rows": 623,
+      "measure_sums_before": {},
+      "measure_sums_after": {},
+      "measure_sums_preserved": {},
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Dim_Product -> category mapping lookup",
+      "left_rows_before": 32951,
+      "right_rows": 74,
+      "left_rows_after": 32951,
+      "matched_left_rows": 32951,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {},
+      "measure_sums_after": {},
+      "measure_sums_preserved": {},
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Orders -> Dim_Customer",
+      "left_rows_before": 99441,
+      "right_rows": 99441,
+      "left_rows_after": 99441,
+      "matched_left_rows": 99441,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {},
+      "measure_sums_after": {},
+      "measure_sums_preserved": {},
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Orders -> aggregated Olist reviews",
+      "left_rows_before": 99441,
+      "right_rows": 98673,
+      "left_rows_after": 99441,
+      "matched_left_rows": 98673,
+      "unmatched_left_rows": 768,
+      "measure_sums_before": {},
+      "measure_sums_after": {},
+      "measure_sums_preserved": {},
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Sales: items -> orders",
+      "left_rows_before": 112650,
+      "right_rows": 99441,
+      "left_rows_after": 112650,
+      "matched_left_rows": 112650,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_after": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_preserved": {
+        "price": true,
+        "freight_value": true
+      },
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Sales -> Dim_Customer",
+      "left_rows_before": 112650,
+      "right_rows": 99441,
+      "left_rows_after": 112650,
+      "matched_left_rows": 112650,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_after": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_preserved": {
+        "price": true,
+        "freight_value": true
+      },
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Sales -> Dim_Product",
+      "left_rows_before": 112650,
+      "right_rows": 32951,
+      "left_rows_after": 112650,
+      "matched_left_rows": 112650,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_after": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_preserved": {
+        "price": true,
+        "freight_value": true
+      },
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Sales -> Dim_Seller",
+      "left_rows_before": 112650,
+      "right_rows": 3095,
+      "left_rows_after": 112650,
+      "matched_left_rows": 112650,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_after": {
+        "price": 13591643.7,
+        "freight_value": 2251909.54
+      },
+      "measure_sums_preserved": {
+        "price": true,
+        "freight_value": true
+      },
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Payments: payments -> orders",
+      "left_rows_before": 103886,
+      "right_rows": 99441,
+      "left_rows_after": 103886,
+      "matched_left_rows": 103886,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {
+        "payment_value": 16008872.12
+      },
+      "measure_sums_after": {
+        "payment_value": 16008872.12
+      },
+      "measure_sums_preserved": {
+        "payment_value": true
+      },
+      "left_join_row_count_preserved": true
+    },
+    {
+      "join": "Fact_Payments -> Dim_Customer",
+      "left_rows_before": 103886,
+      "right_rows": 99441,
+      "left_rows_after": 103886,
+      "matched_left_rows": 103886,
+      "unmatched_left_rows": 0,
+      "measure_sums_before": {
+        "payment_value": 16008872.12
+      },
+      "measure_sums_after": {
+        "payment_value": 16008872.12
+      },
+      "measure_sums_preserved": {
+        "payment_value": true
+      },
+      "left_join_row_count_preserved": true
+    }
+  ],
+  "measure_totals": {
+    "source_item_price_sum": 13591643.7,
+    "fact_sales_item_price_sum": 13591643.7,
+    "source_freight_sum": 2251909.54,
+    "fact_sales_freight_sum": 2251909.54,
+    "source_payment_value_sum": 16008872.12,
+    "fact_payments_payment_value_sum": 16008872.12
+  },
+  "output_rows": {
+    "dim_customer": 99441,
+    "dim_product": 32951,
+    "dim_seller": 3095,
+    "dim_time": 1314,
+    "fact_sales": 112650,
+    "fact_payments": 103886,
+    "fact_orders": 99441,
+    "category_mapping_audit": 74
+  },
+  "geolocation_coverage": {
+    "customers_with_coordinates": 99163,
+    "customers_coordinate_coverage_pct": 99.72,
+    "sellers_with_coordinates": 3088,
+    "sellers_coordinate_coverage_pct": 99.77,
+    "note": "Missing coordinates are allowed; city/state and postal prefix remain available."
+  },
+  "delivery_quality": {
+    "orders_missing_actual_delivery_date": 2965,
+    "orders_with_negative_delivery_duration_set_to_na": 0,
+    "orders_with_delivery_delay_available": 96476
+  },
+  "category_mapping": {
+    "unique_olist_categories_with_nonmissing_names": 73,
+    "categories_with_mapping_rule_and_target_present": 25,
+    "category_mapping_rule_coverage_pct_by_category": 34.25,
+    "categories_with_usable_dummyjson_rating": 25,
+    "usable_rating_coverage_pct_by_category": 34.25,
+    "olist_products_with_mapping_rule_pct": 53.41,
+    "olist_products_with_usable_rating_enrichment_pct": 53.41,
+    "configured_dummyjson_categories_missing_from_raw_snapshot": [],
+    "note": "Coverage describes proxy mapping, not exact product matches; partial mappings must be disclosed."
+  },
+  "failed_checks": []
+}

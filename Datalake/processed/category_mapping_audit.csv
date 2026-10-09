@@ -1,0 +1,75 @@
+﻿category_olist,category_translation_status,olist_product_count,dummyjson_mapped_categories,dummyjson_categories_found,mapping_status,mapping_confidence,mapping_notes,dummyjson_products_count,dummyjson_rated_products_count,dummyjson_category_avg_rating,olist_product_share_pct
+furniture_decor,translated,2657,home-decoration,home-decoration,mapped_high,high,Close correspondence for decorative home products; not every Olist SKU is identical.,5,5,3.784,8.06
+perfumery,translated,868,fragrances,fragrances,mapped_high,high,Close category-level correspondence: perfumery and fragrances.,5,5,3.826,2.63
+sports_leisure,translated,2867,sports-accessories,sports-accessories,mapped_partial,partial,Partial sports proxy; leisure products may be broader.,17,17,4.0147,8.7
+health_beauty,translated,2444,"beauty, skin-care","beauty, skin-care",mapped_partial,partial,Broad source category; the targets represent only part of health and beauty.,8,8,3.7,7.42
+housewares,translated,2335,kitchen-accessories,kitchen-accessories,mapped_partial,partial,Kitchen accessories cover only a subset of housewares.,30,30,3.8207,7.09
+auto,translated,1900,"vehicle, motorcycle","motorcycle, vehicle",mapped_partial,partial,Vehicle/motorcycle proxy; not all automotive products are covered.,10,10,3.53,5.77
+watches_gifts,translated,1329,"mens-watches, womens-watches","mens-watches, womens-watches",mapped_partial,partial,Watches are represented; the gifts portion is not.,11,11,3.5764,4.03
+telephony,translated,1134,smartphones,smartphones,mapped_partial,partial,Phone-related proxy only; telephony can include products outside smartphones.,16,16,3.6981,3.44
+fashion_bags_accessories,translated,849,"womens-bags, sunglasses, womens-jewellery","sunglasses, womens-bags, womens-jewellery",mapped_partial,partial,Selected accessories only; the mapping does not cover every bag/accessory type.,13,13,3.6431,2.58
+office_furniture,translated,309,furniture,furniture,mapped_partial,partial,Related category proxy; office furniture is not identical to all furniture.,5,5,4.006,0.94
+fashion_shoes,translated,173,"mens-shoes, womens-shoes","mens-shoes, womens-shoes",mapped_partial,partial,Shoes proxy; DummyJSON does not necessarily represent every Olist shoe segment.,10,10,4.002,0.53
+furniture_living_room,translated,156,furniture,furniture,mapped_partial,partial,Living-room furniture is represented by the broader DummyJSON furniture category.,5,5,4.006,0.47
+home_confort,translated,111,home-decoration,home-decoration,mapped_partial,partial,Likely home-comfort spelling variant; source translation should be reviewed.,5,5,3.784,0.34
+food_drink,translated,104,groceries,groceries,mapped_partial,partial,Grocery proxy; the source food/drink range may be broader.,27,27,3.9115,0.32
+fashion_male_clothing,translated,95,mens-shirts,mens-shirts,mapped_partial,partial,Shirts represent only part of men's clothing.,5,5,3.18,0.29
+food,translated,82,groceries,groceries,mapped_partial,partial,Broad food-to-groceries proxy; category definitions may differ.,27,27,3.9115,0.25
+furniture_bedroom,translated,45,furniture,furniture,mapped_partial,partial,Bedroom furniture is represented by the broader DummyJSON furniture category.,5,5,4.006,0.14
+small_appliances_home_oven_and_coffee,translated,31,kitchen-accessories,kitchen-accessories,mapped_partial,partial,"Kitchen accessories are an approximate proxy, not an exact appliance category.",30,30,3.8207,0.09
+computers,translated,30,laptops,laptops,mapped_partial,partial,Laptop rating is a proxy for a subset of computer products.,5,5,3.622,0.09
+fashio_female_clothing,translated,27,"womens-dresses, tops","tops, womens-dresses",mapped_partial,partial,Dresses/tops represent only part of women's clothing.,10,10,3.951,0.08
+fashion_sport,translated,19,sports-accessories,sports-accessories,mapped_partial,partial,Sports accessories are a proxy for only part of sporting apparel/products.,17,17,4.0147,0.06
+furniture_mattress_and_upholstery,translated,10,furniture,furniture,mapped_partial,partial,Related to furniture but more specialized than the DummyJSON category.,5,5,4.006,0.03
+la_cuisine,translated,10,kitchen-accessories,kitchen-accessories,mapped_partial,partial,Kitchen-related proxy category.,30,30,3.8207,0.03
+tablets_printing_image,translated,9,tablets,tablets,mapped_partial,partial,Only the tablet part is represented; printing and imaging products are not.,3,3,3.86,0.03
+home_comfort_2,translated,5,home-decoration,home-decoration,mapped_partial,partial,"Broad home-related proxy, not an exact match.",5,5,3.784,0.02
+,missing_source_category,610,,,missing_olist_category,none,Olist source category is missing.,0,0,,1.85
+bed_bath_table,translated,3029,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,9.19
+computers_accessories,translated,1639,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,4.97
+toys,translated,1411,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,4.28
+baby,translated,919,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,2.79
+stationery,translated,849,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,2.58
+cool_stuff,translated,789,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,2.39
+garden_tools,translated,753,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,2.29
+pet_shop,translated,719,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,2.18
+electronics,translated,517,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,1.57
+construction_tools_construction,translated,400,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,1.21
+home_appliances,translated,370,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,1.12
+luggage_accessories,translated,349,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,1.06
+consoles_games,translated,317,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.96
+musical_instruments,translated,289,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.88
+small_appliances,translated,231,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.7
+home_construction,translated,225,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.68
+books_general_interest,translated,216,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.66
+air_conditioning,translated,124,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.38
+books_technical,translated,123,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.37
+fixed_telephony,translated,116,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.35
+market_place,translated,104,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.32
+kitchen_dining_laundry_garden_furniture,translated,94,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.29
+signaling_and_security,translated,93,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.28
+construction_tools_safety,translated,91,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.28
+home_appliances_2,translated,90,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.27
+costruction_tools_garden,translated,88,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.27
+drinks,translated,81,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.25
+construction_tools_lights,translated,78,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.24
+agro_industry_and_commerce,translated,74,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.22
+industry_commerce_and_business,translated,68,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.21
+christmas_supplies,translated,65,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.2
+audio,translated,58,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.18
+art,translated,55,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.17
+fashion_underwear_beach,translated,53,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.16
+dvds_blu_ray,translated,48,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.15
+costruction_tools_tools,translated,39,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.12
+books_imported,translated,31,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.09
+cine_photo,translated,28,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.08
+music,translated,27,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.08
+party_supplies,translated,26,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.08
+arts_and_craftmanship,translated,19,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.06
+flowers,translated,14,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.04
+diapers_and_hygiene,translated,12,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.04
+fashion_childrens_clothes,translated,5,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.02
+security_and_services,translated,2,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.01
+cds_dvds_musicals,translated,1,,,unmapped_no_reliable_match,none,No sufficiently defensible category proxy is configured.,0,0,,0.0
+portateis_cozinha_e_preparadores_de_alimentos,untranslated,10,,,unmapped_untranslated,none,No usable English translation; mapping was intentionally not guessed.,0,0,,0.03
+pc_gamer,untranslated,3,,,unmapped_untranslated,none,No usable English translation; mapping was intentionally not guessed.,0,0,,0.01
