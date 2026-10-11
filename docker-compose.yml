@@ -1,0 +1,66 @@
+services:
+  airflow-meta:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow_local_only
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_meta_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow -d airflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  dwh:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: dwh_user
+      POSTGRES_PASSWORD: dwh_local_only
+      POSTGRES_DB: olist_dwh
+    ports:
+      - "5433:5432"
+    volumes:
+      - dwh_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dwh_user -d olist_dwh"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  airflow:
+    build: .
+    image: olist-airflow-local:3.3.1
+    depends_on:
+      airflow-meta:
+        condition: service_healthy
+      dwh:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow_local_only@airflow-meta:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+      AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_USERS: "admin:admin"
+      DWH_HOST: dwh
+      DWH_PORT: "5432"
+      DWH_DATABASE: olist_dwh
+      DWH_USER: dwh_user
+      DWH_PASSWORD: dwh_local_only
+      DWH_SCHEMA: dwh
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./:/opt/airflow/project
+    command: standalone
+    restart: unless-stopped
+
+volumes:
+  airflow_meta_data:
+  dwh_data:

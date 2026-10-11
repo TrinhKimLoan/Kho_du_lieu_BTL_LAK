@@ -1,0 +1,20 @@
+{
+  "run_status": "success",
+  "loaded_at_utc": "2026-10-11T19:55:43+00:00",
+  "host": "dwh",
+  "port": 5432,
+  "database": "olist_dwh",
+  "schema": "dwh",
+  "rows": {
+    "dim_customer": 99441,
+    "dim_product": 32951,
+    "dim_seller": 3095,
+    "dim_time": 1314,
+    "fact_sales": 112650,
+    "fact_payments": 103886,
+    "fact_orders": 99441,
+    "category_mapping_audit": 74
+  },
+  "quality_report_status": "success",
+  "quality_checks_passed": 17
+}

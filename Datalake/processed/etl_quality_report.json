@@ -1,8 +1,8 @@
 {
   "run_status": "success",
-  "generated_at": "2026-10-10T02:19:57",
-  "raw_directory": "D:\\BTL_KDL_demo\\datalake\\raw",
-  "processed_directory": "D:\\BTL_KDL_demo\\datalake\\processed",
+  "generated_at": "2026-10-11T19:52:35",
+  "raw_directory": "/opt/airflow/project/datalake/raw",
+  "processed_directory": "/opt/airflow/project/datalake/processed",
   "source_definition": "9 Olist CSV files + DummyJSON products JSON",
   "fact_grains": {
     "Fact_Sales": "one row per (order_id, order_item_id)",
