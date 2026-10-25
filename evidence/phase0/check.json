@@ -1,0 +1,48 @@
+{
+  "phase": 0,
+  "passed": true,
+  "checked_at_utc": "2026-10-25T08:52:05.595039+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "baseline_file_count": 27,
+  "baseline_mismatches": [],
+  "syntax_errors": [],
+  "unittest_returncode": 0,
+  "unittest_stdout": "",
+  "unittest_stderr": "test_article_keys (test_transform.TransformTests.test_article_keys) ... ok\ntest_categories (test_transform.TransformTests.test_categories) ... ok\ntest_excel_headers_and_counts (test_transform.TransformTests.test_excel_headers_and_counts) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.711s\n\nOK\n",
+  "relevance_checks": [
+    {
+      "test": "test_civic_camera_installation_still_excluded",
+      "passed": true
+    },
+    {
+      "test": "test_false_positives",
+      "passed": true
+    },
+    {
+      "test": "test_indirect",
+      "passed": true
+    },
+    {
+      "test": "test_phone_camera_not_retail_security_camera",
+      "passed": true
+    },
+    {
+      "test": "test_product_news",
+      "passed": true
+    },
+    {
+      "test": "test_security_camera_product_still_direct",
+      "passed": true
+    }
+  ],
+  "not_tested": [
+    "Docker runtime",
+    "PostgreSQL runtime",
+    "Airflow runtime",
+    "FastAPI runtime",
+    "MediaCloud live API",
+    "CDC",
+    "ML"
+  ]
+}
