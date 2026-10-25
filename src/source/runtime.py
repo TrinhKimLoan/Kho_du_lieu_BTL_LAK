@@ -75,7 +75,7 @@ def install(connection):
 
 
 def identifier(value):
-    if not re.fullmatch(r'[a-z_]+',value):
+    if not re.fullmatch(r'[a-z_][a-z0-9_]*',value):
         raise ValueError('Invalid internal SQL identifier')
     return '`' + value + '`'
 
