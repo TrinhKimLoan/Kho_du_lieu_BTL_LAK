@@ -1,0 +1,10 @@
+{
+  "update_id": "lak-phase4-v1",
+  "phase": 4,
+  "requires_phase3_fix2": true,
+  "common_git_anchor": "3ec2598",
+  "compose_project": "lak-analytics",
+  "connector": "lak-source-v1",
+  "source_mysql_unchanged": true,
+  "runtime_verification": "pending user Docker execution"
+}

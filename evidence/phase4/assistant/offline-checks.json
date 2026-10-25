@@ -1,0 +1,12 @@
+{
+  "phase": 4,
+  "codec_tests_passed": 17,
+  "python_syntax_checked": true,
+  "compose_yaml_parsed": true,
+  "existing_mysql_and_source_tools_service_unchanged": true,
+  "mysql_source_volume_unchanged": true,
+  "docker_runtime_tested": false,
+  "postgres_runtime_tested": false,
+  "kafka_runtime_tested": false,
+  "powershell_tested": false
+}

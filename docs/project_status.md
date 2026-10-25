@@ -1,5 +1,20 @@
 # Trạng thái dự án
 
+## Cập nhật ngày 26 tháng 10 năm 2026
+
+Người dùng đã xác nhận pha 3 sau Fix2 PASS trên Windows, HEAD c311716:
+14 test đạt, nạp hai lần cùng fingerprint, 4 constraint bị từ chối đúng,
+demo INSERT/UPDATE/DELETE không đổi lịch sử, final-check PASS.
+Bằng chứng do người dùng gửi trong log:
+G:\LAK-Analytics\evidence\phase3\run-20261025T170534Z-eb946ea2.
+Nguồn có 3282 khách, 15 sản phẩm, 10000 đơn, 43297 dòng provenance.
+history_state_sha256: e3efd13dee43746344c3cc2ad5402744aca705fd3f48dc09530da6775910246a.
+
+Pha 4 được chuẩn bị bằng patch nối tiếp: Debezium/Kafka/PostgreSQL và hai
+worker, phép thử snapshot/CRUD/replay/recovery. Chưa có xác nhận runtime pha 4
+ở môi trường trợ lý (không Docker/DB), chờ kết quả máy em trước pha 5.
+Các mục phía dưới là trạng thái checkpoint trước khi có cập nhật này.
+
 ## Đã xác nhận trên máy sinh viên
 
 - Giai đoạn 0: PHASE 0 CHECKS PASSED, commit f214c8d.
