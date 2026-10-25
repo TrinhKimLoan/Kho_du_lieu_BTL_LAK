@@ -1,0 +1,13 @@
+{
+  "phase": 8,
+  "update": "lak-phase8-v1",
+  "common_git_anchor": "3ec2598",
+  "required_checkpoint": "phase7 passed after month_start fix",
+  "reference_date": "2026-01-01",
+  "new_unit_tests": 9,
+  "all_phase_tests": 90,
+  "offline_real_lak_training": true,
+  "postgres_capture_publish_validated": false,
+  "docker_runtime_validated": false,
+  "rf_algorithm": "not yet implemented; phase9"
+}

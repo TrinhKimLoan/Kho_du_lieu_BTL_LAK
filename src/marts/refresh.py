@@ -40,14 +40,14 @@ def source_state(connection):
 def populate(connection):
     connection.execute((ROOT/'sql/phase7/002_populate.sql').read_text(),prepare=False)
     connection.execute('DELETE FROM mart.news_coverage')
-    periods=connection.execute('''SELECT generate_series(min(d),max(d),interval '1 month')::date month FROM (
+    periods=connection.execute('''SELECT generate_series(min(d),max(d),interval '1 month')::date AS month_start FROM (
         SELECT date_trunc('month',packed_at) d FROM dw.v_sales_analysis
         UNION ALL SELECT date_trunc('month',d.full_date) FROM dw.v_news_analysis n JOIN dw.dim_date d ON d.date_key=n.published_date_key
     ) dates''').fetchall()
     categories=connection.execute('SELECT category_key,category_code FROM dw.dim_category WHERE category_key<>0 ORDER BY category_key').fetchall()
     queries=config()
     for row in periods:
-        month=row['month']
+        month=row['month_start']
         for cat in categories:
             code=cat['category_code'];sig=signature(code,queries[code],34412246,month) if code in queries else None
             status=None

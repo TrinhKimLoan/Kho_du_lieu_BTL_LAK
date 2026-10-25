@@ -1,0 +1,25 @@
+{
+  "phase": 8,
+  "python_tests": 90,
+  "new_tests": 9,
+  "passed": true,
+  "real_lak_algorithm_check": {
+    "customers": 3282,
+    "orders": 10000,
+    "monetary_vnd": "618293800000.00",
+    "split_counts": {
+      "train": 1969,
+      "validation": 656,
+      "test": 657
+    },
+    "selected_k": 2,
+    "validation_silhouette": 0.4327794197081018,
+    "test_silhouette": 0.40426584705518676,
+    "joblib_roundtrip": true,
+    "artifact_replay": true
+  },
+  "postgres_execution": false,
+  "docker_execution": false,
+  "power_shell_execution": false,
+  "models_delivered_in_patch": false
+}

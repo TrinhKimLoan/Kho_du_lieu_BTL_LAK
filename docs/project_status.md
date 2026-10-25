@@ -1,5 +1,19 @@
 # Trạng thái dự án
 
+## Checkpoint mới nhất — pha 7 đã xác nhận, pha 8 chờ kiểm thử
+
+Người dùng gửi `PHASE 7 MART AND OLAP CHECKS PASSED` và evidence
+G:\LAK-Analytics\evidence\phase7\run-20261025T193240Z-3d53e43e.
+Đã sửa hai dòng alias month_start trong src/marts/refresh.py sau lỗi SQL thực tế.
+Chưa nhận toàn bộ JSON của run PASS và chưa biết commit mới của máy người dùng.
+Không suy đoán số đo hiệu năng từ một dòng docker stats.
+
+Pha 8 chuẩn bị snapshot RFM reference 2026-01-01, phân chia theo khách,
+preprocessing train-only, chọn K 2–8 bằng validation, đánh giá test/baseline,
+registry và artifact có checksum. Đã huấn luyện/roundtrip thật trên dữ liệu LAK
+ở môi trường chuẩn bị; SQL capture/publish và Docker runtime còn chờ người dùng.
+Các checkpoint dưới đây được giữ làm lịch sử.
+
 ## Checkpoint mới nhất — pha 6 đã xác nhận, pha 7 chờ kiểm thử
 
 Người dùng xác nhận stored news PASS tại evidence/phase6/run-20261025T184339Z-2082b9cb,

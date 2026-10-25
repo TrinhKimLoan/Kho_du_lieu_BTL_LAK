@@ -8,3 +8,4 @@ evidence
 __pycache__
 *.pyc
 *.zip
+data/models/

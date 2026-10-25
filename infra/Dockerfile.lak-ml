@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+WORKDIR /opt/project
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+COPY requirements-phase8.txt /tmp/requirements-phase8.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-phase8.txt
+COPY app /opt/project/app
+COPY config /opt/project/config
+COPY data /opt/project/data
+COPY src /opt/project/src
+COPY scripts /opt/project/scripts
+COPY sql /opt/project/sql
+COPY tests /opt/project/tests
+COPY docs/phase2/data_contract.json /opt/project/docs/phase2/data_contract.json
+ENTRYPOINT ["python", "-m", "src.mining.cli"]
