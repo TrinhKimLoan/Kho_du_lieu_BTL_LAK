@@ -1,5 +1,19 @@
 # Trạng thái dự án
 
+## Checkpoint mới nhất — pha 4 đã xác nhận, pha 5 chờ kiểm thử
+
+Ngày 26/10/2026, người dùng báo `PHASE 4 CDC CHECKS PASSED` và HEAD
+`f537de1`, sau commit UUID `9afa9e5` và CDC `115570c`.
+Log chi tiết trước đó đã xác nhận snapshot 3282/15/10000, tiền khớp và CRUD.
+Người dùng gửi marker PASS cho toàn bộ runner sau sửa replay đọc `-infinity`.
+Chưa có bản sao đầy đủ log PASS cuối trong workspace; đường dẫn evidence hiển thị
+bị PowerShell cắt ngắn, vì vậy không ghi đoán tên run.
+Hai thư mục evidence/phase2 chưa track được giữ nguyên; không phải lỗi source.
+
+Pha 5 bổ sung quality audit, migration index và marker, kiểm thử SCD2/Type 1
+qua CDC, fixture PostgreSQL rollback và lifecycle retry. Đã kiểm thử offline;
+PostgreSQL/CDC thực tế vẫn chờ người dùng. Các mục cũ dưới đây là lịch sử checkpoint.
+
 ## Cập nhật ngày 26 tháng 10 năm 2026
 
 Người dùng đã xác nhận pha 3 sau Fix2 PASS trên Windows, HEAD c311716:

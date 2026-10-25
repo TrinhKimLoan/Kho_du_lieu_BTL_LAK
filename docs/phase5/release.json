@@ -1,0 +1,10 @@
+{
+  "phase": 5,
+  "update": "lak-phase5-v1",
+  "required_client_checkpoint": "f537de1",
+  "common_git_anchor": "3ec2598",
+  "runtime_validated": false,
+  "offline_tests": 43,
+  "quality_rules": 17,
+  "phase4_client_pass_confirmed": true
+}

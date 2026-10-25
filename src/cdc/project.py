@@ -150,7 +150,8 @@ def run():
                 try:processed=step(connection,source_epoch)
                 except Waiting:processed=0
                 if processed:
-                    connection.execute("UPDATE audit.projection_errors e SET state='RESOLVED',resolved_at=now() FROM raw.cdc_events r WHERE e.event_id=r.event_id AND e.state='OPEN' AND r.processed_at IS NOT NULL")
+                    from src.quality.retry import resolve_processed
+                    resolve_processed(connection)
                 heartbeat(connection,'applier')
                 if not processed:time.sleep(0.4)
             except Exception as exc:
@@ -158,5 +159,5 @@ def run():
                 heartbeat(connection,'applier',message)
                 candidate=connection.execute('SELECT event_id FROM raw.cdc_events WHERE processed_at IS NULL ORDER BY event_id LIMIT 1').fetchone()
                 if candidate:
-                    connection.execute("INSERT INTO audit.projection_errors(event_id,error_code,safe_message,state) SELECT %s,%s,%s,'OPEN' WHERE NOT EXISTS(SELECT 1 FROM audit.projection_errors WHERE event_id=%s AND state='OPEN')",(candidate['event_id'],type(exc).__name__,message,candidate['event_id']))
+                    connection.execute("INSERT INTO audit.projection_errors(event_id,error_code,safe_message,state) SELECT %s,%s,%s,'OPEN' WHERE NOT EXISTS(SELECT 1 FROM audit.projection_errors WHERE event_id=%s AND state IN ('OPEN','RETRYING'))",(candidate['event_id'],type(exc).__name__,message,candidate['event_id']))
                 raise

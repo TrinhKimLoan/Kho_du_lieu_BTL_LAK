@@ -16,3 +16,4 @@ airflow.db
 .runtime/
 evidence/phase3/run-*/
 evidence/phase4/run-*/
+evidence/phase5/run-*/

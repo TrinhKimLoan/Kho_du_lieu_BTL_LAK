@@ -1,0 +1,9 @@
+{
+  "phase": 5,
+  "python_tests": 43,
+  "passed": true,
+  "postgres_execution": false,
+  "cdc_scd2_demo": false,
+  "powershell_execution": false,
+  "runtime_status": "pending client execution"
+}
