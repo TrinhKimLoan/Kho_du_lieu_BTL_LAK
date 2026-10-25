@@ -109,7 +109,7 @@ def replay(seconds=240):
     with pg() as target:
         source_epoch=epoch(target);wait_idle(target,source_epoch)
         before=history(target,dataset)
-        product_state=fingerprint(target.execute('SELECT * FROM dw.dim_product ORDER BY product_key').fetchall())
+        product_state=fingerprint(target.execute('SELECT to_jsonb(p)::text AS product_state FROM dw.dim_product p ORDER BY p.product_key').fetchall())
         raw_before=target.execute('SELECT count(*) n FROM raw.cdc_events').fetchone()['n']
         client=consumer('lak-replay-'+uuid.uuid4().hex)
         try:
@@ -135,7 +135,7 @@ def replay(seconds=240):
         target.execute('UPDATE raw.cdc_events SET processed_at=NULL WHERE source_epoch=%s',(source_epoch,))
         wait_idle(target,source_epoch,seconds)
         after=history(target,dataset)
-        if before['fact_state_sha256']!=after['fact_state_sha256'] or product_state!=fingerprint(target.execute('SELECT * FROM dw.dim_product ORDER BY product_key').fetchall()):
+        if before['fact_state_sha256']!=after['fact_state_sha256'] or product_state!=fingerprint(target.execute('SELECT to_jsonb(p)::text AS product_state FROM dw.dim_product p ORDER BY p.product_key').fetchall()):
             raise RuntimeError('Raw projection replay changed historical facts or product versions')
         return {'kafka_replay_new_raw_events':new_events,'raw_events':raw_before,
                 'projection_replayed':True,'historical_facts_unchanged':True,'product_versions_unchanged':True}
