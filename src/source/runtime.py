@@ -86,6 +86,28 @@ def insert_noop(cursor, table, rows, fields, primary_key):
         cursor.executemany(sql, [tuple(row[field] for field in fields) for row in rows[start:start+500]])
 
 
+def validate_provenance(row,target):
+    location=str(row['file_name'])+' Excel row '+str(row['excel_row_number'])
+    if target is None:
+        raise RuntimeError('Unexpected provenance key: '+location)
+    payload=row['sanitized_payload']
+    payload=json.loads(payload) if isinstance(payload,str) else payload
+    expected_payload=json.loads(target['sanitized_payload'])
+    actual_hash=fingerprint(payload)
+    if actual_hash!=row['payload_sha256'] or row['payload_sha256']!=target['payload_sha256']:
+        differing=sorted(key for key in set(payload)|set(expected_payload)
+                         if canonical(payload.get(key))!=canonical(expected_payload.get(key)))
+        flags=[]
+        if actual_hash!=row['payload_sha256']:
+            flags.append('readback_hash_differs')
+        if row['payload_sha256']!=target['payload_sha256']:
+            flags.append('stored_hash_differs_from_input')
+        raise RuntimeError('Provenance mismatch: '+location+'; checks='+','.join(flags)+
+                           '; differing_columns='+','.join(differing))
+    if any(row[f]!=target[f] for f in ('entity_type','entity_key','redaction_version')):
+        raise RuntimeError('Provenance entity/version mapping mismatch: '+location)
+
+
 def reconcile(connection, dataset):
     identity_row = identity(connection)
     digests, counts, state = {}, {}, {}
@@ -110,12 +132,7 @@ def reconcile(connection, dataset):
         for row in provenance:
             key = (row['file_name'],row['file_sha256'],row['excel_row_number'])
             target = expected.get(key)
-            payload = row['sanitized_payload']
-            payload = json.loads(payload) if isinstance(payload,str) else payload
-            if target is None or fingerprint(payload) != row['payload_sha256'] or row['payload_sha256'] != target['payload_sha256']:
-                raise RuntimeError('Provenance payload/fingerprint mismatch')
-            if any(row[f] != target[f] for f in ('entity_type','entity_key','redaction_version')):
-                raise RuntimeError('Provenance entity mapping mismatch')
+            validate_provenance(row,target)
         cursor.execute('SELECT SUM(goods_amount) goods,SUM(vat_amount) vat,SUM(shipping_fee) shipping_fee,SUM(total_paid) total_paid FROM orders WHERE is_demo=0')
         totals = cursor.fetchone()
         if any(totals[key] != Decimal(value) for key,value in dataset['money_totals_vnd'].items()):

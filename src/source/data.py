@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
@@ -43,6 +44,19 @@ def table_digest(rows, fields, key):
     return fingerprint(material)
 
 
+def provenance_payload(value):
+    """Encode Excel floats explicitly so MySQL JSON cannot rewrite their digits."""
+    if isinstance(value,float):
+        if not math.isfinite(value):
+            raise ValueError('Nonfinite Excel numeric value')
+        return {'__lak_type__':'excel_float_repr','value':repr(value)}
+    if isinstance(value,dict):
+        return {k:provenance_payload(v) for k,v in value.items()}
+    if isinstance(value,(list,tuple)):
+        return [provenance_payload(v) for v in value]
+    return value
+
+
 def prepare(data_root=None):
     data_root = Path(data_root or ROOT / 'data')
     profile = analyze(data_root)
@@ -58,11 +72,11 @@ def prepare(data_root=None):
         entity = 'customers' if prefix == '02' else 'products' if prefix == '03' else 'orders'
         key = 'Ma_Khach_Hang' if prefix == '02' else 'Ma_San_Pham' if prefix == '03' else 'Ma_Don'
         for number, row in enumerate(rows, 2):
-            sanitized = {k: v for k, v in row.items() if k not in PERSONAL_FIELDS}
+            sanitized = provenance_payload({k: v for k, v in row.items() if k not in PERSONAL_FIELDS})
             provenance.append({'file_name': path.name, 'file_sha256': digest,
                 'excel_row_number': number, 'entity_type': entity, 'entity_key': row[key],
                 'sanitized_payload': json_text(sanitized), 'payload_sha256': fingerprint(sanitized),
-                'redaction_version': 'lak-minimal-v1'})
+                'redaction_version': 'lak-minimal-v2-float-repr'})
     customers = [{'customer_id': r['Ma_Khach_Hang'], 'gender': r['Gioi_Tinh'],
         'profile_city': r['Tinh_Thanh'], 'profile_district': r['Quan_Huyen'], 'is_demo': False}
         for r in tables['02']]
