@@ -1,0 +1,744 @@
+{
+  "phase": 1,
+  "python": "3.12.14",
+  "checked_at_utc": "2026-10-25T15:30:43.447565+00:00",
+  "source_sha256": {
+    "01_don_hang.xlsx": "23779158804ed93154256656e2fbf58eafa9c6c579afa0b7934c0ec980236d36",
+    "02_thong_tin_khach_hang.xlsx": "592206c67cd371f015cca3d1ab518f96d0f2b66f29ac65902c936082722bdfc5",
+    "03_linh_kien_dien_tu_san_pham.xlsx": "030fc4274b9fa3556e878f27993af72b627313537e0f68fc0f695279456a4b5c",
+    "04_thoi_gian_giao_hang.xlsx": "8531684df2125567e1d4a78f48bd49c406d382b118d696ffc01879a48d9aecbe",
+    "05_chi_phi_thanh_toan.xlsx": "3ee6eb81a46cc122d3dc9afb596cd425e7c0563bc39ae3c93d27a862b141be50",
+    "06_van_chuyen_kho_tai_xe.xlsx": "4072b492c8bde7207afa4dc92de23009c926e0b777028c9f2623d37d81379e2d",
+    "media_api_2024.csv": "a5e6d90d36fc54cbaa72238da2c42c41f4bf980ccd3556c89952f64436d2df30"
+  },
+  "tables": {
+    "01": {
+      "filename": "01_don_hang.xlsx",
+      "rows": 10000,
+      "key": "Ma_Don",
+      "columns": {
+        "Ma_Don": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10000,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã đơn, khóa nghiệp vụ; mỗi đơn hiện có một sản phẩm"
+        },
+        "Ma_Khach_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3282,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã khách, dùng ghép lịch sử mua; không dùng như đặc trưng số"
+        },
+        "Ma_San_Pham": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã sản phẩm, dùng ghép danh mục"
+        },
+        "Loai_Giao_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Loại dịch vụ giao: nhanh, bình thường hoặc chậm"
+        },
+        "So_Luong": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 20,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Số đơn vị sản phẩm trong đơn"
+        },
+        "Muc_Hang_Hoa": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Nhóm ít/vừa/nhiều; cần phân biệt phân nhóm theo đơn và sản phẩm"
+        },
+        "Kho_Xuat": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 5,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Kho xuất của đơn"
+        },
+        "Xe_Van_Chuyen": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Loại phương tiện giao"
+        },
+        "Tai_Xe": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Tên tài xế trong nguồn; không đưa tên vào dashboard/bản nộp"
+        }
+      },
+      "exact_duplicate_rows": 0
+    },
+    "02": {
+      "filename": "02_thong_tin_khach_hang.xlsx",
+      "rows": 3282,
+      "key": "Ma_Khach_Hang",
+      "columns": {
+        "Ma_Khach_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3282,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã khách, dùng ghép lịch sử mua; không dùng như đặc trưng số"
+        },
+        "Ten_Khach_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 1300,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Tên khách trong nguồn; loại khỏi tập phân tích công khai"
+        },
+        "Gioi_Tinh": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 2,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Giới tính ghi trong nguồn; không cần cho RFM"
+        },
+        "SDT": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3282,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Số điện thoại; không đưa vào đặc trưng hoặc đầu ra phân tích"
+        },
+        "Dia_Chi_Giao": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Địa chỉ theo khách hoặc theo đơn; không đồng nhất hai vai trò"
+        },
+        "Tinh_Thanh": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 1,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Địa bàn cấp tỉnh/thành theo bảng nguồn; hiện chỉ có TP Hồ Chí Minh"
+        },
+        "Quan_Huyen": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 8,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Địa bàn chi tiết theo nguồn; giữ nguyên nhãn lịch sử"
+        },
+        "So_Lan_Mua_Goc": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 20,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Số lần mua tổng hợp sẵn; không dùng cho snapshot quá khứ"
+        },
+        "So_Don_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 20,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Số đơn tổng hợp toàn bộ nguồn; chỉ dùng đối soát"
+        },
+        "Tong_Chi_Tieu": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3282,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Tổng thanh toán cả lịch sử theo khách, gồm VAT/phí; chỉ đối soát"
+        }
+      },
+      "exact_duplicate_rows": 0
+    },
+    "03": {
+      "filename": "03_linh_kien_dien_tu_san_pham.xlsx",
+      "rows": 15,
+      "key": "Ma_San_Pham",
+      "columns": {
+        "Ma_San_Pham": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã sản phẩm, dùng ghép danh mục"
+        },
+        "Loai_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 1,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Nhóm hàng rộng trong nguồn; hiện chỉ có Linh kiện điện tử"
+        },
+        "Ten_Hang_Hoa": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Tên sản phẩm trong danh mục hiện có"
+        },
+        "Muc_Hang_Hoa": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Nhóm ít/vừa/nhiều; cần phân biệt phân nhóm theo đơn và sản phẩm"
+        },
+        "Don_Gia_San_Pham": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Đơn giá VND; lấy giá ở bảng thanh toán làm giá của giao dịch"
+        },
+        "So_Don_Co_San_Pham": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Số đơn tổng hợp theo sản phẩm; chỉ đối soát"
+        },
+        "Tong_So_Luong_Ban": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Số lượng tổng hợp theo sản phẩm; chỉ đối soát"
+        },
+        "Tong_Doanh_Thu_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Tiền hàng tổng hợp theo sản phẩm, chưa VAT/phí"
+        }
+      },
+      "exact_duplicate_rows": 0
+    },
+    "04": {
+      "filename": "04_thoi_gian_giao_hang.xlsx",
+      "rows": 10000,
+      "key": "Ma_Don",
+      "columns": {
+        "Ma_Don": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10000,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã đơn, khóa nghiệp vụ; mỗi đơn hiện có một sản phẩm"
+        },
+        "Loai_Giao_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Loại dịch vụ giao: nhanh, bình thường hoặc chậm"
+        },
+        "Thoi_Gian_Dong_Goi": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 2153,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Ngày đóng gói, không có bằng chứng đây là ngày đặt hàng"
+        },
+        "Gio_Dong_Goi": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 8742,
+          "storage_types": [
+            "float"
+          ],
+          "meaning": "Giờ đóng gói, ghép với ngày đóng gói"
+        },
+        "Thoi_Gian_Giao_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 2145,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Ngày giao đi theo cách diễn giải vận hành được chọn"
+        },
+        "Gio_Giao_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 8982,
+          "storage_types": [
+            "float"
+          ],
+          "meaning": "Giờ giao đi, ghép với ngày giao đi"
+        },
+        "Thoi_Gian_Du_Kien_Toi": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 2167,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Ngày dự kiến tới; chưa xác nhận là SLA cam kết"
+        },
+        "Gio_Du_Kien_Toi": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 9106,
+          "storage_types": [
+            "float"
+          ],
+          "meaning": "Giờ dự kiến tới; có bản ghi không hợp lý, chưa làm KPI SLA"
+        },
+        "Thoi_Gian_Nhan_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 2165,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Ngày nhận thực tế"
+        },
+        "Gio_Nhan_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 9152,
+          "storage_types": [
+            "float"
+          ],
+          "meaning": "Giờ nhận thực tế"
+        }
+      },
+      "exact_duplicate_rows": 0
+    },
+    "05": {
+      "filename": "05_chi_phi_thanh_toan.xlsx",
+      "rows": 10000,
+      "key": "Ma_Don",
+      "columns": {
+        "Ma_Don": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10000,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã đơn, khóa nghiệp vụ; mỗi đơn hiện có một sản phẩm"
+        },
+        "So_Luong": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 20,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Số đơn vị sản phẩm trong đơn"
+        },
+        "Don_Gia_San_Pham": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 15,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Đơn giá VND; lấy giá ở bảng thanh toán làm giá của giao dịch"
+        },
+        "Tong_Gia_Tri_Hang": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 250,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Tiền hàng VND, bằng số lượng nhân đơn giá"
+        },
+        "VAT_10": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 250,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "VAT VND, quy tắc bộ dữ liệu bằng 10 phần trăm tiền hàng"
+        },
+        "Phi_Van_Chuyen": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 9729,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Phí vận chuyển VND theo đơn"
+        },
+        "Tong_Thanh_Toan": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 9995,
+          "storage_types": [
+            "int"
+          ],
+          "meaning": "Tổng tiền hàng cộng VAT cộng vận chuyển, không phải lợi nhuận"
+        }
+      },
+      "exact_duplicate_rows": 0
+    },
+    "06": {
+      "filename": "06_van_chuyen_kho_tai_xe.xlsx",
+      "rows": 10000,
+      "key": "Ma_Don",
+      "columns": {
+        "Ma_Don": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10000,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Mã đơn, khóa nghiệp vụ; mỗi đơn hiện có một sản phẩm"
+        },
+        "Kho_Xuat": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 5,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Kho xuất của đơn"
+        },
+        "Xe_Van_Chuyen": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 3,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Loại phương tiện giao"
+        },
+        "Tai_Xe": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Tên tài xế trong nguồn; không đưa tên vào dashboard/bản nộp"
+        },
+        "Tinh_Thanh": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 1,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Địa bàn cấp tỉnh/thành theo bảng nguồn; hiện chỉ có TP Hồ Chí Minh"
+        },
+        "Quan_Huyen": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 8,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Địa bàn chi tiết theo nguồn; giữ nguyên nhãn lịch sử"
+        },
+        "Dia_Chi_Giao": {
+          "missing": 0,
+          "missing_percent": 0.0,
+          "distinct_nonmissing": 10,
+          "storage_types": [
+            "str"
+          ],
+          "meaning": "Địa chỉ theo khách hoặc theo đơn; không đồng nhất hai vai trò"
+        }
+      },
+      "exact_duplicate_rows": 0
+    }
+  },
+  "hard_errors": {
+    "01_missing_keys": 0,
+    "01_duplicate_keys": 0,
+    "02_missing_keys": 0,
+    "02_duplicate_keys": 0,
+    "03_missing_keys": 0,
+    "03_duplicate_keys": 0,
+    "04_missing_keys": 0,
+    "04_duplicate_keys": 0,
+    "05_missing_keys": 0,
+    "05_duplicate_keys": 0,
+    "06_missing_keys": 0,
+    "06_duplicate_keys": 0,
+    "04_order_key_set_difference": 0,
+    "05_order_key_set_difference": 0,
+    "06_order_key_set_difference": 0,
+    "missing_customer_refs": 0,
+    "missing_product_refs": 0,
+    "quantity_nonpositive_or_noninteger": 0,
+    "unit_price_nonpositive": 0,
+    "negative_goods_vat_fee_total": 0,
+    "quantity_copy_mismatch": 0,
+    "goods_formula_mismatch": 0,
+    "vat_formula_mismatch": 0,
+    "total_formula_mismatch": 0,
+    "received_before_sent_timestamp": 0,
+    "shipping_type_copy_mismatch": 0,
+    "Kho_Xuat_copy_mismatch": 0,
+    "Xe_Van_Chuyen_copy_mismatch": 0,
+    "Tai_Xe_copy_mismatch": 0,
+    "customer_order_count_mismatch": 0,
+    "customer_total_paid_mismatch": 0,
+    "product_order_count_mismatch": 0,
+    "product_units_mismatch": 0,
+    "product_goods_mismatch": 0
+  },
+  "warnings": {
+    "catalog_transaction_price_difference": 0,
+    "sent_before_pack_timestamp": 880,
+    "expected_before_sent_timestamp": 118,
+    "late_by_timestamp_unconfirmed_sla": 5170,
+    "late_by_date_unconfirmed_sla": 1987,
+    "order_location_differs_from_customer_profile": 6070
+  },
+  "assumptions": [
+    "sales are simulated according to source API note",
+    "shipping date interpreted as dispatch date",
+    "timestamps rounded to nearest second",
+    "no observed order-created or payment-confirmation timestamp"
+  ],
+  "money_totals_vnd": {
+    "goods": "618293800000",
+    "vat": "61829380000",
+    "shipping_fee": "1138180904",
+    "total_paid": "681261360904"
+  },
+  "observed_grain": {
+    "orders": 10000,
+    "distinct_customers": 3282,
+    "distinct_products": 15,
+    "product_rows_per_order": 1,
+    "shipping_rows_per_order": 1,
+    "status_column_present": false
+  },
+  "timestamp_ranges": {
+    "pack": {
+      "min": "2020-01-01T10:53:01",
+      "max": "2025-12-20T17:13:53"
+    },
+    "sent": {
+      "min": "2020-01-01T16:17:21",
+      "max": "2025-12-22T14:09:20"
+    },
+    "expected": {
+      "min": "2020-01-02T14:59:08",
+      "max": "2025-12-31T17:20:14"
+    },
+    "received": {
+      "min": "2020-01-03T17:23:25",
+      "max": "2025-12-31T13:20:15"
+    }
+  },
+  "packing_year_order_counts": {
+    "2020": 1642,
+    "2021": 1673,
+    "2022": 1709,
+    "2023": 1676,
+    "2024": 1705,
+    "2025": 1595
+  },
+  "customer_frequency_distribution_all_history": {
+    "1": 1307,
+    "2": 694,
+    "3": 385,
+    "4": 237,
+    "5": 182,
+    "6": 108,
+    "7": 91,
+    "8": 71,
+    "9": 47,
+    "10": 40,
+    "11": 23,
+    "12": 25,
+    "13": 22,
+    "14": 22,
+    "15": 10,
+    "16": 4,
+    "17": 3,
+    "18": 6,
+    "19": 4,
+    "20": 1
+  },
+  "annual_customer_activity": {
+    "2020": {
+      "customers": 1204,
+      "one_order": 903,
+      "repeat_customers": 301
+    },
+    "2021": {
+      "customers": 1223,
+      "one_order": 902,
+      "repeat_customers": 321
+    },
+    "2022": {
+      "customers": 1219,
+      "one_order": 891,
+      "repeat_customers": 328
+    },
+    "2023": {
+      "customers": 1203,
+      "one_order": 874,
+      "repeat_customers": 329
+    },
+    "2024": {
+      "customers": 1205,
+      "one_order": 855,
+      "repeat_customers": 350
+    },
+    "2025": {
+      "customers": 1159,
+      "one_order": 852,
+      "repeat_customers": 307
+    }
+  },
+  "shipping_groups": {
+    "Giao hàng bình thường": {
+      "hours": {
+        "count": 3807,
+        "min": 83.56055555555555,
+        "median": 107.68111111111111,
+        "mean": 108.28981860899512,
+        "max": 133.7513888888889
+      },
+      "calendar_day_distribution": {
+        "4": 1932,
+        "5": 1875
+      }
+    },
+    "Giao hàng chậm": {
+      "hours": {
+        "count": 2795,
+        "min": 131.6275,
+        "median": 191.98444444444445,
+        "mean": 191.73153866030611,
+        "max": 253.15666666666667
+      },
+      "calendar_day_distribution": {
+        "6": 579,
+        "7": 561,
+        "8": 561,
+        "9": 549,
+        "10": 545
+      }
+    },
+    "Giao hàng nhanh": {
+      "hours": {
+        "count": 3398,
+        "min": 11.296388888888888,
+        "median": 48.45861111111111,
+        "mean": 48.48622351383167,
+        "max": 85.585
+      },
+      "calendar_day_distribution": {
+        "1": 1125,
+        "2": 1148,
+        "3": 1125
+      }
+    }
+  },
+  "news": {
+    "rows": 360,
+    "valid": 360,
+    "unique_article_keys": 360,
+    "levels_from_existing_rules": {
+      "IRRELEVANT": 335,
+      "DIRECT": 19,
+      "INDIRECT": 6
+    },
+    "category_assignments": {
+      "SSD": 5,
+      "CPU": 10,
+      "GPU": 6,
+      "RAM": 6
+    },
+    "published_date_min": "2024-01-04",
+    "published_date_max": "2024-12-31",
+    "manually_labeled_accuracy_available": false,
+    "missing_by_column": {
+      "id": 0,
+      "indexed_date": 0,
+      "language": 0,
+      "media_name": 0,
+      "media_url": 0,
+      "publish_date": 0,
+      "title": 0,
+      "url": 0,
+      "topic": 0,
+      "query": 0
+    }
+  },
+  "passed": true
+}

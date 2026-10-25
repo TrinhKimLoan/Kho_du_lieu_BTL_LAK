@@ -1,0 +1,23 @@
+{
+  "phase": 1,
+  "environment": "assistant Linux Python 3.12.14",
+  "observed_at_utc": "2026-10-25T15:31:56.914969+00:00",
+  "command": "python -B -m unittest discover -s tests -p test_phase1_profile.py -v",
+  "tests_run": 5,
+  "passed": 5,
+  "failures": 0,
+  "errors": 0,
+  "duration_seconds": 10.371,
+  "cases": [
+    "exact decimal arithmetic and nonfinite rejection",
+    "Excel date and clock joined at second precision",
+    "duplicate order rejected before dictionary join",
+    "missing shipping row rejected",
+    "incorrect payment detected with customer reconciliation"
+  ],
+  "original_offline_tests": {
+    "passed": 9,
+    "phase0_check_repeated": true
+  },
+  "windows_phase1_user_run_confirmed": false
+}

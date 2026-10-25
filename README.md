@@ -1,7 +1,11 @@
 # LAK Analytics
 
 Bản nâng cấp độc lập từ LAK, thực hiện theo `docs/upgrade_plan.md`.
-Đây là mốc giai đoạn 0, chưa phải sản phẩm hoàn chỉnh.
+Đây là mốc giai đoạn 1, chưa phải sản phẩm hoàn chỉnh.
+
+Hướng dẫn chạy mới nhất: `docs/phase1_run_guide.md`.
+Giai đoạn 0 đã được người dùng xác nhận PASS trên Windows, commit `f214c8d`.
+Giai đoạn 1 thêm kiểm tra dữ liệu; chưa triển khai schema, CDC hoặc ML mới.
 
 ## Phạm vi đã xác nhận ngày 25 tháng 10 năm 2026
 
@@ -48,6 +52,6 @@ hạ tầng sẽ cấp project, topic, cổng và volume riêng, không xóa vol
 - `scripts/verify_phase0.py`: kiểm tra lại tính nguyên vẹn và các test nguồn.
 - `evidence/phase0/check.json`: bằng chứng kiểm tra trong môi trường trợ lý.
 
-Bước kế tiếp là giai đoạn 1: kiểm tra dữ liệu có thể chạy lại, từ điển dữ liệu,
-định nghĩa nghiệp vụ và xác định điều kiện dùng cho hai mô hình. Chưa viết schema
-mới hay huấn luyện ở giai đoạn 0.
+Bộ giai đoạn 1 có `scripts/profile_lak_data.py`, `docs/data_dictionary.md`,
+`docs/data_quality_profile.md`, `docs/business_definitions.md` và bằng chứng riêng.
+Sau khi xác nhận kết quả trên Windows, sang giai đoạn 2 để thiết kế mô hình kho.
