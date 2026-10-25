@@ -1,5 +1,18 @@
 # Trạng thái dự án
 
+## Checkpoint mới nhất — pha 6 đã xác nhận, pha 7 chờ kiểm thử
+
+Người dùng xác nhận stored news PASS tại evidence/phase6/run-20261025T184339Z-2082b9cb,
+API thật + after-api PASS tại run-20261025T185216Z-d98ec5d2 và DagRun Airflow success
++ PHASE 6 AIRFLOW EXECUTION CHECK PASSED tại run-airflow-20261025T190519Z.
+Các đường dẫn đều ở G:\LAK-Analytics\evidence\phase6. Token được giữ tại máy người dùng,
+không gửi cho trợ lý. Chỉ xác nhận một lần thực thi DAG; lịch news vẫn paused,
+không tuyên bố đã vận hành hằng ngày lâu dài. Mẫu 35 nhãn tiêu đề vẫn chưa human-verified.
+
+Pha 7 chuẩn bị mart/cube, 5 thao tác OLAP, đối soát từng dòng, fixture mutation rollback
+và DAG refresh 15 phút; chưa có kết quả PostgreSQL/Airflow runtime pha 7.
+Các mục dưới đây giữ lại để truy vết các checkpoint cũ.
+
 ## Checkpoint mới nhất — pha 5 đã xác nhận, pha 6 chờ kiểm thử
 
 Người dùng xác nhận `PHASE 5 QUALITY AND SCD2 CHECKS PASSED` ngày 26/10/2026.

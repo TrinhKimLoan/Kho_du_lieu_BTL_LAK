@@ -1,0 +1,12 @@
+services:
+  mart-tools:
+    profiles: [tools]
+    image: lak-analytics-mart-tools:phase7
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.lak-mart
+    environment:
+      PG_HOST: postgres
+      LAK_POSTGRES_PASSWORD: ${LAK_POSTGRES_PASSWORD:?Keep phase4 credentials}
+    volumes:
+      - ../evidence:/opt/project/evidence

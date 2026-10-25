@@ -1,0 +1,11 @@
+{
+  "phase": 7,
+  "update": "lak-phase7-v1",
+  "common_git_anchor": "3ec2598",
+  "requires": "phase 6 patch with client-confirmed API and Airflow execution",
+  "new_tests": 8,
+  "runtime_postgres_validated": false,
+  "runtime_airflow_validated": false,
+  "scheduled_long_run_validated": false,
+  "refresh_interval_minutes": 15
+}

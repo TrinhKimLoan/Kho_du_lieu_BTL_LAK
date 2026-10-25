@@ -10,3 +10,4 @@ COPY --chown=airflow:root scripts /opt/project/scripts
 COPY --chown=airflow:root sql /opt/project/sql
 COPY --chown=airflow:root docs/phase2/data_contract.json /opt/project/docs/phase2/data_contract.json
 COPY --chown=airflow:root dags/phase6 /opt/airflow/dags
+COPY --chown=airflow:root dags/phase7 /opt/airflow/dags/phase7

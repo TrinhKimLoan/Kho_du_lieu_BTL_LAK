@@ -1,0 +1,14 @@
+{
+  "phase": 7,
+  "python_tests": 81,
+  "new_phase7_tests": 8,
+  "passed": true,
+  "python_compile": true,
+  "yaml_parse": true,
+  "postgres_execution": false,
+  "docker_execution": false,
+  "airflow_execution": false,
+  "power_shell_execution": false,
+  "runtime_status": "pending client checks",
+  "original_source_and_warehouse_ddl_unchanged": true
+}
