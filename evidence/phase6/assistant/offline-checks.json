@@ -1,0 +1,20 @@
+{
+  "phase": 6,
+  "python_tests": 73,
+  "passed": true,
+  "seed_rows": 360,
+  "seed_unique_urls": 360,
+  "counts_by_rule": {
+    "DIRECT": 19,
+    "INDIRECT": 6,
+    "IRRELEVANT": 335
+  },
+  "review_sample": 35,
+  "human_verified": false,
+  "http_tests": "mocked responses only",
+  "postgres_execution": false,
+  "live_api_execution": false,
+  "powershell_execution": false,
+  "airflow_execution": false,
+  "original_warehouse_and_mysql_ddl_unchanged": true
+}

@@ -1,0 +1,510 @@
+[
+  {
+    "source_csv_line": 2,
+    "record": {
+      "id": "75cf6139ef2099c5f6a118071763d8840db731f19d257014c935eb0c75a04df1",
+      "title": "Prudential trao \"món quà\" chu toàn giải pháp bảo vệ sức khỏe cho cả gia đình dịp cuối năm",
+      "url": "https://baobinhthuan.com.vn/prudential-trao-mon-qua-chu-toan-giai-phap-bao-ve-suc-khoe-cho-ca-gia-dinh-dip-cuoi-nam-125365.html",
+      "publish_date": "2024-01-11",
+      "indexed_date": "2024-11-01 11:32:05.323285+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 3,
+    "record": {
+      "id": "c9d466a55d30d0b244e40419a4ebed10881b5c9c40eafc461d33794cb08d5e71",
+      "title": "Quá tải shipper mùa Tết và câu chuyện quy hoạch vận tải đường dài",
+      "url": "https://www.nguoiduatin.vn/qua-tai-shipper-mua-tet-va-cau-chuyen-quy-hoach-van-tai-duong-dai-204648196.htm",
+      "publish_date": "2024-01-31",
+      "indexed_date": "2024-07-13 14:15:04.203156+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 4,
+    "record": {
+      "id": "bf70d8f541981ade88c6e24094f84b4a8bf0c73e4bae382478038de6fb5db664",
+      "title": "Bia trái cây LUSH – Sống tới, trải vị mới",
+      "url": "https://www.nguoiduatin.vn/bia-trai-cay-lush-song-toi-trai-vi-moi-204644877.htm",
+      "publish_date": "2024-01-11",
+      "indexed_date": "2024-07-13 13:53:19.147169+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 5,
+    "record": {
+      "id": "ecbf534a83b0d4556b5544f30b7138241197424dd0362f98bd126793c7fd4f04",
+      "title": "Tất tần tật” về SSD KIOXIA: SSD KIOXIA có ưu điểm gì? Tổng quan những dòng sản phẩm SSD KIOXIA tại Việt Nam",
+      "url": "https://www.nguoiduatin.vn/tat-tan-tat-ve-ssd-kioxia-ssd-kioxia-co-uu-diem-gi-tong-quan-nhung-dong-san-pham-ssd-kioxia-tai-viet-nam-204647321.htm",
+      "publish_date": "2024-01-25",
+      "indexed_date": "2024-07-13 13:02:47.348616+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "SSD"
+    ],
+    "note": "Giới thiệu trực tiếp các dòng SSD."
+  },
+  {
+    "source_csv_line": 12,
+    "record": {
+      "id": "287cb4ddc324f84ba2085888ae5a774b111fdbdaae636ad5a757592ff378fd7d",
+      "title": "Chợ truyền thống không thể ngồi đợi khách",
+      "url": "https://baobariavungtau.com.vn/thoi-su-binh-luan/202401/cho-truyen-thong-khong-the-ngoi-doi-khach-1002620/",
+      "publish_date": "2024-01-31",
+      "indexed_date": "2024-02-02 02:54:51+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 22,
+    "record": {
+      "id": "43562da916f97bf3961c4036b3fce356e889e3054c38ad441f7676e610fc1447",
+      "title": "Doanh nghiệp Nhật Bản 'tố' hàng giả trên sàn thương mại điện tử",
+      "url": "https://thanhnien.vn/doanh-nghiep-nhat-ban-to-hang-gia-tren-san-thuong-mai-dien-tu-185240228200910727.htm",
+      "publish_date": "2024-02-28",
+      "indexed_date": "2024-03-01 04:16:26.335580+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 42,
+    "record": {
+      "id": "9e075a4271dbcfd0aa85f307ab4fdc37fcbe748b5b6e4a7c5cdfca155a9cc68b",
+      "title": "Chợ đêm TP.HCM: Mới mở đông đúc, về sau thưa dần",
+      "url": "https://tuoitre.vn/cho-dem-tp-hcm-moi-mo-dong-duc-ve-sau-thua-dan-20240331081707927.htm",
+      "publish_date": "2024-03-31",
+      "indexed_date": "2024-04-02 01:14:50.165612+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 82,
+    "record": {
+      "id": "7f73402011650bb771037e0687512ad52ef538bb1810a28bf60620053efbc372",
+      "title": "Đề xuất đánh thuế VAT đơn hàng dưới 1 triệu đồng",
+      "url": "http://lamdongtv.vn/tin-tuc-n23457/cong-nghiep-dong-luc-tang-truong-moi-cua-lam-dong.html",
+      "publish_date": "2024-06-22",
+      "indexed_date": "2025-07-13 08:55:46.944284+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 122,
+    "record": {
+      "id": "ef576b8c5333b1cfb26c23f9ed2f052d9873b4596a03715d9799881421f3101d",
+      "title": "Nhiều khuyến mãi kích cầu tiêu dùng cuối năm",
+      "url": "https://baobinhthuan.com.vn/nhieu-khuyen-mai-kich-cau-tieu-dung-cuoi-nam-126357.html",
+      "publish_date": "2024-09-12",
+      "indexed_date": "2024-12-09 02:19:59.701403+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 162,
+    "record": {
+      "id": "72d59a0bea09fac21a4b9726aeb266ee524c73200799d237a0a6ec463267c272",
+      "title": "Khai mạc 60 giờ mua sắm online năm 2024",
+      "url": "https://www.sggp.org.vn/khai-mac-60-gio-mua-sam-online-nam-2024-post770726.html",
+      "publish_date": "2024-11-30",
+      "indexed_date": "2024-11-30 04:17:19.950090+00:00"
+    },
+    "review_level": "IRRELEVANT",
+    "review_categories": [],
+    "note": "Nội dung tiêu đề không đề cập linh kiện; không đồng nhất tin thương mại điện tử chung với thị trường linh kiện."
+  },
+  {
+    "source_csv_line": 202,
+    "record": {
+      "id": "1ec74fb38e42fffb10ecccc734b08d1807b5b669996e9708a1b9f60b04be8847",
+      "title": "Samsung công bố thẻ nhớ microSD nhanh hơn cả SSD",
+      "url": "https://thanhnien.vn/samsung-cong-bo-the-nho-microsd-nhanh-hon-ca-ssd-185240228220120671.htm",
+      "publish_date": "2024-02-29",
+      "indexed_date": "2024-03-02 00:43:25.574641+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "SSD"
+    ],
+    "note": "Sản phẩm chính là microSD; SSD chỉ là đối tượng so sánh."
+  },
+  {
+    "source_csv_line": 210,
+    "record": {
+      "id": "4df1e3f615729dd6258391895803093c7298c3d268ed180a023463f071b96b1c",
+      "title": "Khám phá sơ đồ đặt tên của CPU Intel Core Ultra",
+      "url": "https://thanhnien.vn/kham-pha-so-do-dat-ten-cua-cpu-intel-core-ultra-185240224094324048.htm",
+      "publish_date": "2024-02-26",
+      "indexed_date": "2024-02-28 03:51:05.429088+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Giải thích tên CPU; chưa thấy tín hiệu thị trường trực tiếp."
+  },
+  {
+    "source_csv_line": 242,
+    "record": {
+      "id": "f98f07a6eab54d82ae8179053b09764bc375dd4f970467b6a6d163e4edb5e922",
+      "title": "Apple đang phát triển chip AI dành cho trung tâm dữ liệu",
+      "url": "https://www.nguoiduatin.vn/apple-dang-phat-trien-chip-ai-danh-cho-trung-tam-du-lieu-204662514.htm",
+      "publish_date": "2024-05-07",
+      "indexed_date": "2024-07-13 07:49:25.133936+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Chip AI cho trung tâm dữ liệu là nhóm xử lý liên quan; quy tắc hiện tại không bắt được từ chip AI."
+  },
+  {
+    "source_csv_line": 268,
+    "record": {
+      "id": "0fee0f59eb19f4b36a6aa0da84181100340ff7b8d53f174a83192f0eb106e46f",
+      "title": "Hàng trăm model PC và máy chủ với CPU Intel dính lỗ hổng nghiêm trọng",
+      "url": "https://thanhnien.vn/hang-tram-model-pc-va-may-chu-voi-cpu-intel-dinh-lo-hong-nghiem-trong-185240623072435006.htm",
+      "publish_date": "2024-06-23",
+      "indexed_date": "2024-06-23 09:22:01.091495+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Lỗ hổng trên CPU tác động trực tiếp việc lựa chọn linh kiện, cần đọc toàn bài để xác minh."
+  },
+  {
+    "source_csv_line": 287,
+    "record": {
+      "id": "65321349580f73045ec983603deed2c8d114ac31b223e3ac4058cfd64f26bcde",
+      "title": "AMD giải thích gì về hiệu suất của Ryzen 9000?",
+      "url": "https://thanhnien.vn/amd-giai-thich-gi-ve-hieu-suat-cua-ryzen-9000-185240827223407898.htm",
+      "publish_date": "2024-08-27",
+      "indexed_date": "2024-09-09 23:22:24.158380+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Hiệu suất dòng Ryzen 9000."
+  },
+  {
+    "source_csv_line": 288,
+    "record": {
+      "id": "aacfa1506bf6832d9566938432d5753df703afc0cc60e473079216c67ed4972d",
+      "title": "Cách tăng tốc GPU tối ưu hóa game bằng Nvidia App",
+      "url": "https://thanhnien.vn/cach-tang-toc-gpu-toi-uu-hoa-game-bang-nvidia-app-18524082811273288.htm",
+      "publish_date": "2024-08-28",
+      "indexed_date": "2024-09-09 23:22:02.836259+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "GPU"
+    ],
+    "note": "Hướng dẫn ứng dụng tối ưu GPU."
+  },
+  {
+    "source_csv_line": 294,
+    "record": {
+      "id": "a11d42974bfb6e36c84c67803b96f61959e6634477665a5108bdd7cece9f9b72",
+      "title": "MacBook sẽ từ bỏ mức RAM 8 GB",
+      "url": "https://thanhnien.vn/macbook-se-tu-bo-muc-ram-8-gb-185240829150008565.htm",
+      "publish_date": "2024-08-29",
+      "indexed_date": "2024-08-29 10:47:19.070920+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "RAM"
+    ],
+    "note": "Cấu hình RAM của máy MacBook."
+  },
+  {
+    "source_csv_line": 295,
+    "record": {
+      "id": "7cefa46408925c7cc4397ca523059f4915c27610f7670a2f8d70b130abc52cc8",
+      "title": "Chip AMD Ryzen 9000 giá cao nhất 18 triệu đồng tại Việt Nam",
+      "url": "https://vnexpress.net/chip-amd-ryzen-9000-gia-cao-nhat-18-trieu-dong-tai-viet-nam-4787145.html",
+      "publish_date": "2024-08-29",
+      "indexed_date": "2024-08-29 10:25:51.299286+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Giá CPU Ryzen tại Việt Nam."
+  },
+  {
+    "source_csv_line": 298,
+    "record": {
+      "id": "cf0cc9a1668f659424705549661c1297c154259a9a0bc41545a049e7912d38cc",
+      "title": "AMD ra mắt vi xử lý Ryzen 9000 Series tại Việt Nam",
+      "url": "https://thanhnien.vn/amd-ra-mat-vi-xu-ly-ryzen-9000-series-tai-viet-nam-185240828161010464.htm",
+      "publish_date": "2024-08-28",
+      "indexed_date": "2024-08-28 16:17:17.180620+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Ra mắt dòng CPU."
+  },
+  {
+    "source_csv_line": 305,
+    "record": {
+      "id": "0c794ea263062936f153caa3c02853a89a1c2259d4e954a7fb9bb0f9d0854374",
+      "title": "NVIDIA đã thống trị thị trường GPU trong bao lâu?",
+      "url": "https://thanhnien.vn/nvidia-da-thong-tri-thi-truong-gpu-trong-bao-lau-185240930093616284.htm",
+      "publish_date": "2024-09-30",
+      "indexed_date": "2024-09-30 11:48:29.036680+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "GPU"
+    ],
+    "note": "Thị trường GPU."
+  },
+  {
+    "source_csv_line": 316,
+    "record": {
+      "id": "f597147c839b887cb56dca3fc81c41e034ccfdb0ee3a09339a68a1ce0fbb574b",
+      "title": "Những điều cần biết nếu chuyển đổi từ CPU Intel sang AMD",
+      "url": "https://thanhnien.vn/nhung-dieu-can-biet-neu-chuyen-doi-tu-cpu-intel-sang-amd-185240926125757044.htm",
+      "publish_date": "2024-09-29",
+      "indexed_date": "2024-09-29 07:22:52.392243+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Hướng dẫn chuyển nền tảng CPU."
+  },
+  {
+    "source_csv_line": 319,
+    "record": {
+      "id": "3f3debd7dc45d38e45d4052aa7a2be5723465e0337db2f3f40eefb3527ed7722",
+      "title": "Intel 'ngậm ngùi' nhìn AMD thống trị thị trường CPU",
+      "url": "https://thanhnien.vn/intel-ngam-ngui-nhin-amd-thong-tri-thi-truong-cpu-185241031093839439.htm",
+      "publish_date": "2024-10-31",
+      "indexed_date": "2024-10-31 11:32:38.139146+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Cạnh tranh thị trường CPU."
+  },
+  {
+    "source_csv_line": 325,
+    "record": {
+      "id": "fc2bf22fbca0e123b0968645b41a2745f93a2a6667c0d2f24694ee56077c3553",
+      "title": "MacBook Air, MacBook Pro tiêu chuẩn nâng cấp RAM từ 16 GB",
+      "url": "https://vnexpress.net/macbook-air-macbook-pro-tieu-chuan-nang-cap-ram-tu-16-gb-4810403.html",
+      "publish_date": "2024-10-30",
+      "indexed_date": "2024-10-30 18:36:18.125188+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "RAM"
+    ],
+    "note": "Nâng cấu hình máy MacBook, chưa phải RAM linh kiện bán rời."
+  },
+  {
+    "source_csv_line": 332,
+    "record": {
+      "id": "aa087cbeb8386cfd05db278a8bc4f8a4756e37cbb914ccb916fca02413889349",
+      "title": "Lexar ra mắt dòng SSD di động và bộ nhớ RAM mới",
+      "url": "https://thanhnien.vn/lexar-ra-mat-dong-ssd-di-dong-va-bo-nho-ram-moi-185241130165454399.htm",
+      "publish_date": "2024-11-30",
+      "indexed_date": "2024-11-30 13:23:10.622023+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "RAM",
+      "SSD"
+    ],
+    "note": "Ra mắt hai loại linh kiện."
+  },
+  {
+    "source_csv_line": 340,
+    "record": {
+      "id": "3a8eeee1a61a36f1f6684002f861c055a73e6f3088c62e2d0b680c9a1493affc",
+      "title": "Điều gì xảy ra với những chiếc máy tính có 2 CPU?",
+      "url": "https://thanhnien.vn/dieu-gi-xay-ra-voi-nhung-chiec-may-tinh-co-2-cpu-185241127153031061.htm",
+      "publish_date": "2024-11-27",
+      "indexed_date": "2024-11-27 11:24:57.160100+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Kiến thức cấu hình hai CPU."
+  },
+  {
+    "source_csv_line": 341,
+    "record": {
+      "id": "7c84e631a18874b1040bd2397b0be1cb1d402af218cdaad584d404c0135b950f",
+      "title": "Có nên mua RAM DDR5 khi giá DDR4 liên tục giảm?",
+      "url": "https://thanhnien.vn/co-nen-mua-ram-ddr5-khi-gia-ddr4-lien-tuc-giam-185241125090727096.htm",
+      "publish_date": "2024-11-27",
+      "indexed_date": "2024-11-27 10:45:26.567270+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "RAM"
+    ],
+    "note": "Giá RAM và lựa chọn DDR4/DDR5."
+  },
+  {
+    "source_csv_line": 344,
+    "record": {
+      "id": "b4f1cc9d10febd53159a9ea5d8c6388c78e6a4b49e2d2d33b4cee0bc197323b2",
+      "title": "RTX 5070 Ti đồn đoán dùng chip chung với phiên bản 5080",
+      "url": "https://thanhnien.vn/rtx-5070-ti-don-doan-dung-chip-chung-voi-phien-ban-5080-185241124201525728.htm",
+      "publish_date": "2024-11-27",
+      "indexed_date": "2024-11-27 06:27:07.992829+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "GPU"
+    ],
+    "note": "Thông số dự kiến GPU; đây là tin đồn cần ghi rõ."
+  },
+  {
+    "source_csv_line": 347,
+    "record": {
+      "id": "2d09f0b5cb582f6a3f472d57bf45260d0a1a2eb671bfd1497be0fddca7f5b817",
+      "title": "Giá DRAM được dự báo giảm mạnh trong quý 1/2025",
+      "url": "https://thanhnien.vn/gia-dram-duoc-du-bao-giam-manh-trong-quy-1-2025-185241230233325256.htm",
+      "publish_date": "2024-12-31",
+      "indexed_date": "2024-12-31 01:25:25.598379+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "RAM"
+    ],
+    "note": "Dự báo giá DRAM; không phải giá đã xảy ra."
+  },
+  {
+    "source_csv_line": 348,
+    "record": {
+      "id": "298a187cb346a0ec8c0d57408e0d6fcedbf0b0fac39bed45794c4d8ac7918d0c",
+      "title": "Intel sẽ ra mắt card đồ họa AI Battlemage với 24 GB DRAM",
+      "url": "https://thanhnien.vn/intel-se-ra-mat-card-do-hoa-ai-battlemage-voi-24-gb-dram-185241230110827427.htm",
+      "publish_date": "2024-12-30",
+      "indexed_date": "2024-12-30 17:19:26.754996+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "GPU"
+    ],
+    "note": "Sản phẩm chính là GPU; DRAM là cấu hình bộ nhớ đi kèm."
+  },
+  {
+    "source_csv_line": 349,
+    "record": {
+      "id": "ae4924c49ff7de08da2bca2bae72d29ba18e428a48f35d9ffd840a9e6ff969db",
+      "title": "Huawei gia nhập thị trường SSD với giá rẻ",
+      "url": "https://thanhnien.vn/huawei-gia-nhap-thi-truong-ssd-voi-gia-re-185241230154624305.htm",
+      "publish_date": "2024-12-30",
+      "indexed_date": "2024-12-30 10:18:20.905931+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "SSD"
+    ],
+    "note": "Gia nhập thị trường SSD giá rẻ."
+  },
+  {
+    "source_csv_line": 354,
+    "record": {
+      "id": "b4882c4f0bd483a4b836617b550ea8582de4af2ef34b3e7a19272d7fd88fb316",
+      "title": "Lộ thông số AMD Ryzen 9 9950X3D với xung nhịp cao cùng 3D V-Cache",
+      "url": "https://thanhnien.vn/lo-thong-so-amd-ryzen-9-9950x3d-voi-xung-nhip-cao-cung-3d-v-cache-185241227230834207.htm",
+      "publish_date": "2024-12-28",
+      "indexed_date": "2024-12-28 11:18:06.210107+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Thông số dòng CPU Ryzen."
+  },
+  {
+    "source_csv_line": 355,
+    "record": {
+      "id": "23ba89f5f5bf4c93326dfd4d781b0869b2f5ad911185f604ffaea21cfd668ddf",
+      "title": "Nhà sản xuất Trung Quốc công bố vi xử lý mới sánh ngang Intel Xeon Ice Lake",
+      "url": "https://thanhnien.vn/nha-san-xuat-trung-quoc-cong-bo-vi-xu-ly-moi-sanh-ngang-intel-xeon-ice-lake-185241227225447577.htm",
+      "publish_date": "2024-12-28",
+      "indexed_date": "2024-12-28 04:22:05.041583+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "CPU"
+    ],
+    "note": "Công bố dòng vi xử lý máy chủ."
+  },
+  {
+    "source_csv_line": 358,
+    "record": {
+      "id": "33ab2936c23d6c3942612a2c067c49a07c53a64ad8c841475c1835a08dd4c073",
+      "title": "AMD Radeon RX 9000 sắp ra mắt với nhiều thay đổi bất ngờ",
+      "url": "https://thanhnien.vn/amd-radeon-rx-9000-sap-ra-mat-voi-nhieu-thay-doi-bat-ngo-185241226100128407.htm",
+      "publish_date": "2024-12-27",
+      "indexed_date": "2024-12-27 04:21:18.913063+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "GPU"
+    ],
+    "note": "Thông tin dòng GPU Radeon sắp ra mắt."
+  },
+  {
+    "source_csv_line": 359,
+    "record": {
+      "id": "876400f277c687d38c80f66b96a947507ce09adc7c863586f48a59b6a52180cb",
+      "title": "Những điều chỉnh đơn giản giúp tối đa hóa hiệu suất SSD",
+      "url": "https://thanhnien.vn/nhung-dieu-chinh-don-gian-giup-toi-da-hoa-hieu-suat-ssd-185241226095909797.htm",
+      "publish_date": "2024-12-27",
+      "indexed_date": "2024-12-27 01:22:18.028981+00:00"
+    },
+    "review_level": "INDIRECT",
+    "review_categories": [
+      "SSD"
+    ],
+    "note": "Hướng dẫn sử dụng/tối ưu SSD hơn là tín hiệu mua bán thị trường."
+  },
+  {
+    "source_csv_line": 361,
+    "record": {
+      "id": "4d749fb36f55eb520fc8a95fb08f1e666b2b63d20a6e87955725e411483b4e85",
+      "title": "Rò rỉ mới về card đồ họa RTX 5070 khiến giới game thủ thất vọng",
+      "url": "https://thanhnien.vn/ro-ri-moi-ve-card-do-hoa-rtx-5070-khien-gioi-game-thu-that-vong-185241226102653355.htm",
+      "publish_date": "2024-12-26",
+      "indexed_date": "2024-12-26 07:20:17.617748+00:00"
+    },
+    "review_level": "DIRECT",
+    "review_categories": [
+      "GPU"
+    ],
+    "note": "Thông số GPU rò rỉ, chưa xác nhận chính thức."
+  }
+]

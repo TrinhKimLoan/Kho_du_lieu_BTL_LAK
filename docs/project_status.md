@@ -1,5 +1,17 @@
 # Trạng thái dự án
 
+## Checkpoint mới nhất — pha 5 đã xác nhận, pha 6 chờ kiểm thử
+
+Người dùng xác nhận `PHASE 5 QUALITY AND SCD2 CHECKS PASSED` ngày 26/10/2026.
+Evidence: G:\LAK-Analytics\evidence\phase5\run-20261025T182247Z-67e968f6.
+Đã gửi marker PASS và đường dẫn quality-after.json; chưa cung cấp toàn bộ JSON.
+Không suy đoán commit pha 5 của máy người dùng từ commit môi trường chuẩn bị.
+
+Pha 6 bổ sung pipeline metadata tin tức vào kho mới, nguồn gốc raw, hash,
+coverage, bridge, rà soát 35 tiêu đề có ghi rõ do AI và chưa human-verified.
+73 kiểm thử Python pha 1–6 đạt; PostgreSQL seed, API thật, Airflow runtime còn
+chờ kết quả trên máy người dùng. Giữ các checkpoint cũ dưới đây làm lịch sử.
+
 ## Checkpoint mới nhất — pha 4 đã xác nhận, pha 5 chờ kiểm thử
 
 Ngày 26/10/2026, người dùng báo `PHASE 4 CDC CHECKS PASSED` và HEAD

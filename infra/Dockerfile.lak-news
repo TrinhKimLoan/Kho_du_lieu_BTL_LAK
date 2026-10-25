@@ -1,0 +1,13 @@
+FROM python:3.11-slim
+WORKDIR /opt/project
+COPY requirements-phase3.txt requirements-phase4.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements-phase3.txt -r /tmp/requirements-phase4.txt
+COPY app /opt/project/app
+COPY config /opt/project/config
+COPY data /opt/project/data
+COPY src /opt/project/src
+COPY scripts /opt/project/scripts
+COPY sql /opt/project/sql
+COPY docs/phase2/data_contract.json /opt/project/docs/phase2/data_contract.json
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+ENTRYPOINT ["python", "-m", "src.news.cli"]

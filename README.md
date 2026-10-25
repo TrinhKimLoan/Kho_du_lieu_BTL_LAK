@@ -1,15 +1,16 @@
 # LAK Analytics
 
 Bản nâng cấp độc lập từ LAK, thực hiện theo `docs/upgrade_plan.md`.
-Đây là bản nâng cấp đến pha 5, chưa phải sản phẩm hoàn chỉnh.
+Đây là bản nâng cấp đến pha 6, chưa phải sản phẩm hoàn chỉnh.
 
-Hướng dẫn chạy mới nhất: `docs/phase5/run_guide.md`.
+Hướng dẫn chạy mới nhất: `docs/phase6/run_guide.md`.
 Giai đoạn 0 đã được người dùng xác nhận PASS trên Windows, commit `f214c8d`.
 Giai đoạn 1 đã được người dùng xác nhận PASS trên Windows, commit `3e43b27`.
 Giai đoạn 2 đã được người dùng xác nhận PostgreSQL PASS, commit `3ec2598`.
 Thư mục cố định là `G:\LAK-Analytics`. Pha 3 có MySQL nguồn, loader và demo;
 đã được người dùng xác nhận runtime PASS sau Fix2. Pha 4 CDC đã được người dùng xác nhận PASS tại commit f537de1.
-Pha 5 chất lượng/SCD2 đang chờ kiểm thử runtime trên máy em. Chưa triển khai ML/giao diện mới.
+Pha 5 chất lượng/SCD2 đã được người dùng xác nhận PASS.
+Pha 6 tin tức đang chờ kiểm thử dữ liệu lưu sẵn, API thật và DAG Airflow. Chưa triển khai ML/giao diện mới.
 
 ## Phạm vi đã xác nhận ngày 25 tháng 10 năm 2026
 

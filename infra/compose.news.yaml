@@ -1,0 +1,38 @@
+services:
+  news-tools:
+    profiles: [tools]
+    image: lak-analytics-news-tools:phase6
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.lak-news
+    env_file:
+      - ../.runtime/news.env
+    environment:
+      PG_HOST: postgres
+      LAK_POSTGRES_PASSWORD: ${LAK_POSTGRES_PASSWORD:?Keep phase4 credentials}
+    volumes:
+      - ../evidence:/opt/project/evidence
+  news-airflow:
+    profiles: [news-scheduler]
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.lak-news-airflow
+    image: lak-analytics-news-airflow:phase6
+    restart: unless-stopped
+    env_file:
+      - ../.runtime/news.env
+    environment:
+      PG_HOST: postgres
+      LAK_POSTGRES_PASSWORD: ${LAK_POSTGRES_PASSWORD:?Keep phase4 credentials}
+      PYTHONPATH: /opt/project
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/state/airflow.db
+    volumes:
+      - news_airflow_state:/opt/airflow/state
+      - news_airflow_logs:/opt/airflow/logs
+    command: [bash, -c, 'airflow db migrate && exec airflow scheduler']
+volumes:
+  news_airflow_state:
+  news_airflow_logs:

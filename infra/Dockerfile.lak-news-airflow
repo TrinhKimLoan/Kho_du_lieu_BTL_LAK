@@ -1,0 +1,12 @@
+FROM apache/airflow:2.10.5-python3.11
+USER airflow
+RUN pip install --no-cache-dir "apache-airflow==2.10.5" "psycopg[binary]==3.2.6"
+RUN mkdir -p /opt/airflow/state /opt/airflow/logs
+COPY --chown=airflow:root app /opt/project/app
+COPY --chown=airflow:root config /opt/project/config
+COPY --chown=airflow:root data /opt/project/data
+COPY --chown=airflow:root src /opt/project/src
+COPY --chown=airflow:root scripts /opt/project/scripts
+COPY --chown=airflow:root sql /opt/project/sql
+COPY --chown=airflow:root docs/phase2/data_contract.json /opt/project/docs/phase2/data_contract.json
+COPY --chown=airflow:root dags/phase6 /opt/airflow/dags

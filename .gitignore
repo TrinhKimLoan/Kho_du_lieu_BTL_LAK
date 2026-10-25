@@ -17,3 +17,4 @@ airflow.db
 evidence/phase3/run-*/
 evidence/phase4/run-*/
 evidence/phase5/run-*/
+evidence/phase6/run-*/

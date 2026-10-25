@@ -1,0 +1,12 @@
+{
+  "phase": 6,
+  "update": "lak-phase6-v1",
+  "base": "phase 5 patch after client-confirmed runtime pass",
+  "common_git_anchor": "3ec2598",
+  "offline_python_tests": 73,
+  "new_phase6_tests": 21,
+  "client_postgres_validated": false,
+  "live_api_validated": false,
+  "airflow_runtime_validated": false,
+  "review_sample_human_verified": false
+}
