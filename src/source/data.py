@@ -6,6 +6,7 @@ import math
 from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
+from uuid import UUID
 
 from app.core import product_cat, xlsx_rows
 from scripts.profile_lak_data import analyze, decimal, stamp
@@ -18,6 +19,8 @@ PERSONAL_FIELDS = {'Ten_Khach_Hang', 'SDT', 'Dia_Chi_Giao', 'Tai_Xe'}
 
 
 def canonical(value):
+    if isinstance(value, UUID):
+        return str(value)
     if isinstance(value, Decimal):
         return format(value.quantize(Decimal('0.01')), 'f')
     if isinstance(value, datetime):
