@@ -1,0 +1,100 @@
+{
+  "contract_version": "lak-phase2-v1",
+  "database_target": "new dedicated LAK database only",
+  "schemas": ["raw", "staging", "dw", "mart", "audit", "ml"],
+  "facts": {
+    "dw.fact_sales": {
+      "grain": "one current-state row per order containing one product",
+      "surrogate_key": "sales_key",
+      "business_key": ["order_id"],
+      "foreign_keys": {
+        "customer_key": "dw.dim_customer.customer_key",
+        "product_key": "dw.dim_product.product_key",
+        "category_key": "dw.dim_category.category_key",
+        "delivery_geography_key": "dw.dim_geography.geography_key",
+        "shipping_method_key": "dw.dim_shipping_method.shipping_method_key",
+        "packed_date_key": "dw.dim_date.date_key",
+        "dispatched_date_key": "dw.dim_date.date_key",
+        "expected_date_key": "dw.dim_date.date_key",
+        "received_date_key": "dw.dim_date.date_key"
+      },
+      "additive_measures": ["quantity", "goods_amount", "vat_amount", "shipping_fee", "total_paid"],
+      "nonadditive_measures": ["transaction_unit_price", "delivery_hours", "distinct_customers", "aov"],
+      "analysis_view": "dw.v_sales_analysis"
+    },
+    "dw.fact_news": {
+      "grain": "one current-state row per canonical article key",
+      "surrogate_key": "news_key",
+      "business_key": ["article_key"],
+      "foreign_keys": {
+        "published_date_key": "dw.dim_date.date_key",
+        "news_source_key": "dw.dim_news_source.news_source_key"
+      },
+      "analysis_view": "dw.v_news_analysis"
+    }
+  },
+  "dimensions": {
+    "dw.dim_date": {"key": "date_key", "unknown_key": 0, "history": "calendar", "hierarchy": ["year", "quarter", "month", "day"]},
+    "dw.dim_customer": {"key": "customer_key", "unknown_key": 0, "history": "type1 current profile"},
+    "dw.dim_product": {"key": "product_key", "unknown_key": 0, "history": "type2 observation time", "versioned_attributes": ["product_name", "product_group", "category_code"]},
+    "dw.dim_category": {"key": "category_key", "unknown_key": 0, "history": "stable code; type1 display correction"},
+    "dw.dim_geography": {"key": "geography_key", "unknown_key": 0, "history": "stable normalized city-district tuple"},
+    "dw.dim_shipping_method": {"key": "shipping_method_key", "unknown_key": 0, "history": "stable code; type1 display correction"},
+    "dw.dim_news_source": {"key": "news_source_key", "unknown_key": 0, "history": "canonical domain; type1 display correction"}
+  },
+  "bridge": {
+    "table": "dw.bridge_news_category",
+    "grain": "one unique article-category assignment",
+    "primary_key": ["news_key", "category_key"],
+    "cross_category_total": "count distinct news_key; never sum per-category article counts"
+  },
+  "source_entities": {
+    "customers": {
+      "key": "customer_id",
+      "fields": ["customer_id", "gender", "profile_city", "profile_district", "is_demo"],
+      "source_files": ["02"],
+      "staging_table": "staging.customers"
+    },
+    "products": {
+      "key": "product_id",
+      "fields": ["product_id", "product_name", "product_group", "category_code", "catalog_unit_price", "product_size_band", "is_demo"],
+      "source_files": ["03"],
+      "staging_table": "staging.products"
+    },
+    "orders": {
+      "key": "order_id",
+      "fields": ["order_id", "customer_id", "product_id", "quantity", "transaction_unit_price", "goods_amount", "vat_amount", "shipping_fee", "total_paid", "shipping_method", "quantity_band", "warehouse_name", "vehicle_type", "delivery_city", "delivery_district", "packed_at", "dispatched_at", "expected_at", "received_at", "is_demo"],
+      "source_files": ["01", "04", "05", "06"],
+      "staging_table": "staging.orders"
+    }
+  },
+  "cdc": {
+    "raw_identity": ["source_epoch", "topic", "partition_id", "kafka_offset"],
+    "raw_table": "raw.cdc_events",
+    "checkpoint_table": "raw.kafka_checkpoints",
+    "checkpoint_meaning": "next Kafka offset, persisted atomically with raw events",
+    "ledger_table": "audit.applied_source_transactions",
+    "ledger_identity": ["source_epoch", "source_tx_id"],
+    "transaction_metadata_partitions": 1,
+    "ordering": "transaction END offset order; data within transaction by total_order",
+    "business_delete": "soft delete; exclude via analysis view",
+    "tombstone": "capture only; not another business delete",
+    "source_epoch": "installation identity; never compare positions across different source epochs"
+  },
+  "time": {
+    "business_timestamps": "timestamp without time zone; source local timezone unverified",
+    "system_timestamps": "timestamptz",
+    "sales_analysis_date": "packed_at, explicitly labeled packing date",
+    "shipping_target": "hours between dispatched_at and received_at when nonnegative",
+    "rfm_reference_date": "2026-01-01",
+    "sla_confirmed": false
+  },
+  "stage_boundaries": {
+    "phase2": "design, DDL, data contracts and isolated schema tests",
+    "phase3": "MySQL DDL and history loader",
+    "phase4": "CDC collector, applier and integration checks",
+    "phase5": "SCD2 runtime logic and quality gates",
+    "phase7": "mart and cube implementation",
+    "phase8_10": "model schemas, training and inference implementation"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "phase": 2,
+  "contract_version": "lak-phase2-v1",
+  "checked_at_utc": "2026-10-25T15:58:24.006737+00:00",
+  "passed": true,
+  "declared_tables": 24,
+  "errors": [],
+  "sql_executed": false,
+  "powershell_executed": false,
+  "needs_postgresql_schema_check": true,
+  "input_sha256": {
+    "docs/phase2/data_contract.json": "bbc6a159a31f6633b9bd04f1d451b141ebaa538e2679f02b21c4ecd267e6ac6e",
+    "sql/phase2/001_warehouse_schema.sql": "5375a9ee6f1e756d3336a15d32afc287372795f90dd0a2539b2e6ac4aa7d43a8",
+    "sql/phase2/002_schema_checks.sql": "9011ac08bed9860ad0ca2b61ca20e5ce8044da8a56cbdbddb7185e89aec05264",
+    "scripts/test_phase2_postgres.ps1": "da787550e275db87e733d6a6d656f61720fca6aca7349f0e14e7c7a61e4ed7e0"
+  }
+}

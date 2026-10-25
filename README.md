@@ -1,11 +1,13 @@
 # LAK Analytics
 
 Bản nâng cấp độc lập từ LAK, thực hiện theo `docs/upgrade_plan.md`.
-Đây là mốc giai đoạn 1, chưa phải sản phẩm hoàn chỉnh.
+Đây là gói thiết kế giai đoạn 2, chưa phải sản phẩm hoàn chỉnh.
 
-Hướng dẫn chạy mới nhất: `docs/phase1_run_guide.md`.
+Hướng dẫn chạy mới nhất: `docs/phase2/run_guide.md`.
 Giai đoạn 0 đã được người dùng xác nhận PASS trên Windows, commit `f214c8d`.
-Giai đoạn 1 thêm kiểm tra dữ liệu; chưa triển khai schema, CDC hoặc ML mới.
+Giai đoạn 1 đã được người dùng xác nhận PASS trên Windows, commit `3e43b27`.
+Giai đoạn 2 có thiết kế, SQL và bộ thử schema riêng. Chưa xác nhận thực thi
+PostgreSQL trước khi người dùng chạy phép thử. Chưa triển khai CDC hoặc ML mới.
 
 ## Phạm vi đã xác nhận ngày 25 tháng 10 năm 2026
 
@@ -54,4 +56,6 @@ hạ tầng sẽ cấp project, topic, cổng và volume riêng, không xóa vol
 
 Bộ giai đoạn 1 có `scripts/profile_lak_data.py`, `docs/data_dictionary.md`,
 `docs/data_quality_profile.md`, `docs/business_definitions.md` và bằng chứng riêng.
-Sau khi xác nhận kết quả trên Windows, sang giai đoạn 2 để thiết kế mô hình kho.
+Thiết kế giai đoạn 2 ở `docs/phase2`, DDL ở `sql/phase2`. Chỉ chạy schema bằng
+phép thử container tạm trong hướng dẫn, không áp vào CSDL cũ. Sau khi PostgreSQL
+check đạt trên Windows, bước tiếp theo là giai đoạn 3: MySQL nguồn và nạp lịch sử.
