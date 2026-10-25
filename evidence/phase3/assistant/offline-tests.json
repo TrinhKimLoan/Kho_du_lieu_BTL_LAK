@@ -1,0 +1,13 @@
+{
+  "phase": 3,
+  "tests_run": 6,
+  "tests_passed": 6,
+  "duration_seconds": 7.098,
+  "mysql_executed": false,
+  "docker_executed": false,
+  "powershell_executed": false,
+  "compose_yaml_parsed": true,
+  "source_contract_columns_present": true,
+  "original_plan_unchanged": true,
+  "checked_at_utc": "2026-10-25T16:43:49.240795+00:00"
+}

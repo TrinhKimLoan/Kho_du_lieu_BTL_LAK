@@ -1,0 +1,10 @@
+.git
+.runtime
+.env
+.env.*
+!.env.example
+evidence
+.venv
+__pycache__
+*.pyc
+*.zip

@@ -1,0 +1,11 @@
+{
+  "update_id": "lak-phase3-v1",
+  "phase": 3,
+  "base_phase": 2,
+  "base_commit": "3ec2598",
+  "application": "incremental patch on existing G:\\LAK-Analytics",
+  "mysql_database": "lak_source",
+  "compose_project": "lak-analytics",
+  "mysql_host_port": 3310,
+  "postgres_or_cdc_started_in_phase3": false
+}

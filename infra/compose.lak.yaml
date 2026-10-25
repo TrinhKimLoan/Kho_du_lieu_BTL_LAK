@@ -1,0 +1,45 @@
+services:
+  mysql:
+    image: mysql:8.0.46-oraclelinux9
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${LAK_MYSQL_ROOT_PASSWORD:?Prepare .runtime/lak.env first}
+      MYSQL_DATABASE: lak_source
+      MYSQL_USER: lak_app
+      MYSQL_PASSWORD: ${LAK_MYSQL_APP_PASSWORD:?Prepare .runtime/lak.env first}
+    command:
+      - --server-id=274103
+      - --log-bin=lak-bin
+      - --binlog-format=ROW
+      - --binlog-row-image=FULL
+      - --binlog-expire-logs-seconds=604800
+      - --innodb-buffer-pool-size=268435456
+    ports:
+      - "127.0.0.1:3310:3306"
+    volumes:
+      - mysql_source_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+
+  source-tools:
+    profiles: ["tools"]
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.lak-source
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: "3306"
+      MYSQL_DATABASE: lak_source
+      MYSQL_USER: lak_app
+      MYSQL_PASSWORD: ${LAK_MYSQL_APP_PASSWORD:?Prepare .runtime/lak.env first}
+    volumes:
+      - ../evidence:/opt/project/evidence
+volumes:
+  mysql_source_data:

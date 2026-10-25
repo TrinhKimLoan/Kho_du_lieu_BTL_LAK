@@ -1,13 +1,14 @@
 # LAK Analytics
 
 Bản nâng cấp độc lập từ LAK, thực hiện theo `docs/upgrade_plan.md`.
-Đây là gói thiết kế giai đoạn 2, chưa phải sản phẩm hoàn chỉnh.
+Đây là bản nâng cấp đến pha 3, chưa phải sản phẩm hoàn chỉnh.
 
-Hướng dẫn chạy mới nhất: `docs/phase2/run_guide.md`.
+Hướng dẫn chạy mới nhất: `docs/phase3/run_guide.md`.
 Giai đoạn 0 đã được người dùng xác nhận PASS trên Windows, commit `f214c8d`.
 Giai đoạn 1 đã được người dùng xác nhận PASS trên Windows, commit `3e43b27`.
-Giai đoạn 2 có thiết kế, SQL và bộ thử schema riêng. Chưa xác nhận thực thi
-PostgreSQL trước khi người dùng chạy phép thử. Chưa triển khai CDC hoặc ML mới.
+Giai đoạn 2 đã được người dùng xác nhận PostgreSQL PASS, commit `3ec2598`.
+Thư mục cố định là `G:\LAK-Analytics`. Pha 3 có MySQL nguồn, loader và demo;
+chưa xác nhận runtime trước khi người dùng gửi kết quả. Chưa có CDC/ML mới.
 
 ## Phạm vi đã xác nhận ngày 25 tháng 10 năm 2026
 
@@ -56,6 +57,8 @@ hạ tầng sẽ cấp project, topic, cổng và volume riêng, không xóa vol
 
 Bộ giai đoạn 1 có `scripts/profile_lak_data.py`, `docs/data_dictionary.md`,
 `docs/data_quality_profile.md`, `docs/business_definitions.md` và bằng chứng riêng.
-Thiết kế giai đoạn 2 ở `docs/phase2`, DDL ở `sql/phase2`. Chỉ chạy schema bằng
-phép thử container tạm trong hướng dẫn, không áp vào CSDL cũ. Sau khi PostgreSQL
-check đạt trên Windows, bước tiếp theo là giai đoạn 3: MySQL nguồn và nạp lịch sử.
+Thiết kế giai đoạn 2 ở `docs/phase2`, DDL ở `sql/phase2`. Pha 3 dùng compose
+riêng `infra/compose.lak.yaml`, không dùng docker-compose.yml LAK cũ.
+Sau khi pha 3 đạt trên Windows, bước tiếp theo là pha 4: CDC đầu cuối.
+verify_phase0 xác minh byte checkpoint gốc; không dùng làm gate chung sau khi
+các pha sau đã chủ động sửa tệp, ví dụ .gitignore trong pha 3.

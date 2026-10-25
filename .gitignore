@@ -12,3 +12,6 @@ __pycache__/
 *.backup
 *.sql.gz
 airflow.db
+
+.runtime/
+evidence/phase3/run-*/

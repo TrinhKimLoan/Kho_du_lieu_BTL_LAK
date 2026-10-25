@@ -1,0 +1,1 @@
+"""Sanitized MySQL transaction source."""
