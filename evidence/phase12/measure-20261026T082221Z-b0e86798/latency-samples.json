@@ -1,0 +1,602 @@
+[
+  {
+    "sample": 1,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_d162ed7d98_O",
+    "request_to_ack_seconds": 0.02528241700019862,
+    "request_to_dw_observed_seconds": 1.0428940880010487,
+    "request_to_ml_observed_seconds": 1.4670709729998634,
+    "ack_to_dw_observed_seconds": 1.01761167100085,
+    "ack_to_ml_observed_seconds": 1.4417885559996648
+  },
+  {
+    "sample": 1,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_d162ed7d98_O",
+    "request_to_ack_seconds": 0.01553345300089859,
+    "request_to_dw_observed_seconds": 0.7263463800009049,
+    "request_to_ml_observed_seconds": 0.9387897970009362,
+    "ack_to_dw_observed_seconds": 0.7108129270000063,
+    "ack_to_ml_observed_seconds": 0.9232563440000376
+  },
+  {
+    "sample": 1,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_d162ed7d98_O",
+    "request_to_ack_seconds": 0.018996241000422742,
+    "request_to_dw_observed_seconds": 0.6267435549998481,
+    "request_to_ml_observed_seconds": 1.040401878000921,
+    "ack_to_dw_observed_seconds": 0.6077473139994254,
+    "ack_to_ml_observed_seconds": 1.0214056370004982
+  },
+  {
+    "sample": 2,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_ba9186b57e_O",
+    "request_to_ack_seconds": 0.014691276001030928,
+    "request_to_dw_observed_seconds": 0.4195774370000436,
+    "request_to_ml_observed_seconds": 0.9339000689997192,
+    "ack_to_dw_observed_seconds": 0.40488616099901265,
+    "ack_to_ml_observed_seconds": 0.9192087929986883
+  },
+  {
+    "sample": 2,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_ba9186b57e_O",
+    "request_to_ack_seconds": 0.011041679001209559,
+    "request_to_dw_observed_seconds": 0.7181205530014267,
+    "request_to_ml_observed_seconds": 1.026125824000701,
+    "ack_to_dw_observed_seconds": 0.7070788740002172,
+    "ack_to_ml_observed_seconds": 1.0150841449994914
+  },
+  {
+    "sample": 2,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_ba9186b57e_O",
+    "request_to_ack_seconds": 0.015813965001143515,
+    "request_to_dw_observed_seconds": 1.639555821000613,
+    "request_to_ml_observed_seconds": 1.9491198610012361,
+    "ack_to_dw_observed_seconds": 1.6237418559994694,
+    "ack_to_ml_observed_seconds": 1.9333058960000926
+  },
+  {
+    "sample": 3,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_9de06c5642_O",
+    "request_to_ack_seconds": 0.021243241000775015,
+    "request_to_dw_observed_seconds": 0.5289541269994515,
+    "request_to_ml_observed_seconds": 1.0546772889993008,
+    "ack_to_dw_observed_seconds": 0.5077108859986765,
+    "ack_to_ml_observed_seconds": 1.0334340479985258
+  },
+  {
+    "sample": 3,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_9de06c5642_O",
+    "request_to_ack_seconds": 0.018736837000687956,
+    "request_to_dw_observed_seconds": 1.5372859740000422,
+    "request_to_ml_observed_seconds": 2.0574345379991428,
+    "ack_to_dw_observed_seconds": 1.5185491369993542,
+    "ack_to_ml_observed_seconds": 2.038697700998455
+  },
+  {
+    "sample": 3,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_9de06c5642_O",
+    "request_to_ack_seconds": 0.022698783001033007,
+    "request_to_dw_observed_seconds": 1.4426113950012223,
+    "request_to_ml_observed_seconds": 1.9714311749994522,
+    "ack_to_dw_observed_seconds": 1.4199126120001893,
+    "ack_to_ml_observed_seconds": 1.9487323919984192
+  },
+  {
+    "sample": 4,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_86eb23b8f9_O",
+    "request_to_ack_seconds": 0.04074818899971433,
+    "request_to_dw_observed_seconds": 1.568121053998766,
+    "request_to_ml_observed_seconds": 2.08928638100042,
+    "ack_to_dw_observed_seconds": 1.5273728649990517,
+    "ack_to_ml_observed_seconds": 2.0485381920007057
+  },
+  {
+    "sample": 4,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_86eb23b8f9_O",
+    "request_to_ack_seconds": 0.023381271999824094,
+    "request_to_dw_observed_seconds": 1.4672402850010258,
+    "request_to_ml_observed_seconds": 1.9032119300009072,
+    "ack_to_dw_observed_seconds": 1.4438590130012017,
+    "ack_to_ml_observed_seconds": 1.879830658001083
+  },
+  {
+    "sample": 4,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_86eb23b8f9_O",
+    "request_to_ack_seconds": 0.05683334700006526,
+    "request_to_dw_observed_seconds": 1.0745160140013468,
+    "request_to_ml_observed_seconds": 2.0002319169998373,
+    "ack_to_dw_observed_seconds": 1.0176826670012815,
+    "ack_to_ml_observed_seconds": 1.943398569999772
+  },
+  {
+    "sample": 5,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_0370481bab_O",
+    "request_to_ack_seconds": 0.015469899999516201,
+    "request_to_dw_observed_seconds": 1.1339089209996018,
+    "request_to_ml_observed_seconds": 1.9568822490000457,
+    "ack_to_dw_observed_seconds": 1.1184390210000856,
+    "ack_to_ml_observed_seconds": 1.9414123490005295
+  },
+  {
+    "sample": 5,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_0370481bab_O",
+    "request_to_ack_seconds": 0.01688164500046696,
+    "request_to_dw_observed_seconds": 1.2341071860009833,
+    "request_to_ml_observed_seconds": 2.0538906670008146,
+    "ack_to_dw_observed_seconds": 1.2172255410005164,
+    "ack_to_ml_observed_seconds": 2.0370090220003476
+  },
+  {
+    "sample": 5,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_0370481bab_O",
+    "request_to_ack_seconds": 0.012099940999178216,
+    "request_to_dw_observed_seconds": 1.2271492279996892,
+    "request_to_ml_observed_seconds": 2.0455792989996553,
+    "ack_to_dw_observed_seconds": 1.215049287000511,
+    "ack_to_ml_observed_seconds": 2.033479358000477
+  },
+  {
+    "sample": 6,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_a95c517412_O",
+    "request_to_ack_seconds": 0.01364124800056743,
+    "request_to_dw_observed_seconds": 1.2263849869996193,
+    "request_to_ml_observed_seconds": 1.9420133639996493,
+    "ack_to_dw_observed_seconds": 1.2127437389990519,
+    "ack_to_ml_observed_seconds": 1.9283721159990819
+  },
+  {
+    "sample": 6,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_a95c517412_O",
+    "request_to_ack_seconds": 0.009528058999421773,
+    "request_to_dw_observed_seconds": 1.3221881539993774,
+    "request_to_ml_observed_seconds": 2.038047161000577,
+    "ack_to_dw_observed_seconds": 1.3126600949999556,
+    "ack_to_ml_observed_seconds": 2.0285191020011553
+  },
+  {
+    "sample": 6,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_a95c517412_O",
+    "request_to_ack_seconds": 0.022812057999544777,
+    "request_to_dw_observed_seconds": 1.3433045809997566,
+    "request_to_ml_observed_seconds": 2.0645615299999918,
+    "ack_to_dw_observed_seconds": 1.3204925230002118,
+    "ack_to_ml_observed_seconds": 2.041749472000447
+  },
+  {
+    "sample": 7,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_e63285dbc2_O",
+    "request_to_ack_seconds": 0.016134433000843273,
+    "request_to_dw_observed_seconds": 0.9286712330012961,
+    "request_to_ml_observed_seconds": 1.0317701010008022,
+    "ack_to_dw_observed_seconds": 0.9125368000004528,
+    "ack_to_ml_observed_seconds": 1.015635667999959
+  },
+  {
+    "sample": 7,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_e63285dbc2_O",
+    "request_to_ack_seconds": 0.013466614998833393,
+    "request_to_dw_observed_seconds": 1.0277243029995589,
+    "request_to_ml_observed_seconds": 1.9463003529999696,
+    "ack_to_dw_observed_seconds": 1.0142576880007255,
+    "ack_to_ml_observed_seconds": 1.9328337380011362
+  },
+  {
+    "sample": 7,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_e63285dbc2_O",
+    "request_to_ack_seconds": 0.011228448000110802,
+    "request_to_dw_observed_seconds": 1.122316287999638,
+    "request_to_ml_observed_seconds": 2.0409850729993195,
+    "ack_to_dw_observed_seconds": 1.1110878399995272,
+    "ack_to_ml_observed_seconds": 2.0297566249992087
+  },
+  {
+    "sample": 8,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_19f507c136_O",
+    "request_to_ack_seconds": 0.017889892000312102,
+    "request_to_dw_observed_seconds": 1.0299224770005821,
+    "request_to_ml_observed_seconds": 1.8574534050003422,
+    "ack_to_dw_observed_seconds": 1.01203258500027,
+    "ack_to_ml_observed_seconds": 1.83956351300003
+  },
+  {
+    "sample": 8,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_19f507c136_O",
+    "request_to_ack_seconds": 0.02422187700176437,
+    "request_to_dw_observed_seconds": 1.1390184980009508,
+    "request_to_ml_observed_seconds": 2.0684707760010497,
+    "ack_to_dw_observed_seconds": 1.1147966209991864,
+    "ack_to_ml_observed_seconds": 2.0442488989992853
+  },
+  {
+    "sample": 8,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_19f507c136_O",
+    "request_to_ack_seconds": 0.03626708400042844,
+    "request_to_dw_observed_seconds": 1.1529206610011897,
+    "request_to_ml_observed_seconds": 1.9736962340011814,
+    "ack_to_dw_observed_seconds": 1.1166535770007613,
+    "ack_to_ml_observed_seconds": 1.937429150000753
+  },
+  {
+    "sample": 9,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_d14f730cbd_O",
+    "request_to_ack_seconds": 0.011438198998803273,
+    "request_to_dw_observed_seconds": 1.2248179589987558,
+    "request_to_ml_observed_seconds": 2.0448531249985535,
+    "ack_to_dw_observed_seconds": 1.2133797599999525,
+    "ack_to_ml_observed_seconds": 2.0334149259997503
+  },
+  {
+    "sample": 9,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_d14f730cbd_O",
+    "request_to_ack_seconds": 0.00826065799992648,
+    "request_to_dw_observed_seconds": 0.8167316760009271,
+    "request_to_ml_observed_seconds": 1.0239362869997422,
+    "ack_to_dw_observed_seconds": 0.8084710180010006,
+    "ack_to_ml_observed_seconds": 1.0156756289998157
+  },
+  {
+    "sample": 9,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_d14f730cbd_O",
+    "request_to_ack_seconds": 0.023713226999461767,
+    "request_to_dw_observed_seconds": 0.8358100790010212,
+    "request_to_ml_observed_seconds": 1.8628370990008989,
+    "ack_to_dw_observed_seconds": 0.8120968520015595,
+    "ack_to_ml_observed_seconds": 1.8391238720014371
+  },
+  {
+    "sample": 10,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_5258ca2dac_O",
+    "request_to_ack_seconds": 0.009743347000039648,
+    "request_to_dw_observed_seconds": 1.0210169940000924,
+    "request_to_ml_observed_seconds": 2.0435451199991803,
+    "ack_to_dw_observed_seconds": 1.0112736470000527,
+    "ack_to_ml_observed_seconds": 2.0338017729991407
+  },
+  {
+    "sample": 10,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_5258ca2dac_O",
+    "request_to_ack_seconds": 0.016597101999650477,
+    "request_to_dw_observed_seconds": 0.9275831429986283,
+    "request_to_ml_observed_seconds": 1.9538498820002133,
+    "ack_to_dw_observed_seconds": 0.9109860409989778,
+    "ack_to_ml_observed_seconds": 1.9372527800005628
+  },
+  {
+    "sample": 10,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_5258ca2dac_O",
+    "request_to_ack_seconds": 0.018500152000342496,
+    "request_to_dw_observed_seconds": 1.0296983230000478,
+    "request_to_ml_observed_seconds": 2.04651568600093,
+    "ack_to_dw_observed_seconds": 1.0111981709997053,
+    "ack_to_ml_observed_seconds": 2.0280155340005876
+  },
+  {
+    "sample": 11,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_c4a400615a_O",
+    "request_to_ack_seconds": 0.02324289300122473,
+    "request_to_dw_observed_seconds": 1.035367179001696,
+    "request_to_ml_observed_seconds": 1.9535572610002419,
+    "ack_to_dw_observed_seconds": 1.0121242860004713,
+    "ack_to_ml_observed_seconds": 1.9303143679990171
+  },
+  {
+    "sample": 11,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_c4a400615a_O",
+    "request_to_ack_seconds": 0.016260414000498713,
+    "request_to_dw_observed_seconds": 0.6245424850003474,
+    "request_to_ml_observed_seconds": 0.9326770050010964,
+    "ack_to_dw_observed_seconds": 0.6082820709998487,
+    "ack_to_ml_observed_seconds": 0.9164165910005977
+  },
+  {
+    "sample": 11,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_c4a400615a_O",
+    "request_to_ack_seconds": 0.014082645999224042,
+    "request_to_dw_observed_seconds": 0.9254562219994114,
+    "request_to_ml_observed_seconds": 1.029243831999338,
+    "ack_to_dw_observed_seconds": 0.9113735760001873,
+    "ack_to_ml_observed_seconds": 1.015161186000114
+  },
+  {
+    "sample": 12,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_b7f16b6b0c_O",
+    "request_to_ack_seconds": 0.018145387999538798,
+    "request_to_dw_observed_seconds": 0.7265743499992823,
+    "request_to_ml_observed_seconds": 1.0332436169992434,
+    "ack_to_dw_observed_seconds": 0.7084289619997435,
+    "ack_to_ml_observed_seconds": 1.0150982289997046
+  },
+  {
+    "sample": 12,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_b7f16b6b0c_O",
+    "request_to_ack_seconds": 0.00850001999970118,
+    "request_to_dw_observed_seconds": 0.9184468610001204,
+    "request_to_ml_observed_seconds": 1.0239253130002908,
+    "ack_to_dw_observed_seconds": 0.9099468410004192,
+    "ack_to_ml_observed_seconds": 1.0154252930005896
+  },
+  {
+    "sample": 12,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_b7f16b6b0c_O",
+    "request_to_ack_seconds": 0.015114603000256466,
+    "request_to_dw_observed_seconds": 0.7217072189996543,
+    "request_to_ml_observed_seconds": 1.0269298990006064,
+    "ack_to_dw_observed_seconds": 0.7065926159993978,
+    "ack_to_ml_observed_seconds": 1.01181529600035
+  },
+  {
+    "sample": 13,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_1e34f77d5f_O",
+    "request_to_ack_seconds": 0.007782897000652156,
+    "request_to_dw_observed_seconds": 0.9168166689996724,
+    "request_to_ml_observed_seconds": 1.0184119469995494,
+    "ack_to_dw_observed_seconds": 0.9090337719990202,
+    "ack_to_ml_observed_seconds": 1.0106290499988972
+  },
+  {
+    "sample": 13,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_1e34f77d5f_O",
+    "request_to_ack_seconds": 0.01318752599945583,
+    "request_to_dw_observed_seconds": 0.721391726998263,
+    "request_to_ml_observed_seconds": 1.0288708549996954,
+    "ack_to_dw_observed_seconds": 0.7082042009988072,
+    "ack_to_ml_observed_seconds": 1.0156833290002396
+  },
+  {
+    "sample": 13,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_1e34f77d5f_O",
+    "request_to_ack_seconds": 0.017265590000533848,
+    "request_to_dw_observed_seconds": 0.9273432150002918,
+    "request_to_ml_observed_seconds": 0.9278720679994876,
+    "ack_to_dw_observed_seconds": 0.910077624999758,
+    "ack_to_ml_observed_seconds": 0.9106064779989538
+  },
+  {
+    "sample": 14,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_da756c0dda_O",
+    "request_to_ack_seconds": 0.011166547001266736,
+    "request_to_dw_observed_seconds": 0.8191019870009768,
+    "request_to_ml_observed_seconds": 1.0229320890011877,
+    "ack_to_dw_observed_seconds": 0.8079354399997101,
+    "ack_to_ml_observed_seconds": 1.011765541999921
+  },
+  {
+    "sample": 14,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_da756c0dda_O",
+    "request_to_ack_seconds": 0.013913435001086327,
+    "request_to_dw_observed_seconds": 1.0232740760002343,
+    "request_to_ml_observed_seconds": 1.0247596940007497,
+    "ack_to_dw_observed_seconds": 1.009360640999148,
+    "ack_to_ml_observed_seconds": 1.0108462589996634
+  },
+  {
+    "sample": 14,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_da756c0dda_O",
+    "request_to_ack_seconds": 0.02185411299979023,
+    "request_to_dw_observed_seconds": 0.8324100539994106,
+    "request_to_ml_observed_seconds": 1.0411806459997024,
+    "ack_to_dw_observed_seconds": 0.8105559409996204,
+    "ack_to_ml_observed_seconds": 1.0193265329999122
+  },
+  {
+    "sample": 15,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_5e00d054d4_O",
+    "request_to_ack_seconds": 0.022304128000541823,
+    "request_to_dw_observed_seconds": 0.5299405969999498,
+    "request_to_ml_observed_seconds": 0.9459832219999953,
+    "ack_to_dw_observed_seconds": 0.507636468999408,
+    "ack_to_ml_observed_seconds": 0.9236790939994535
+  },
+  {
+    "sample": 15,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_5e00d054d4_O",
+    "request_to_ack_seconds": 0.019116010998914135,
+    "request_to_dw_observed_seconds": 0.8296627099989564,
+    "request_to_ml_observed_seconds": 1.0346467199997278,
+    "ack_to_dw_observed_seconds": 0.8105466990000423,
+    "ack_to_ml_observed_seconds": 1.0155307090008137
+  },
+  {
+    "sample": 15,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_5e00d054d4_O",
+    "request_to_ack_seconds": 0.01024626099933812,
+    "request_to_dw_observed_seconds": 0.5151290689991583,
+    "request_to_ml_observed_seconds": 1.0267965530001675,
+    "ack_to_dw_observed_seconds": 0.5048828079998202,
+    "ack_to_ml_observed_seconds": 1.0165502920008294
+  },
+  {
+    "sample": 16,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_73f984b8fe_O",
+    "request_to_ack_seconds": 0.016639904999465216,
+    "request_to_dw_observed_seconds": 1.5336407989998406,
+    "request_to_ml_observed_seconds": 1.9412836329993297,
+    "ack_to_dw_observed_seconds": 1.5170008940003754,
+    "ack_to_ml_observed_seconds": 1.9246437279998645
+  },
+  {
+    "sample": 16,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_73f984b8fe_O",
+    "request_to_ack_seconds": 0.015584008000587346,
+    "request_to_dw_observed_seconds": 0.8231388439999137,
+    "request_to_ml_observed_seconds": 1.0277426480006397,
+    "ack_to_dw_observed_seconds": 0.8075548359993263,
+    "ack_to_ml_observed_seconds": 1.0121586400000524
+  },
+  {
+    "sample": 16,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_73f984b8fe_O",
+    "request_to_ack_seconds": 0.017392805000781664,
+    "request_to_dw_observed_seconds": 0.6239117800014355,
+    "request_to_ml_observed_seconds": 1.0322742170010315,
+    "ack_to_dw_observed_seconds": 0.6065189750006539,
+    "ack_to_ml_observed_seconds": 1.0148814120002498
+  },
+  {
+    "sample": 17,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_843190683e_O",
+    "request_to_ack_seconds": 0.01102241300031892,
+    "request_to_dw_observed_seconds": 1.629270125000403,
+    "request_to_ml_observed_seconds": 2.039858218000518,
+    "ack_to_dw_observed_seconds": 1.618247712000084,
+    "ack_to_ml_observed_seconds": 2.028835805000199
+  },
+  {
+    "sample": 17,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_843190683e_O",
+    "request_to_ack_seconds": 0.017960985998797696,
+    "request_to_dw_observed_seconds": 1.6346789250001166,
+    "request_to_ml_observed_seconds": 2.0433942889994796,
+    "ack_to_dw_observed_seconds": 1.6167179390013189,
+    "ack_to_ml_observed_seconds": 2.025433303000682
+  },
+  {
+    "sample": 17,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_843190683e_O",
+    "request_to_ack_seconds": 0.013751648000834393,
+    "request_to_dw_observed_seconds": 1.6304789170008007,
+    "request_to_ml_observed_seconds": 2.0410116110015224,
+    "ack_to_dw_observed_seconds": 1.6167272689999663,
+    "ack_to_ml_observed_seconds": 2.027259963000688
+  },
+  {
+    "sample": 18,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_c9dea28085_O",
+    "request_to_ack_seconds": 0.024392798000917537,
+    "request_to_dw_observed_seconds": 1.5459875619999366,
+    "request_to_ml_observed_seconds": 1.957900982000865,
+    "ack_to_dw_observed_seconds": 1.521594763999019,
+    "ack_to_ml_observed_seconds": 1.9335081839999475
+  },
+  {
+    "sample": 18,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_c9dea28085_O",
+    "request_to_ack_seconds": 0.01984842700039735,
+    "request_to_dw_observed_seconds": 1.6508622569999716,
+    "request_to_ml_observed_seconds": 1.9632747730011033,
+    "ack_to_dw_observed_seconds": 1.6310138299995742,
+    "ack_to_ml_observed_seconds": 1.943426346000706
+  },
+  {
+    "sample": 18,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_c9dea28085_O",
+    "request_to_ack_seconds": 0.0266628050012514,
+    "request_to_dw_observed_seconds": 1.6589207190008892,
+    "request_to_ml_observed_seconds": 1.969017713001449,
+    "ack_to_dw_observed_seconds": 1.6322579139996378,
+    "ack_to_ml_observed_seconds": 1.9423549080001976
+  },
+  {
+    "sample": 19,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_36391db9bd_O",
+    "request_to_ack_seconds": 0.017914277999807382,
+    "request_to_dw_observed_seconds": 1.3351252159991418,
+    "request_to_ml_observed_seconds": 2.051953637999759,
+    "ack_to_dw_observed_seconds": 1.3172109379993344,
+    "ack_to_ml_observed_seconds": 2.0340393599999516
+  },
+  {
+    "sample": 19,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_36391db9bd_O",
+    "request_to_ack_seconds": 0.011266680998232914,
+    "request_to_dw_observed_seconds": 1.2250855610000144,
+    "request_to_ml_observed_seconds": 1.957862370998555,
+    "ack_to_dw_observed_seconds": 1.2138188800017815,
+    "ack_to_ml_observed_seconds": 1.946595690000322
+  },
+  {
+    "sample": 19,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_36391db9bd_O",
+    "request_to_ack_seconds": 0.030814421999821207,
+    "request_to_dw_observed_seconds": 1.2469235630014737,
+    "request_to_ml_observed_seconds": 1.9650138140004856,
+    "ack_to_dw_observed_seconds": 1.2161091410016525,
+    "ack_to_ml_observed_seconds": 1.9341993920006644
+  },
+  {
+    "sample": 20,
+    "operation": "insert",
+    "order_id": "DEMO_MEASURE12_d605e4cf16_O",
+    "request_to_ack_seconds": 0.015213497999866377,
+    "request_to_dw_observed_seconds": 1.2298286389996065,
+    "request_to_ml_observed_seconds": 1.9441362010002194,
+    "ack_to_dw_observed_seconds": 1.21461514099974,
+    "ack_to_ml_observed_seconds": 1.928922703000353
+  },
+  {
+    "sample": 20,
+    "operation": "update",
+    "order_id": "DEMO_MEASURE12_d605e4cf16_O",
+    "request_to_ack_seconds": 0.010833398999238852,
+    "request_to_dw_observed_seconds": 0.5166707889984536,
+    "request_to_ml_observed_seconds": 1.0418242649993772,
+    "ack_to_dw_observed_seconds": 0.5058373899992148,
+    "ack_to_ml_observed_seconds": 1.0309908660001383
+  },
+  {
+    "sample": 20,
+    "operation": "delete",
+    "order_id": "DEMO_MEASURE12_d605e4cf16_O",
+    "request_to_ack_seconds": 0.032495015000677085,
+    "request_to_dw_observed_seconds": 1.1562153340000805,
+    "request_to_ml_observed_seconds": 2.087173226000232,
+    "ack_to_dw_observed_seconds": 1.1237203189994034,
+    "ack_to_ml_observed_seconds": 2.0546782109995547
+  }
+]

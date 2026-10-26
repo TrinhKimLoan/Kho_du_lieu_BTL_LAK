@@ -1,0 +1,11 @@
+﻿{
+    "cpu":  [
+                {
+                    "Name":  "12th Gen Intel(R) Core(TM) i5-12450H",
+                    "NumberOfCores":  8,
+                    "NumberOfLogicalProcessors":  12
+                }
+            ],
+    "ram_gib":  15.7,
+    "captured_at_utc":  "2026-10-26T08:14:21.3066714Z"
+}

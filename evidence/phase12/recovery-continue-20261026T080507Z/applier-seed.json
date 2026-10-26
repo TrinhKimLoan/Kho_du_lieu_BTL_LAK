@@ -1,0 +1,11 @@
+{
+  "phase": 4,
+  "command": "recovery-seed",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:05:21.842692+00:00",
+  "result": {
+    "suffix": "RECOVERY_6e44842a",
+    "order_id": "DEMO_RECOVERY_6e44842a_O",
+    "source_insert_committed": true
+  }
+}

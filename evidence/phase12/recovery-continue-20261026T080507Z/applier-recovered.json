@@ -1,0 +1,11 @@
+{
+  "phase": 4,
+  "command": "recovery-finish",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:05:27.019975+00:00",
+  "result": {
+    "source_change_during_worker_downtime_recovered": true,
+    "insert_update_delete_verified": true,
+    "historical_fact_state_sha256": "8a86593176d87fad40a4a116038aeba8bd2199c85b9e0a0bcab2f5a292b543ea"
+  }
+}

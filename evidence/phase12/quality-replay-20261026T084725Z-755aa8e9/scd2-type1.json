@@ -1,0 +1,21 @@
+{
+  "phase": 5,
+  "command": "dimensions",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:47:56.875298+00:00",
+  "result": {
+    "passed": true,
+    "steps": [
+      "product name/category create adjacent SCD2 version",
+      "customer geography updates Type 1 with same key",
+      "existing order retains original version/category after update",
+      "new order uses current product version/category",
+      "catalog price is staging-only and does not create a dimension version"
+    ],
+    "historical_facts_unchanged": true,
+    "product_id": "DEMO_SCD5_6f2ac179_P",
+    "source_demo_rows_removed": true,
+    "old_product_key": 54,
+    "new_product_key": 55
+  }
+}

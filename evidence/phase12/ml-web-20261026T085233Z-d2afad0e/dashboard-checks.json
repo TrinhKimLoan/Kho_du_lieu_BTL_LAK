@@ -1,0 +1,53 @@
+{
+  "phase": 11,
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:52:46.247280+00:00",
+  "browser_visual_verified": false,
+  "queries": {
+    "read_only_queries_passed": true,
+    "overview_olap_reconciled": true,
+    "current_fact_matches_mart": true,
+    "sales_orders": "10000",
+    "customer_assignments": 3282,
+    "shipping_test_rows": 1599,
+    "observed_news_in_default_period": 1247,
+    "connector": {
+      "connector": "RUNNING",
+      "tasks": [
+        {
+          "task": 0,
+          "state": "RUNNING"
+        }
+      ]
+    },
+    "demo_lookup_safe": true,
+    "query_time": "2026-10-26 08:52:47.019625+00:00",
+    "mart_snapshot": {
+      "source_observed_at": "2026-10-26 08:45:06.419507+00:00",
+      "refreshed_at": "2026-10-26 08:45:07.945016+00:00",
+      "sales_facts": 10000,
+      "news_facts": 2145
+    },
+    "pinned_models": {
+      "rfm_model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+      "delivery_model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+      "reference_date": "2026-01-01"
+    }
+  },
+  "app": {
+    "pages_executed": [
+      "overview",
+      "olap",
+      "customers",
+      "shipping",
+      "news",
+      "detail",
+      "operations",
+      "demo"
+    ],
+    "cold_import_verified": true,
+    "source": "actual warehouse connections; no fixture provider",
+    "ui_test_type": "Streamlit AppTest execution, not a browser visual inspection",
+    "demo_mutations_performed": false
+  }
+}

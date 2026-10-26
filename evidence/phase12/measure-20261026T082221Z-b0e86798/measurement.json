@@ -1,0 +1,144 @@
+{
+  "phase": 12,
+  "stage": "measurements",
+  "passed": true,
+  "started_at_utc": "2026-10-26T08:22:31.779352+00:00",
+  "script_sha256": "e7b97de362582cb1a5f1762402ce298e90b17ff2470d6f2fad311fa4d9e84eb4",
+  "method": {
+    "samples_per_operation": 20,
+    "operations": [
+      "insert",
+      "update",
+      "delete"
+    ],
+    "poll_seconds": 0.1,
+    "clock": "one process perf_counter monotonic",
+    "start": "before source action; includes identity/SQL/commit round trip",
+    "ack": "after source action returns",
+    "end": "polling sees matching committed DW state, then matching RFM and delivery outcome",
+    "limitations": [
+      "Observed upper-bound timings, not exact binlog-commit timestamps.",
+      "Serial demo workload, no concurrency or capacity claim.",
+      "ML observed after DW check; may already have been ready.",
+      "Does not measure 15-minute scheduled mart propagation or browser rendering.",
+      "n=20 p95 is descriptive and unstable, no production SLA claim."
+    ]
+  },
+  "latency": {
+    "insert": {
+      "request_to_ack_seconds": {
+        "n": 20,
+        "mean_seconds": 0.017705344350270026,
+        "median_seconds": 0.016387169000154245,
+        "p95_seconds": 0.026055705600174416,
+        "max_seconds": 0.04074818899971433
+      },
+      "request_to_dw_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.0712961199999882,
+        "median_seconds": 1.0391306335013724,
+        "p95_seconds": 1.5711785075488478,
+        "max_seconds": 1.629270125000403
+      },
+      "request_to_ml_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.6165356441999392,
+        "median_seconds": 1.9416484984994895,
+        "p95_seconds": 2.053820275149792,
+        "max_seconds": 2.08928638100042
+      },
+      "ack_to_dw_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.053590775649718,
+        "median_seconds": 1.0148679785006607,
+        "p95_seconds": 1.5319166073491033,
+        "max_seconds": 1.618247712000084
+      },
+      "ack_to_ml_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.5988302998496693,
+        "median_seconds": 1.9265079219994732,
+        "p95_seconds": 2.0347643015999894,
+        "max_seconds": 2.0485381920007057
+      }
+    },
+    "update": {
+      "request_to_ack_seconds": {
+        "n": 20,
+        "mean_seconds": 0.0152060051999797,
+        "median_seconds": 0.015558730500742968,
+        "p95_seconds": 0.023423302249921108,
+        "max_seconds": 0.02422187700176437
+      },
+      "request_to_dw_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.0442050193500108,
+        "median_seconds": 0.9754286094994313,
+        "p95_seconds": 1.6354880916001093,
+        "max_seconds": 1.6508622569999716
+      },
+      "request_to_ml_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.5044517574002385,
+        "median_seconds": 1.4725180975001422,
+        "p95_seconds": 2.057986349899238,
+        "max_seconds": 2.0684707760010497
+      },
+      "ack_to_dw_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.0289990141500311,
+        "median_seconds": 0.9601733409990629,
+        "p95_seconds": 1.6174327335512317,
+        "max_seconds": 1.6310138299995742
+      },
+      "ack_to_ml_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.4892457522002587,
+        "median_seconds": 1.4554107620006107,
+        "p95_seconds": 2.0389752608984963,
+        "max_seconds": 2.0442488989992853
+      }
+    },
+    "delete": {
+      "request_to_ack_seconds": {
+        "n": 20,
+        "mean_seconds": 0.021932157700211972,
+        "median_seconds": 0.01874819650038262,
+        "p95_seconds": 0.037295397150410296,
+        "max_seconds": 0.05683334700006526
+      },
+      "request_to_dw_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.0866561018503489,
+        "median_seconds": 1.0984161510004924,
+        "p95_seconds": 1.6405240659006268,
+        "max_seconds": 1.6589207190008892
+      },
+      "request_to_ml_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.6570936665503724,
+        "median_seconds": 1.9670157635009673,
+        "p95_seconds": 2.0656921148000036,
+        "max_seconds": 2.087173226000232
+      },
+      "ack_to_dw_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.064723944150137,
+        "median_seconds": 1.0643852535004044,
+        "p95_seconds": 1.6241676588994778,
+        "max_seconds": 1.6322579139996378
+      },
+      "ack_to_ml_observed_seconds": {
+        "n": 20,
+        "mean_seconds": 1.6351615088501603,
+        "median_seconds": 1.9358142710007087,
+        "p95_seconds": 2.0423959089504025,
+        "max_seconds": 2.0546782109995547
+      }
+    }
+  },
+  "historical_facts_unchanged": true,
+  "no_retraining": true,
+  "query_cases": 6,
+  "finished_at_utc": "2026-10-26T08:24:32.398108+00:00"
+}

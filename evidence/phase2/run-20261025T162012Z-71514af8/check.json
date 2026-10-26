@@ -1,0 +1,13 @@
+﻿{
+    "phase":  2,
+    "passed":  true,
+    "checked_at_utc":  "2026-10-25T16:20:16.2136034Z",
+    "image":  "postgres:16.15-trixie",
+    "image_id":  "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+    "schema_sha256":  "5375a9ee6f1e756d3336a15d32afc287372795f90dd0a2539b2e6ac4aa7d43a8",
+    "checks_sha256":  "9011ac08bed9860ad0ca2b61ca20e5ce8044da8a56cbdbddb7185e89aec05264",
+    "temporary_container":  "lak-phase2-check-71514af8",
+    "binds_host_port":  false,
+    "uses_persistent_volume":  false,
+    "failure":  null
+}

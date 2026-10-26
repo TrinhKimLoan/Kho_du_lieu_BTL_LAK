@@ -1,0 +1,85 @@
+{
+  "phase": 5,
+  "command": "quality",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:47:26.404848+00:00",
+  "result": {
+    "error_findings": 0,
+    "warning_findings": 998,
+    "passed": true,
+    "run_id": "f2813371-dcf2-4c8a-b8ec-91d20ea77489",
+    "rule_counts": {
+      "UNKNOWN_MEMBERS": 0,
+      "SALES_DUPLICATE": 0,
+      "SALES_FOREIGN_KEYS": 0,
+      "SALES_MONEY": 0,
+      "DATE_ROLES": 0,
+      "SCD2_OVERLAP": 0,
+      "SCD2_CURRENT": 0,
+      "SCD2_BOUNDS": 0,
+      "FACT_PRODUCT_VERSION": 0,
+      "UNKNOWN_ANALYTICAL_KEYS": 0,
+      "ML_TARGET": 0,
+      "DEMO_ANALYSIS_LEAK": 0,
+      "PROJECTION_UNRESOLVED": 0,
+      "DISPATCH_BEFORE_PACK": 880,
+      "EXPECTED_BEFORE_DISPATCH": 118,
+      "RECEIVED_BEFORE_DISPATCH": 0,
+      "MISSING_DELIVERY_TIMES": 0
+    },
+    "reconciliation": {
+      "warehouse": {
+        "counts": {
+          "customers": 3282,
+          "products": 15,
+          "orders": 10000
+        },
+        "staging_digests": {
+          "customers": "a013a071cfe99f187830686c6168dd76c6cbbf4903ffa4de610893566360aaa6",
+          "products": "4fd584ee537e0e81714c06705d0193b016ffecc7dff8c484d3ff826ef561eb7b",
+          "orders": "59c12836ebacfbbd8439286700daf042b1a63c435e2c8fc0d1d2033c08ea56ee"
+        },
+        "fact_state_sha256": "8a86593176d87fad40a4a116038aeba8bd2199c85b9e0a0bcab2f5a292b543ea",
+        "money_totals_vnd": {
+          "orders": 10000,
+          "goods": "618293800000.00",
+          "vat": "61829380000.00",
+          "shipping_fee": "1138180904.00",
+          "total_paid": "681261360904.00"
+        }
+      },
+      "source": {
+        "source_epoch": "13168923-bbb9-4cac-ac2b-9af01a53c892",
+        "counts": {
+          "customers": 3282,
+          "products": 15,
+          "orders": 10000
+        },
+        "digests": {
+          "customers": "a013a071cfe99f187830686c6168dd76c6cbbf4903ffa4de610893566360aaa6",
+          "products": "4fd584ee537e0e81714c06705d0193b016ffecc7dff8c484d3ff826ef561eb7b",
+          "orders": "59c12836ebacfbbd8439286700daf042b1a63c435e2c8fc0d1d2033c08ea56ee"
+        },
+        "history_state_sha256": "e3efd13dee43746344c3cc2ad5402744aca705fd3f48dc09530da6775910246a",
+        "provenance_rows": 43297,
+        "money_totals_vnd": {
+          "goods": "618293800000.00",
+          "vat": "61829380000.00",
+          "shipping_fee": "1138180904.00",
+          "total_paid": "681261360904.00"
+        },
+        "demo_orders": 0,
+        "observations": {
+          "catalog_transaction_price_difference": 0,
+          "sent_before_pack_timestamp": 880,
+          "expected_before_sent_timestamp": 118,
+          "late_by_timestamp_unconfirmed_sla": 5170,
+          "late_by_date_unconfirmed_sla": 1987,
+          "order_location_differs_from_customer_profile": 6070
+        }
+      }
+    },
+    "warning_policy": "Retain anomalous sales; do not silently repair source timestamps.",
+    "failure": null
+  }
+}
