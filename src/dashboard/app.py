@@ -172,7 +172,7 @@ def customers(repo,filters):
     with evaluation:
         ev=model['metadata']['evaluation']
         kpis([('K được chọn',str(ev['selected_k']),'Chọn từ validation'),('Silhouette test',number(ev['test']['silhouette'],3),'Điểm hình học, không phải accuracy'),('Davies–Bouldin test',number(ev['test']['davies_bouldin'],3),'Thấp hơn thường tốt hơn')])
-        profile_rows=[dict(cluster_id=r['cluster_id'],display_name=r['display_name'],**r['profile']) for r in data['profiles']]
+        profile_rows=[{**r['profile'],'cluster_id':r['cluster_id'],'display_name':r['display_name']} for r in data['profiles']]
         table(profile_rows,'Hồ sơ nhóm trên snapshot huấn luyện','customer-profiles')
         st.markdown('**Gợi ý chăm sóc theo hồ sơ nhóm**')
         for row in data['profiles']:

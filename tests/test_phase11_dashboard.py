@@ -41,7 +41,10 @@ class FakeRepo:
     def customers(self):return {'model':model('kmeans_rfm'),'expected':2,
         'rows':[{'customer_id':'C1','cluster_id':0,'state':'ASSIGNED','recency_days':'12','frequency':'2','monetary':'200000.00','reference_date':date(2026,1,1)},
                 {'customer_id':'C2','cluster_id':1,'state':'ASSIGNED','recency_days':'35','frequency':'3','monetary':'300000.00','reference_date':date(2026,1,1)}],
-        'profiles':[{'cluster_id':0,'display_name':'Gần đây; mua ít','profile':{'name':'Gần đây','customers':1}}]}
+        'profiles':[{'cluster_id':i,'display_name':name,'customer_count':1,
+          'profile':{'cluster_id':i,'name':name,'customers':1,'share':.5,'median_R_days':r,'median_F_orders':f,
+                     'median_M_vnd':m,'monetary_total_vnd':str(m),'split_counts':{'train':1,'validation':0,'test':0}}}
+          for i,name,r,f,m in [(0,'Gần đây; mua ít; chi tiêu thấp',12,2,200000),(1,'Lâu chưa quay lại; mua thường xuyên; chi tiêu cao',35,3,300000)]]}
     def shipping(self,filters):return {'model':model('random_forest_delivery'),
         'actual':[{'order_id':'O1','delivery_hours':27,'shipping_method':'FAST','district':'D1','dispatched_at':datetime(2025,1,1)}],
         'live':[{'order_id':'O2','predicted_hours':28,'actual_hours':None,'state':'PENDING'}],
@@ -98,6 +101,16 @@ class DashboardTests(unittest.TestCase):
                 for page in ['overview','olap','customers','shipping','news','detail','operations','demo']:
                     at.radio(key='page').set_value(page).run()
                     self.assertFalse(at.exception,repr(at.exception));self.assertFalse(at.error,repr(at.error))
+    def test_customer_profile_with_nested_cluster_id(self):
+        with patch('src.dashboard.repository.Repository',FakeRepo):
+            at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run()
+            at.radio(key='page').set_value('customers').run()
+            self.assertFalse(at.exception);self.assertFalse(at.error)
+            tables=[element.value for element in at.dataframe if 'display_name' in element.value.columns]
+            self.assertEqual(len(tables),1)
+            self.assertEqual(tables[0]['Cụm'].tolist(),[0,1])
+            self.assertEqual(tables[0]['customers'].sum(),2)
+
     def test_ui_lookup(self):
         with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.demo.perform',return_value={'exists':False}):
             at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run()
