@@ -107,3 +107,10 @@ các lựa chọn vận hành được công bố trong business_definitions và
 Dịch vụ đã khởi động lại trên máy người dùng; PostgreSQL/MySQL/Kafka healthy, Connect/collector/applier/Airflow running. Phase 8 model/evidence còn nguyên theo kiểm tra thư mục; script Phase 9 sẽ xác minh tiếp model registry và predictions K-Means.
 
 Bổ sung Random Forest delivery theo hợp đồng Phase 1, snapshot thời gian, baseline, đánh giá test/nhóm/importance, model phiên bản và bảng sai số. Đã kiểm tra Python và huấn luyện offline trên Excel. PostgreSQL/PowerShell/Docker Phase 9 chờ máy người dùng; chưa chốt. Chi tiết: docs/phase9/run_guide.md.
+
+
+## Phase 9 đã đạt / Phase 10 chờ kiểm thử thực tế
+
+Người dùng xác nhận Phase 9: evidence/phase9/run-20261026T060146Z-fe4c3559, model rf-delivery-4a60b2b333abc46ef35bb5f6, test MAE 18.73291669322565 giờ, baseline 18.834618337850046 giờ. Chênh lệch khoảng 6,1 phút, nhỏ; không tuyên bố hiệu quả vận tải thật.
+
+Phase 10 bổ sung outbox PostgreSQL, worker cố định model, RFM theo thay đổi CDC/ngày logic, dự đoán giao hàng ban đầu bất biến và lịch sử outcome. Unit test Python đạt; SQL/CDC/worker restart/PowerShell chờ script trên máy người dùng. Chưa chốt Phase 10. Xem docs/phase10/run_guide.md.

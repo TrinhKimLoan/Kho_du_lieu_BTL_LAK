@@ -71,3 +71,8 @@ các pha sau đã chủ động sửa tệp, ví dụ .gitignore trong pha 3.
 ## Phase 9 — Random Forest giao hàng
 
 Sau Phase 8 đã kiểm thử đạt, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_phase9.ps1`. Script xác minh Phase 8 còn nguyên trong DB/artifact trước khi train RF. Xem docs/phase9/run_guide.md. PostgreSQL/Compose Phase 9 chờ kiểm thử tại máy triển khai.
+
+
+## Phase 10 — Suy luận sau CDC
+
+Sau Phase 9 đã đạt, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_phase10.ps1`. Có queue bền vững, worker riêng, ghim model và giữ nguyên dự đoán ban đầu. Xem docs/phase10/run_guide.md; chỉ chốt sau kiểm thử thực tế.

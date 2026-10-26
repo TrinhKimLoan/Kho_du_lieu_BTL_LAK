@@ -1,0 +1,14 @@
+{
+  "phase": 10,
+  "python_tests": {
+    "passed": true,
+    "count": 115,
+    "new_tests": 12
+  },
+  "compose_yaml_parsed": true,
+  "postgres_trigger_runtime_validated": false,
+  "cdc_to_inference_validated": false,
+  "worker_restart_validated": false,
+  "powershell_runtime_validated": false,
+  "runtime_evidence_required_on_user_machine": true
+}

@@ -1,0 +1,12 @@
+{
+  "phase": 10,
+  "update": "lak-phase10-v1",
+  "required_checkpoint": "Phase 9 passed on user machine: run-20261026T060146Z-fe4c3559",
+  "new_unit_tests": 12,
+  "postgres_trigger_validated": false,
+  "mysql_to_ml_validated": false,
+  "worker_restart_validated": false,
+  "powershell_runtime_validated": false,
+  "automatic_retraining": false,
+  "rfm_reference_date": "2026-01-01"
+}

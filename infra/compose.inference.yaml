@@ -1,0 +1,37 @@
+x-inference: &inference
+  image: lak-analytics-inference:phase10
+  build:
+    context: ..
+    dockerfile: infra/Dockerfile.lak-inference
+  environment:
+    PG_HOST: postgres
+    LAK_POSTGRES_PASSWORD: ${LAK_POSTGRES_PASSWORD:?Keep existing warehouse credentials}
+    MYSQL_HOST: mysql
+    MYSQL_PORT: '3306'
+    MYSQL_DATABASE: lak_source
+    MYSQL_USER: lak_app
+    MYSQL_PASSWORD: ${LAK_MYSQL_APP_PASSWORD:?Keep existing source credentials}
+    OMP_NUM_THREADS: '1'
+    OPENBLAS_NUM_THREADS: '1'
+    MKL_NUM_THREADS: '1'
+  volumes:
+    - ../evidence:/opt/project/evidence
+    - ../data/models:/opt/project/data/models:ro
+services:
+  inference-tools:
+    <<: *inference
+    profiles: [tools]
+  inference-worker:
+    <<: *inference
+    profiles: [ml-inference]
+    restart: unless-stopped
+    command: [worker]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "from src.cdc.store import pg; c=pg(); r=c.execute(\"SELECT safe_error IS NULL AND heartbeat_at>now()-interval '30 seconds' AS ok FROM audit.worker_heartbeats WHERE worker='ml-inference'\").fetchone(); c.close(); raise SystemExit(0 if r and r['ok'] else 1)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
