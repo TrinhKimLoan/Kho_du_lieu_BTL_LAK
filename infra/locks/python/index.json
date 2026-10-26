@@ -1,0 +1,68 @@
+{
+  "kind": "observed pip freeze --all for each image; separate environments, not one combined environment",
+  "packages": [
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-cdc-tools_phase4.txt",
+      "lock": "infra/locks/python/lak-analytics-cdc-tools_phase4.lock.txt",
+      "count": 12,
+      "removed_warning_lines": 0,
+      "sha256": "9ab76fc25f406e0373b8eddb6bba2efd3833aae8985618855da679bdc885d057"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-dashboard_phase11.txt",
+      "lock": "infra/locks/python/lak-analytics-dashboard_phase11.lock.txt",
+      "count": 47,
+      "removed_warning_lines": 0,
+      "sha256": "eca8e98d8ce11a670520d305ed2b307d8b33a6686637624c8871902121dcc4e9"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-delivery-tools_phase9.txt",
+      "lock": "infra/locks/python/lak-analytics-delivery-tools_phase9.lock.txt",
+      "count": 12,
+      "removed_warning_lines": 0,
+      "sha256": "258f3ba1af38f9b31006067e4876b5e8cf7a458674acd5010bf733327c38d6e1"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-inference_phase10.txt",
+      "lock": "infra/locks/python/lak-analytics-inference_phase10.lock.txt",
+      "count": 16,
+      "removed_warning_lines": 0,
+      "sha256": "70879ffdc2fce484d6c4345661f1f12c8b75bc8f330b53b36b0cfca3b0dc4a1f"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-mart-tools_phase7.txt",
+      "lock": "infra/locks/python/lak-analytics-mart-tools_phase7.lock.txt",
+      "count": 12,
+      "removed_warning_lines": 0,
+      "sha256": "9ab76fc25f406e0373b8eddb6bba2efd3833aae8985618855da679bdc885d057"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-ml-tools_phase8.txt",
+      "lock": "infra/locks/python/lak-analytics-ml-tools_phase8.lock.txt",
+      "count": 12,
+      "removed_warning_lines": 0,
+      "sha256": "258f3ba1af38f9b31006067e4876b5e8cf7a458674acd5010bf733327c38d6e1"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-news-airflow_phase6.txt",
+      "lock": "infra/locks/python/lak-analytics-news-airflow_phase6.lock.txt",
+      "count": 377,
+      "removed_warning_lines": 1,
+      "sha256": "6f16282eb8cb38a9915c12602263390504a86b192b608f1d3aa3505d59498c85"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-news-tools_phase6.txt",
+      "lock": "infra/locks/python/lak-analytics-news-tools_phase6.lock.txt",
+      "count": 12,
+      "removed_warning_lines": 0,
+      "sha256": "9ab76fc25f406e0373b8eddb6bba2efd3833aae8985618855da679bdc885d057"
+    },
+    {
+      "source": "docs/phase13/inventory/packages-lak-analytics-source-tools_latest.txt",
+      "lock": "infra/locks/python/lak-analytics-source-tools_latest.lock.txt",
+      "count": 8,
+      "removed_warning_lines": 0,
+      "sha256": "8b38e653350636d5fe640801873b341e2319ff284a6214179d6d2b74ca4d9d9a"
+    }
+  ]
+}

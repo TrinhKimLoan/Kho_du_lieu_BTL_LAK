@@ -1,0 +1,89 @@
+{
+  "services": {
+    "mysql": {
+      "image": "mysql:8.0.46-oraclelinux9",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "postgres": {
+      "image": "postgres:16.15-trixie",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "kafka": {
+      "image": "apache/kafka:3.9.1",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "connect": {
+      "image": "quay.io/debezium/connect:3.2",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "source-tools": {
+      "image": "lak-analytics-source-tools:latest",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "cdc-tools": {
+      "image": "lak-analytics-cdc-tools:phase4",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "collector": {
+      "image": "lak-analytics-cdc-tools:phase4",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "applier": {
+      "image": "lak-analytics-cdc-tools:phase4",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "news-tools": {
+      "image": "lak-analytics-news-tools:phase6",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "news-airflow": {
+      "image": "lak-analytics-news-airflow:phase6",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "mart-tools": {
+      "image": "lak-analytics-mart-tools:phase7",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "ml-tools": {
+      "image": "lak-analytics-ml-tools:phase8",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "delivery-tools": {
+      "image": "lak-analytics-delivery-tools:phase9",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "inference-tools": {
+      "image": "lak-analytics-inference:phase10",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "inference-worker": {
+      "image": "lak-analytics-inference:phase10",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "dashboard-tools": {
+      "image": "lak-analytics-dashboard:phase11",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    },
+    "dashboard": {
+      "image": "lak-analytics-dashboard:phase11",
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    }
+  }
+}

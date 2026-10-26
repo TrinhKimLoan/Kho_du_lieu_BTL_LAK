@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "inventory_git_head": "2534fc1abb2a17eb8b2da29d9e22a32117d07c79",
+  "inventory_timestamp_utc": "2026-10-26T09:14:25Z",
+  "platform": "linux/amd64",
+  "images": [
+    {
+      "id": "sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed",
+      "tags": [
+        "apache/kafka:3.9.1"
+      ],
+      "digests": [
+        "apache/kafka@sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-apache_kafka_3.9.1.json"
+    },
+    {
+      "id": "sha256:afc8f33905ba66e81ce7c656822e001019e41c239963cd9a5abeb7b3e5d5452b",
+      "tags": [
+        "lak-analytics-cdc-tools:phase4"
+      ],
+      "digests": [
+        "lak-analytics-cdc-tools@sha256:afc8f33905ba66e81ce7c656822e001019e41c239963cd9a5abeb7b3e5d5452b"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-cdc-tools_phase4.json"
+    },
+    {
+      "id": "sha256:3d310c9d2709edf77aa9bff2780418865babb7cf4c97e6293dc1ef773eba9e61",
+      "tags": [
+        "lak-analytics-dashboard:phase11"
+      ],
+      "digests": [
+        "lak-analytics-dashboard@sha256:3d310c9d2709edf77aa9bff2780418865babb7cf4c97e6293dc1ef773eba9e61"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-dashboard_phase11.json"
+    },
+    {
+      "id": "sha256:79925d46b468bd79d7d2f32968fca474ce0d760a488ba7e02337d3b0649bf821",
+      "tags": [
+        "lak-analytics-delivery-tools:phase9"
+      ],
+      "digests": [
+        "lak-analytics-delivery-tools@sha256:79925d46b468bd79d7d2f32968fca474ce0d760a488ba7e02337d3b0649bf821"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-delivery-tools_phase9.json"
+    },
+    {
+      "id": "sha256:5d9382bfbf905a10c2ace8bc9c0e3a1153548ca086cf9b2ad47274005ce42446",
+      "tags": [
+        "lak-analytics-inference:phase10"
+      ],
+      "digests": [
+        "lak-analytics-inference@sha256:5d9382bfbf905a10c2ace8bc9c0e3a1153548ca086cf9b2ad47274005ce42446"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-inference_phase10.json"
+    },
+    {
+      "id": "sha256:0ff52539bc170094f15cf15879ad4e99e50aff6ebce430d4b5a11a15c363aeb7",
+      "tags": [
+        "lak-analytics-mart-tools:phase7"
+      ],
+      "digests": [
+        "lak-analytics-mart-tools@sha256:0ff52539bc170094f15cf15879ad4e99e50aff6ebce430d4b5a11a15c363aeb7"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-mart-tools_phase7.json"
+    },
+    {
+      "id": "sha256:b6033015119ae31b418fde6964a3eb926b9268e3de78220d85b50984c2540d92",
+      "tags": [
+        "lak-analytics-ml-tools:phase8"
+      ],
+      "digests": [
+        "lak-analytics-ml-tools@sha256:b6033015119ae31b418fde6964a3eb926b9268e3de78220d85b50984c2540d92"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-ml-tools_phase8.json"
+    },
+    {
+      "id": "sha256:f9ef7a46ef5c1526d49836ad5c2dbff10d156a84ee3655da27ab4f68b41196b0",
+      "tags": [
+        "lak-analytics-news-airflow:phase6"
+      ],
+      "digests": [
+        "lak-analytics-news-airflow@sha256:f9ef7a46ef5c1526d49836ad5c2dbff10d156a84ee3655da27ab4f68b41196b0"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-news-airflow_phase6.json"
+    },
+    {
+      "id": "sha256:ffabc48ded79babc5cabca6d5b5820296e1d8db4977486616dc9a82de3ccb8ab",
+      "tags": [
+        "lak-analytics-news-tools:phase6"
+      ],
+      "digests": [
+        "lak-analytics-news-tools@sha256:ffabc48ded79babc5cabca6d5b5820296e1d8db4977486616dc9a82de3ccb8ab"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-news-tools_phase6.json"
+    },
+    {
+      "id": "sha256:9ddbd468d2d4e26dae4c450f2d53ccb7c0addc9dd40a7566219b61de6e5fc441",
+      "tags": [
+        "lak-analytics-source-tools:latest"
+      ],
+      "digests": [
+        "lak-analytics-source-tools@sha256:9ddbd468d2d4e26dae4c450f2d53ccb7c0addc9dd40a7566219b61de6e5fc441"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-lak-analytics-source-tools_latest.json"
+    },
+    {
+      "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "tags": [
+        "mysql:8.0.46-oraclelinux9"
+      ],
+      "digests": [
+        "mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-mysql_8.0.46-oraclelinux9.json"
+    },
+    {
+      "id": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+      "tags": [
+        "postgres:16.15-trixie"
+      ],
+      "digests": [
+        "postgres@sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-postgres_16.15-trixie.json"
+    },
+    {
+      "id": "sha256:bb7a4e3e44afe245fbb5b84b2acb3d8f29cceb9d6ab97d84d32311c7b167126c",
+      "tags": [
+        "quay.io/debezium/connect:3.2"
+      ],
+      "digests": [
+        "quay.io/debezium/connect@sha256:bb7a4e3e44afe245fbb5b84b2acb3d8f29cceb9d6ab97d84d32311c7b167126c"
+      ],
+      "os": "linux",
+      "architecture": "amd64",
+      "inventory_file": "docs/phase13/inventory/image-quay.io_debezium_connect_3.2.json"
+    }
+  ],
+  "services": {
+    "mysql": "mysql:8.0.46-oraclelinux9",
+    "postgres": "postgres:16.15-trixie",
+    "kafka": "apache/kafka:3.9.1",
+    "connect": "quay.io/debezium/connect:3.2",
+    "source-tools": "lak-analytics-source-tools:latest",
+    "cdc-tools": "lak-analytics-cdc-tools:phase4",
+    "collector": "lak-analytics-cdc-tools:phase4",
+    "applier": "lak-analytics-cdc-tools:phase4",
+    "news-tools": "lak-analytics-news-tools:phase6",
+    "news-airflow": "lak-analytics-news-airflow:phase6",
+    "mart-tools": "lak-analytics-mart-tools:phase7",
+    "ml-tools": "lak-analytics-ml-tools:phase8",
+    "delivery-tools": "lak-analytics-delivery-tools:phase9",
+    "inference-tools": "lak-analytics-inference:phase10",
+    "inference-worker": "lak-analytics-inference:phase10",
+    "dashboard-tools": "lak-analytics-dashboard:phase11",
+    "dashboard": "lak-analytics-dashboard:phase11"
+  },
+  "policy": "Verify local tag ID against observed ID before start/export; never pull or build implicitly. Repository digests are observed metadata; locally built images may not be fetchable from a registry."
+}

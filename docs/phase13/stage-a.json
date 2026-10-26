@@ -1,0 +1,19 @@
+{
+  "phase": 13,
+  "stage": "A",
+  "state": "IMPLEMENTED_PENDING_USER_CHECK",
+  "scope": [
+    "observed image and package locks",
+    "model checksum inventory",
+    "operations wrapper",
+    "source-model-evidence candidate package"
+  ],
+  "phase13_complete": false,
+  "remaining": [
+    "explicit data and Docker image export",
+    "isolated rebuild from candidate and explicit exports",
+    "rebuild evidence",
+    "final release checksum and final defense documentation"
+  ],
+  "inventory_normalization": "Windows native argument quoting removed JSON object key quotes in image-* files. Only known identifier keys were re-quoted by regex, then parsed with json.loads and validated. Original bytes retained. One Airflow pip cache warning excluded from package constraints; raw warning retained."
+}

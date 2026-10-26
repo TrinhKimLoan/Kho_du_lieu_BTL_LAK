@@ -1,0 +1,141 @@
+{
+  "stage": "13A",
+  "tests": {
+    "release_artifact_safety_tests": 5,
+    "passed": true,
+    "fixture_scope": "synthetic temporary Git repository and dummy model bytes; no claim to execute user models or Docker"
+  },
+  "inventory_files": [
+    {
+      "path": "docs/phase13/inventory/containers.jsonl",
+      "sha256": "1bee27624e40fae1699bd35687a63976211fbd2e8c2bbf37c5b4af83b7e9a8ef",
+      "bytes": 13851
+    },
+    {
+      "path": "docs/phase13/inventory/git-head.txt",
+      "sha256": "24a1080aeecbdbdab86a053e1de72c22895b761c77ff64b76b5014bb16b58aeb",
+      "bytes": 45
+    },
+    {
+      "path": "docs/phase13/inventory/git-status.txt",
+      "sha256": "54c251045ad505c0ed654e0ebd18a9d46291c663a0c98e3e52b659b56862bc5e",
+      "bytes": 128
+    },
+    {
+      "path": "docs/phase13/inventory/image-apache_kafka_3.9.1.json",
+      "sha256": "6bea94d1a9e384d7e061bde43500ad18d260be5aa21af4aea0b623f12e2879fd",
+      "bytes": 240
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-cdc-tools_phase4.json",
+      "sha256": "d9758eb920b1acf1ffb1dca80ee242853009a371a6521bbd2bfbec83ceb23edd",
+      "bytes": 263
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-dashboard_phase11.json",
+      "sha256": "7db012d77bf38aadeb31fbbe2842c6d946feed981dbb06892bfb9444763b23ce",
+      "bytes": 264
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-delivery-tools_phase9.json",
+      "sha256": "9351324c8fc5eafbb4e1fc270bcdf55531e0923c6293df362b953207c2637cab",
+      "bytes": 273
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-inference_phase10.json",
+      "sha256": "0b5a05c3108bf698a88ee34fcc3753fffbb34aacd0c7609b80d2e2af78c4f61a",
+      "bytes": 264
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-mart-tools_phase7.json",
+      "sha256": "6e4fea3e5f49fef8d48654ac751a7aea8472f22f5bb137faa94cfb0bf51eb104",
+      "bytes": 265
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-ml-tools_phase8.json",
+      "sha256": "ec8ce9e82b903b83c6426897f18f9421aa85236e361a76b37b5ca0216d6fecb6",
+      "bytes": 261
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-news-airflow_phase6.json",
+      "sha256": "821752884113de183aa2173a5cc85c110bd7e12caca0bc1854e2db22373c44c9",
+      "bytes": 269
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-news-tools_phase6.json",
+      "sha256": "8b404034722c749498016993a270b0a2389d730094b50fa3a035fb16ac77ce1c",
+      "bytes": 265
+    },
+    {
+      "path": "docs/phase13/inventory/image-lak-analytics-source-tools_latest.json",
+      "sha256": "b96dad69fd46f25d39dbac4f1ce1884eb8ad42a5f3fe5926d100d543c1c8189b",
+      "bytes": 269
+    },
+    {
+      "path": "docs/phase13/inventory/image-mysql_8.0.46-oraclelinux9.json",
+      "sha256": "a67ab4075bd2695b78af48332cc0700a803614453a3d15b17fe40b652a356f4c",
+      "bytes": 240
+    },
+    {
+      "path": "docs/phase13/inventory/image-postgres_16.15-trixie.json",
+      "sha256": "7fccf3a839b4d42a5acf9078ff7ff61e5c98313f88ba0d2d4402f0682a7b97c3",
+      "bytes": 239
+    },
+    {
+      "path": "docs/phase13/inventory/image-quay.io_debezium_connect_3.2.json",
+      "sha256": "3d91ee74c18cf66e2a84a6ab80f940467b4b6f009f5b61b23bb23c490ce41284",
+      "bytes": 262
+    },
+    {
+      "path": "docs/phase13/inventory/models-inventory.json",
+      "sha256": "a86a1694b608d65b135a8839e51eaedb675c954a0c28aaf29b261f228d7023af",
+      "bytes": 4168
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-cdc-tools_phase4.txt",
+      "sha256": "ae526e37e1b08a67a9a5887074d0895cebcd65917c154ac2ef1109ade49dd918",
+      "bytes": 224
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-dashboard_phase11.txt",
+      "sha256": "e0caa4dd2e1cf02faa4833268949c3405d57b7296375aa61c89b87a421f14af7",
+      "bytes": 827
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-delivery-tools_phase9.txt",
+      "sha256": "cd59b6993f720189aa184ddb718ea8f559fd100a9ba780c4bb849e02aef09cd0",
+      "bytes": 219
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-inference_phase10.txt",
+      "sha256": "eefa93e1ceee97f524b171696c852b827930050ffc7df50f15bd570c9a977863",
+      "bytes": 287
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-mart-tools_phase7.txt",
+      "sha256": "ae526e37e1b08a67a9a5887074d0895cebcd65917c154ac2ef1109ade49dd918",
+      "bytes": 224
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-ml-tools_phase8.txt",
+      "sha256": "cd59b6993f720189aa184ddb718ea8f559fd100a9ba780c4bb849e02aef09cd0",
+      "bytes": 219
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-news-airflow_phase6.txt",
+      "sha256": "4f31398b321bca2d1d5024615f3e99df22535cf70d6b4d6235f88b2c1d11cbcf",
+      "bytes": 9336
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-news-tools_phase6.txt",
+      "sha256": "ae526e37e1b08a67a9a5887074d0895cebcd65917c154ac2ef1109ade49dd918",
+      "bytes": 224
+    },
+    {
+      "path": "docs/phase13/inventory/packages-lak-analytics-source-tools_latest.txt",
+      "sha256": "9616bf88abd081abf9632e7fbd10a2f3190253a515e62e48a52a5689a84f7def",
+      "bytes": 134
+    }
+  ],
+  "full_phase13_complete": false
+}
