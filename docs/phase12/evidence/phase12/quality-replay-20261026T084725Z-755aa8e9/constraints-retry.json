@@ -1,0 +1,21 @@
+{
+  "phase": 5,
+  "command": "fixtures",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:47:53.240780+00:00",
+  "result": {
+    "passed": true,
+    "cases": [
+      "adjacent_scd2_bounds_accepted",
+      "overlap_rejected",
+      "second_current_rejected",
+      "bad_money_rejected",
+      "orphan_product_rejected",
+      "wrong_date_role_rejected",
+      "unknown_infinite_boundary_preserved",
+      "retry_request_idempotent_and_processed_error_resolves"
+    ],
+    "data_fixtures_rolled_back": true,
+    "retry_scope": "database lifecycle fixture; not a process crash or poison-event recovery test"
+  }
+}

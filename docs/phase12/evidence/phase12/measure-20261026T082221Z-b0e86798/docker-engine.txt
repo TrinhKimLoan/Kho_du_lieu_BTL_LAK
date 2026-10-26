@@ -1,0 +1,1 @@
+﻿Docker=29.1.5 CPU=12 MemoryBytes=8167567360 OS=linux

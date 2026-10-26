@@ -1,0 +1,42 @@
+{
+  "phase": 10,
+  "command": "init",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T08:06:16.565800+00:00",
+  "result": {
+    "config": {
+      "singleton": true,
+      "rfm_model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+      "delivery_model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+      "reference_date": "2026-01-01",
+      "configured_at": "2026-10-26 06:21:16.081709+00:00"
+    },
+    "phase8_verified": true,
+    "phase9_verified": true,
+    "rfm_bootstrap_jobs": 3,
+    "pending_delivery_jobs": 0,
+    "rf_test": {
+      "bias_hours": -1.391268937223672,
+      "count": 1599,
+      "mae_hours": 18.73291669322565,
+      "rmse_hours": 22.90631103931566
+    },
+    "rf_baseline_test": {
+      "by_shipping_method": {
+        "bias_hours": -1.7858632131193104,
+        "count": 1599,
+        "mae_hours": 18.834618337850046,
+        "rmse_hours": 23.09008261311469
+      },
+      "global": {
+        "bias_hours": -9.791211607949421,
+        "count": 1599,
+        "mae_hours": 47.81122689528178,
+        "rmse_hours": 61.30824964396973
+      }
+    },
+    "rf_improvement_small": true,
+    "models_retrained": false,
+    "delivery_history_not_backfilled_as_live": true
+  }
+}
