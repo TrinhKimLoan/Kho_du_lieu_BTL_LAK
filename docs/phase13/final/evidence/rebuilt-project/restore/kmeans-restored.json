@@ -1,0 +1,125 @@
+{
+  "phase": 8,
+  "command": "verify",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:05:40.837275+00:00",
+  "result": {
+    "passed": true,
+    "model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+    "snapshot_id": "rfm-5947867dc7b06aef6013df70",
+    "customers": 3282,
+    "split_counts": {
+      "test": 657,
+      "train": 1969,
+      "validation": 656
+    },
+    "selected_k": 2,
+    "validation_selected": {
+      "cluster_sizes": {
+        "0": 393,
+        "1": 263
+      },
+      "davies_bouldin": 0.9100343823878982,
+      "metric_space": "train-fitted clipped log1p standardized RFM",
+      "minimum_cluster_fraction": 0.4009146341463415,
+      "silhouette": 0.432779419708165
+    },
+    "test": {
+      "cluster_sizes": {
+        "0": 394,
+        "1": 263
+      },
+      "davies_bouldin": 0.9598059858889026,
+      "metric_space": "train-fitted clipped log1p standardized RFM",
+      "minimum_cluster_fraction": 0.4003044140030441,
+      "silhouette": 0.40426584705518676
+    },
+    "business_baseline": {
+      "rule": "three median thresholds fitted on train: recent R, frequent F, high M, eight bit-pattern groups",
+      "test": {
+        "cluster_sizes": {
+          "0": 150,
+          "1": 31,
+          "2": 51,
+          "3": 63,
+          "4": 60,
+          "5": 16,
+          "6": 66,
+          "7": 220
+        },
+        "davies_bouldin": 1.179549374590565,
+        "metric_space": "train-fitted clipped log1p standardized RFM",
+        "minimum_cluster_fraction": 0.0243531202435312,
+        "silhouette": 0.1658184267748631
+      },
+      "thresholds": [
+        630.0,
+        2.0,
+        104000000.0
+      ],
+      "validation": {
+        "cluster_sizes": {
+          "0": 148,
+          "1": 39,
+          "2": 52,
+          "3": 67,
+          "4": 62,
+          "5": 12,
+          "6": 55,
+          "7": 221
+        },
+        "davies_bouldin": 1.2002345451236165,
+        "metric_space": "train-fitted clipped log1p standardized RFM",
+        "minimum_cluster_fraction": 0.018292682926829267,
+        "silhouette": 0.18518945239550424
+      }
+    },
+    "profiles": [
+      {
+        "cluster_id": 0,
+        "customers": 1993,
+        "median_F_orders": 1.0,
+        "median_M_vnd": 51200000.0,
+        "median_R_days": 994.0,
+        "monetary_total_vnd": "154287100000.00",
+        "name": "Lâu chưa quay lại; tần suất trung bình; chi tiêu thấp",
+        "share": 0.6072516758074344,
+        "split_counts": {
+          "test": 394,
+          "train": 1206,
+          "validation": 393
+        }
+      },
+      {
+        "cluster_id": 1,
+        "customers": 1289,
+        "median_F_orders": 5.0,
+        "median_M_vnd": 288600000.0,
+        "median_R_days": 224.0,
+        "monetary_total_vnd": "464006700000.00",
+        "name": "Gần đây; mua thường xuyên; chi tiêu cao",
+        "share": 0.3927483241925655,
+        "split_counts": {
+          "test": 263,
+          "train": 763,
+          "validation": 263
+        }
+      }
+    ],
+    "preprocessing_train_only": true,
+    "predictions_reproduce": true,
+    "artifact_checksums_valid": true,
+    "active": true,
+    "manifest_sha256": "1068a37c944d2d145bc5ca74fa6aaf02336469fafb7f8d4681a2e618236ea175",
+    "artifact_relpath": "kmeans_rfm/km-rfm-6ea5a87000cce054c9fa28c9",
+    "snapshot_observations": {
+      "after_reference": 0,
+      "eligible_orders": 10000,
+      "analytical_orders": 10000,
+      "eligible_customers": 3282,
+      "missing_packed_time": 0,
+      "eligible_monetary_vnd": "618293800000.00"
+    },
+    "future_behavior_validated": false
+  }
+}

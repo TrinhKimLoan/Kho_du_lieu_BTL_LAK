@@ -1,0 +1,375 @@
+Loaded image: apache/kafka:3.9.1
+Loaded image: lak-analytics-cdc-tools:phase4
+Loaded image: lak-analytics-dashboard:phase11
+Loaded image: lak-analytics-delivery-tools:phase9
+Loaded image: lak-analytics-inference:phase10
+Loaded image: lak-analytics-mart-tools:phase7
+Loaded image: lak-analytics-ml-tools:phase8
+Loaded image: lak-analytics-news-airflow:phase6
+Loaded image: lak-analytics-news-tools:phase6
+Loaded image: lak-analytics-source-tools:latest
+Loaded image: mysql:8.0.46-oraclelinux9
+Loaded image: postgres:16.15-trixie
+Loaded image: quay.io/debezium/connect:3.2
+ Network lak-rebuild-b406a316e7_default Creating 
+ Network lak-rebuild-b406a316e7_default Created 
+ Volume lak-rebuild-b406a316e7_warehouse_data Creating 
+ Volume lak-rebuild-b406a316e7_warehouse_data Created 
+ Volume lak-rebuild-b406a316e7_mysql_source_data Creating 
+ Volume lak-rebuild-b406a316e7_mysql_source_data Created 
+ Container lak-rebuild-b406a316e7-mysql-1 Creating 
+ Container lak-rebuild-b406a316e7-postgres-1 Creating 
+ Container lak-rebuild-b406a316e7-mysql-1 Created 
+ Container lak-rebuild-b406a316e7-postgres-1 Created 
+ Container lak-rebuild-b406a316e7-mysql-1 Starting 
+ Container lak-rebuild-b406a316e7-postgres-1 Starting 
+ Container lak-rebuild-b406a316e7-postgres-1 Started 
+ Container lak-rebuild-b406a316e7-mysql-1 Started 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-mysql-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-mysql-1 Healthy 
+time="2026-10-26T17:04:44+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:04:44+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-source-tools-run-d45d5860221a Creating 
+ Container lak-rebuild-b406a316e7-source-tools-run-d45d5860221a Created 
+{
+  "phase": 3,
+  "command": "check",
+  "passed": 1,
+  "checked_at_utc": "2026-10-26T10:04:47.822156+00:00",
+  "result": {
+    "source_epoch": "13168923-bbb9-4cac-ac2b-9af01a53c892",
+    "counts": {
+      "customers": 3282,
+      "products": 15,
+      "orders": 10000
+    },
+    "digests": {
+      "customers": "a013a071cfe99f187830686c6168dd76c6cbbf4903ffa4de610893566360aaa6",
+      "products": "4fd584ee537e0e81714c06705d0193b016ffecc7dff8c484d3ff826ef561eb7b",
+      "orders": "59c12836ebacfbbd8439286700daf042b1a63c435e2c8fc0d1d2033c08ea56ee"
+    },
+    "history_state_sha256": "e3efd13dee43746344c3cc2ad5402744aca705fd3f48dc09530da6775910246a",
+    "provenance_rows": 43297,
+    "money_totals_vnd": {
+      "goods": "618293800000.00",
+      "vat": "61829380000.00",
+      "shipping_fee": "1138180904.00",
+      "total_paid": "681261360904.00"
+    },
+    "demo_orders": 0,
+    "observations": {
+      "catalog_transaction_price_difference": 0,
+      "sent_before_pack_timestamp": 880,
+      "expected_before_sent_timestamp": 118,
+      "late_by_timestamp_unconfirmed_sla": 5170,
+      "late_by_date_unconfirmed_sla": 1987,
+      "order_location_differs_from_customer_profile": 6070
+    }
+  }
+}
+Evidence: /opt/project/evidence/phase13/restore/source-restored.json
+time="2026-10-26T17:05:16+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:05:17+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-mart-tools-run-aa4c540ac2fc Creating 
+ Container lak-rebuild-b406a316e7-mart-tools-run-aa4c540ac2fc Created 
+{
+  "phase": 7,
+  "command": "verify",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:05:20.153643+00:00",
+  "refresh": null,
+  "reconciliation": {
+    "passed": true,
+    "row_counts": {
+      "sales_cells": 9999,
+      "sales_daily": 9658,
+      "product_daily": 8623,
+      "customer_summary": 3282,
+      "delivery_daily": 8850,
+      "news_daily": 604,
+      "news_membership": 63,
+      "news_category_daily": 60
+    },
+    "totals": {
+      "order_count": "10000",
+      "customer_count": 3282,
+      "quantity_sum": "104960",
+      "goods_amount": "618293800000.00",
+      "vat_amount": "61829380000.00",
+      "shipping_fee": "1138180904.00",
+      "total_paid": "681261360904.00",
+      "delivered_orders": "10000",
+      "delivery_hours_sum": "1112905.1775000000000020",
+      "avg_order_goods": "61829380.000000000000",
+      "avg_delivery_hours": "111.2905177500000000"
+    },
+    "cube_grand_total_reconciled": true,
+    "cross_fact_sales_not_duplicated": true,
+    "snapshot": {
+      "singleton": true,
+      "refresh_id": "46a6714e-81c0-432c-b538-5d133bcf5cd4",
+      "source_observed_at": "2026-10-26 09:45:07.423533+00:00",
+      "refreshed_at": "2026-10-26 09:45:09.707125+00:00",
+      "sales_facts": 10000,
+      "news_facts": 2145,
+      "source_sha256": "f1ac79d47ec56c651f7925b2cd770960f029f74614df1fb78e5128354049f782",
+      "age_seconds": "1215.073898"
+    },
+    "all_news_totals": {
+      "article_count": "2145",
+      "source_count": 56
+    },
+    "relevant_news_totals": {
+      "article_count": 61,
+      "source_count": 8,
+      "weighted_articles": "61.00000000000000000000"
+    },
+    "sla_late_rate": null,
+    "sla_note": "No verified committed SLA; no SLA late rate is published."
+  },
+  "fixtures": null,
+  "olap_examples": [
+    "roll_up",
+    "drill_down",
+    "slice",
+    "dice",
+    "pivot"
+  ],
+  "source_facts_and_news_unchanged": true
+}
+Evidence: /opt/project/evidence/phase13/restore/mart-restored.json
+time="2026-10-26T17:05:34+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:05:34+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-inference-tools-run-a9d09623b7d3 Creating 
+ Container lak-rebuild-b406a316e7-inference-tools-run-a9d09623b7d3 Created 
+{
+  "phase": 8,
+  "command": "verify",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:05:40.837275+00:00",
+  "result": {
+    "passed": true,
+    "model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+    "snapshot_id": "rfm-5947867dc7b06aef6013df70",
+    "customers": 3282,
+    "split_counts": {
+      "test": 657,
+      "train": 1969,
+      "validation": 656
+    },
+    "selected_k": 2,
+    "validation_selected": {
+      "cluster_sizes": {
+        "0": 393,
+        "1": 263
+      },
+      "davies_bouldin": 0.9100343823878982,
+      "metric_space": "train-fitted clipped log1p standardized RFM",
+      "minimum_cluster_fraction": 0.4009146341463415,
+      "silhouette": 0.432779419708165
+    },
+    "test": {
+      "cluster_sizes": {
+        "0": 394,
+        "1": 263
+      },
+      "davies_bouldin": 0.9598059858889026,
+      "metric_space": "train-fitted clipped log1p standardized RFM",
+      "minimum_cluster_fraction": 0.4003044140030441,
+      "silhouette": 0.40426584705518676
+    },
+    "business_baseline": {
+      "rule": "three median thresholds fitted on train: recent R, frequent F, high M, eight bit-pattern groups",
+      "test": {
+        "cluster_sizes": {
+          "0": 150,
+          "1": 31,
+          "2": 51,
+          "3": 63,
+          "4": 60,
+          "5": 16,
+          "6": 66,
+          "7": 220
+        },
+        "davies_bouldin": 1.179549374590565,
+        "metric_space": "train-fitted clipped log1p standardized RFM",
+        "minimum_cluster_fraction": 0.0243531202435312,
+        "silhouette": 0.1658184267748631
+      },
+      "thresholds": [
+        630.0,
+        2.0,
+        104000000.0
+      ],
+      "validation": {
+        "cluster_sizes": {
+          "0": 148,
+          "1": 39,
+          "2": 52,
+          "3": 67,
+          "4": 62,
+          "5": 12,
+          "6": 55,
+          "7": 221
+        },
+        "davies_bouldin": 1.2002345451236165,
+        "metric_space": "train-fitted clipped log1p standardized RFM",
+        "minimum_cluster_fraction": 0.018292682926829267,
+        "silhouette": 0.18518945239550424
+      }
+    },
+    "profiles": [
+      {
+        "cluster_id": 0,
+        "customers": 1993,
+        "median_F_orders": 1.0,
+        "median_M_vnd": 51200000.0,
+        "median_R_days": 994.0,
+        "monetary_total_vnd": "154287100000.00",
+        "name": "Lâu chưa quay lại; tần suất trung bình; chi tiêu thấp",
+        "share": 0.6072516758074344,
+        "split_counts": {
+          "test": 394,
+          "train": 1206,
+          "validation": 393
+        }
+      },
+      {
+        "cluster_id": 1,
+        "customers": 1289,
+        "median_F_orders": 5.0,
+        "median_M_vnd": 288600000.0,
+        "median_R_days": 224.0,
+        "monetary_total_vnd": "464006700000.00",
+        "name": "Gần đây; mua thường xuyên; chi tiêu cao",
+        "share": 0.3927483241925655,
+        "split_counts": {
+          "test": 263,
+          "train": 763,
+          "validation": 263
+        }
+      }
+    ],
+    "preprocessing_train_only": true,
+    "predictions_reproduce": true,
+    "artifact_checksums_valid": true,
+    "active": true,
+    "manifest_sha256": "1068a37c944d2d145bc5ca74fa6aaf02336469fafb7f8d4681a2e618236ea175",
+    "artifact_relpath": "kmeans_rfm/km-rfm-6ea5a87000cce054c9fa28c9",
+    "snapshot_observations": {
+      "after_reference": 0,
+      "eligible_orders": 10000,
+      "analytical_orders": 10000,
+      "eligible_customers": 3282,
+      "missing_packed_time": 0,
+      "eligible_monetary_vnd": "618293800000.00"
+    },
+    "future_behavior_validated": false
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/restore/kmeans-restored.json
+time="2026-10-26T17:05:42+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:05:42+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-inference-tools-run-4a2c0b72361d Creating 
+ Container lak-rebuild-b406a316e7-inference-tools-run-4a2c0b72361d Created 
+{
+  "phase": 9,
+  "command": "verify",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:05:46.555343+00:00",
+  "result": {
+    "model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+    "snapshot_id": "delivery-5ba9a865c6f74af9343621c3",
+    "rows": 9952,
+    "split_counts": {
+      "test": 1599,
+      "train": 6682,
+      "validation": 1671
+    },
+    "test": {
+      "bias_hours": -1.391268937223672,
+      "count": 1599,
+      "mae_hours": 18.73291669322565,
+      "rmse_hours": 22.90631103931566
+    },
+    "baseline_test": {
+      "by_shipping_method": {
+        "bias_hours": -1.7858632131193104,
+        "count": 1599,
+        "mae_hours": 18.834618337850046,
+        "rmse_hours": 23.09008261311469
+      },
+      "global": {
+        "bias_hours": -9.791211607949421,
+        "count": 1599,
+        "mae_hours": 47.81122689528178,
+        "rmse_hours": 61.30824964396973
+      }
+    },
+    "beats_baseline": true,
+    "artifact_relpath": "random_forest_delivery/rf-delivery-4a60b2b333abc46ef35bb5f6",
+    "checksums_verified": true,
+    "database_predictions_verified": true,
+    "active": false
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/restore/rf-restored.json
+time="2026-10-26T17:05:50+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:05:51+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-dashboard-tools-run-084e5e243e76 Creating 
+ Container lak-rebuild-b406a316e7-dashboard-tools-run-084e5e243e76 Created 
+2026-10-26 10:06:03.246 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+{
+  "phase": 11,
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:05:52.663971+00:00",
+  "browser_visual_verified": false,
+  "queries": {
+    "read_only_queries_passed": true,
+    "overview_olap_reconciled": true,
+    "current_fact_matches_mart": true,
+    "sales_orders": "10000",
+    "customer_assignments": 3282,
+    "shipping_test_rows": 1599,
+    "observed_news_in_default_period": 1247,
+    "connector": {
+      "connector": "UNAVAILABLE",
+      "tasks": []
+    },
+    "demo_lookup_safe": true,
+    "query_time": "2026-10-26 10:05:53.318645+00:00",
+    "mart_snapshot": {
+      "source_observed_at": "2026-10-26 09:45:07.423533+00:00",
+      "refreshed_at": "2026-10-26 09:45:09.707125+00:00",
+      "sales_facts": 10000,
+      "news_facts": 2145
+    },
+    "pinned_models": {
+      "rfm_model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+      "delivery_model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+      "reference_date": "2026-01-01"
+    }
+  },
+  "app": {
+    "pages_executed": [
+      "overview",
+      "olap",
+      "customers",
+      "shipping",
+      "news",
+      "detail",
+      "operations",
+      "demo"
+    ],
+    "cold_import_verified": true,
+    "source": "actual warehouse connections; no fixture provider",
+    "ui_test_type": "Streamlit AppTest execution, not a browser visual inspection",
+    "demo_mutations_performed": false
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/restore/dashboard-checks.json

@@ -1,0 +1,15 @@
+{
+  "phase": 13,
+  "stage": "isolated-cdc-ml-web",
+  "passed": true,
+  "phase13_complete": false,
+  "project": "lak-rebuild-b406a316e7",
+  "directory": "G:\\LAK-Rebuilds\\LAK-Rebuild-20261026T095955Z-f2faba",
+  "original_stack_stopped": false,
+  "started_at_utc": "2026-10-26T10:20:38.245923+00:00",
+  "cdc_bootstrap_verified": true,
+  "fresh_source_to_ml_insert_update_delete_verified": true,
+  "dashboard_pages_verified": 8,
+  "website": "http://localhost:18501",
+  "finished_at_utc": "2026-10-26T10:26:18.878999+00:00"
+}

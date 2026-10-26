@@ -1,0 +1,54 @@
+{
+  "phase": 13,
+  "stage": "isolated-database-model-restore",
+  "passed": true,
+  "phase13_complete": false,
+  "project": "lak-rebuild-b406a316e7",
+  "directory": "G:\\LAK-Rebuilds\\LAK-Rebuild-20261026T095955Z-f2faba",
+  "original_project_modified": false,
+  "cdc_bootstrap_verified": false,
+  "runtime_scope": "two new database volumes; source, mart, model and 8-page AppTest checks; CDC/workers/scheduler/dashboard server not started",
+  "image_archive_sha256": "53f959982689f04f6fb731ab1ab3f72e55726555a4cb667251e86327fb715409",
+  "candidate_sha256": "b5949a398322cbb44adbbcd460f07e8c9b8e0491598a5e86e08f9ad824f68db7",
+  "data_export": {
+    "phase": 13,
+    "stage": "logical-data-export",
+    "passed": true,
+    "restore_verified": false,
+    "started_at_utc": "2026-10-26T09:49:51.123715+00:00",
+    "previously_running": [
+      "dashboard",
+      "news-airflow",
+      "collector",
+      "applier",
+      "inference-worker"
+    ],
+    "snapshot_method": "Application services stopped; separate consistent logical database dumps. Not an atomic distributed snapshot. Do not write to source through other clients during export.",
+    "kafka_connect_state_included": false,
+    "database_user_credentials_included": false,
+    "airflow_state_included": false,
+    "files": [
+      {
+        "name": "mysql-source.sql",
+        "bytes": 25806538,
+        "sha256": "73a7c059171bdf57d672b51d3eee9bb4fbbb69390e48d7457829b1d21c975929"
+      },
+      {
+        "name": "warehouse.dump",
+        "bytes": 11770732,
+        "sha256": "6d019751cc69276d52ae5e5bd211afffd85f6cb7017b0ff6665d50f6daf7871c"
+      },
+      {
+        "name": "warehouse-toc.txt",
+        "bytes": 21500,
+        "sha256": "2d7708e99a077910f40bf23baf00027abe805f567c268edeb050517cf9c837cb"
+      }
+    ],
+    "restart_errors": [],
+    "export_completed": true,
+    "finished_at_utc": "2026-10-26T09:52:35.087161+00:00",
+    "services_resumed": true
+  },
+  "started_at_utc": "2026-10-26T09:59:55.192112+00:00",
+  "finished_at_utc": "2026-10-26T10:06:14.804849+00:00"
+}

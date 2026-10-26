@@ -1,0 +1,290 @@
+{
+  "phase": 13,
+  "status": "REBUILD_VERIFIED_FINAL_PACKAGE_PENDING_LOCAL_CREATION",
+  "evidence_basis": "User supplied actual Windows/Docker output; no assistant Docker runtime claim",
+  "evidence_files": [
+    {
+      "path": "docs/phase13/final/evidence/candidate-summary.json",
+      "bytes": 634,
+      "sha256": "926faf393bd8a998e73cca88d65c552ebdaefb90fc38c1da6885252bd643bef7"
+    },
+    {
+      "path": "docs/phase13/final/evidence/data-export.json",
+      "bytes": 1249,
+      "sha256": "9e60ef1407624bb70c8f74f4639c4d90b1c850918e6691c8f330d71bfe3e6dcf"
+    },
+    {
+      "path": "docs/phase13/final/evidence/images-export.json",
+      "bytes": 402,
+      "sha256": "caab9f102064ae2a569f87cf35f2a2af78b01b4c5741bf693bc4eacb3d6b16f2"
+    },
+    {
+      "path": "docs/phase13/final/evidence/original-project/stage-a-20261026T093024Z-4d645ea9/check-images.json",
+      "bytes": 2267,
+      "sha256": "e6b27cb30629cf3af06bcf389efb06c650ba000b196d82d0c6e2bafb7f0a80cb"
+    },
+    {
+      "path": "docs/phase13/final/evidence/original-project/stage-a-20261026T093024Z-4d645ea9/package.json",
+      "bytes": 818,
+      "sha256": "5e87b4302551c2dcf59a02fa9d0e6040b4c6aae59a9937ae49836a749689c600"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/bootstrap.json",
+      "bytes": 539,
+      "sha256": "826de75dfd3ffd962c49a000691b1552a3bcde821807c0e13d1c8b55d3d9fe9f"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/bootstrap.log",
+      "bytes": 21825,
+      "sha256": "4a40a233f9ee4918054acc9ac11255dcd2b09625894d576a40509fa215f6985e"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/cdc-verified.json",
+      "bytes": 430,
+      "sha256": "e930bcf43137f9f3a213736da7b4b756ed81e4c5188dc17e596f9d329c97ddc7"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/dashboard-checks.json",
+      "bytes": 1435,
+      "sha256": "e8ca18202969bb1e3ca1166247fb95e43b7e0bb7b80464fa9711420c8179633c"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/epoch-plan.json",
+      "bytes": 952,
+      "sha256": "b7c327c937264caa66fc0bc1571625e0a92a705d339f837a99b3a64662a3d14a"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed-dice.csv",
+      "bytes": 20279,
+      "sha256": "ad499fbfab5e44d82108a0a11a1d1861128e42b409dff0454e911a0d9d1e646e"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed-drill_down.csv",
+      "bytes": 2086,
+      "sha256": "a34cb5868ad1a04c9d6701396ab54fe0b864bc5802c90bc90e64c7e033e15719"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed-news-month-category.csv",
+      "bytes": 1076,
+      "sha256": "00763a936550338872379d627b71056b999d81ea3814fcc1b80f6ca808e93e5d"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed-pivot.csv",
+      "bytes": 1060,
+      "sha256": "88e1657e85e7d721fdc22f574bdfcaea8f49c58993dabd019ca7a8b61c2af6c4"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed-roll_up.csv",
+      "bytes": 1088,
+      "sha256": "986bbc1fdc0224fb330ab0ba85b453430fb9198d78275e274eddbfd39a006ef8"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed-slice.csv",
+      "bytes": 1748,
+      "sha256": "a463d17602336fa8ad0e0dfe753702dfafa8e490dfb630c4e5fca09bdc2485e2"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/mart-refreshed.json",
+      "bytes": 105897,
+      "sha256": "b2031ae2512006ba32710c9fcaff4ef67922fdc76ff1b780777a604b235eb013"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/ml-cleanup.json",
+      "bytes": 222,
+      "sha256": "9bc445e0976ac7ee17d5d0509828efe2ff23612b73a10d92f75b5f4c64d23e87"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/ml-finish.json",
+      "bytes": 706,
+      "sha256": "dde2ac0531be7f5ffc8601f924562c7d4c3663a6b93b8e11707e601812562f02"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/ml-init.json",
+      "bytes": 1188,
+      "sha256": "68ce0c6ec938e378a13596433e2687ecc0db9f64c31917e1a71e2bc0b00afb75"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/ml-seed.json",
+      "bytes": 458,
+      "sha256": "9e8b0a7a7efd948e56ea0f26ae40ef6feb27843c9a56fb1cd57b15f1e3019700"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/new-cdc-demo.json",
+      "bytes": 682,
+      "sha256": "a1009d132024694227b373ad34bb1b3db2070508047d0eb44e97764bd2dda9fb"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/new-epoch-reconciliation.json",
+      "bytes": 938,
+      "sha256": "52ca3d0651f7066e04197a6a2077c0f25c38b2a0666a4594a11cf23dac294030"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc/runtime.py",
+      "bytes": 4754,
+      "sha256": "8424b88cfa31baf0e5a09120ba70233b31f21bb5c329d8c8efbacfce6654105a"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc-failed-fileno-20261026T102038Z-3e9d38/bootstrap.json",
+      "bytes": 440,
+      "sha256": "839ea352a64783998bbf9bf9c0f39149ed101638997da9bbb1645140e1a4e12a"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc-failed-fileno-20261026T102038Z-3e9d38/bootstrap.log",
+      "bytes": 1088,
+      "sha256": "534f255549a6165f39bbc99d6926fb045154e0922355aa3fcf68be10b1ba0a12"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/cdc-failed-fileno-20261026T102038Z-3e9d38/runtime.py",
+      "bytes": 4754,
+      "sha256": "8424b88cfa31baf0e5a09120ba70233b31f21bb5c329d8c8efbacfce6654105a"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/dashboard-checks.json",
+      "bytes": 1362,
+      "sha256": "cf6b808544ea86225573312b10ee0e54b6a80e6b5a57487e16fb8a034bbb3a29"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/kmeans-restored.json",
+      "bytes": 3581,
+      "sha256": "020255abdf36b973fc51341970c0242970e861ddd0d5a53095cfd10ad235ddfd"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored-dice.csv",
+      "bytes": 20279,
+      "sha256": "ad499fbfab5e44d82108a0a11a1d1861128e42b409dff0454e911a0d9d1e646e"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored-drill_down.csv",
+      "bytes": 2086,
+      "sha256": "a34cb5868ad1a04c9d6701396ab54fe0b864bc5802c90bc90e64c7e033e15719"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored-news-month-category.csv",
+      "bytes": 1076,
+      "sha256": "00763a936550338872379d627b71056b999d81ea3814fcc1b80f6ca808e93e5d"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored-pivot.csv",
+      "bytes": 1060,
+      "sha256": "88e1657e85e7d721fdc22f574bdfcaea8f49c58993dabd019ca7a8b61c2af6c4"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored-roll_up.csv",
+      "bytes": 1088,
+      "sha256": "986bbc1fdc0224fb330ab0ba85b453430fb9198d78275e274eddbfd39a006ef8"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored-slice.csv",
+      "bytes": 1748,
+      "sha256": "a463d17602336fa8ad0e0dfe753702dfafa8e490dfb630c4e5fca09bdc2485e2"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/mart-restored.json",
+      "bytes": 105640,
+      "sha256": "505103d2ffb193969bbcc2cf8efc0202ea9cdee10873d5d6e47666a553db2f9c"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/restore.json",
+      "bytes": 2096,
+      "sha256": "49011c51ceba0bbf87dd707cbd23a80e3a041718b09cdcded62fc533058d1d0e"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/restore.log",
+      "bytes": 12702,
+      "sha256": "ac6ece094c09933420b47341c72812974ce661b8e72365a11c2e97a91b2f0489"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/rf-restored.json",
+      "bytes": 1113,
+      "sha256": "f9322f4d6256e9623b3eb491a1d0a7ad49a3c2fb1d6648ead94698b7ce474519"
+    },
+    {
+      "path": "docs/phase13/final/evidence/rebuilt-project/restore/source-restored.json",
+      "bytes": 1199,
+      "sha256": "71d1cab5e5f9ef5cde007ce2b407941577795528d7d8c794f9e630522ed76885"
+    }
+  ],
+  "verified_project": "lak-rebuild-b406a316e7",
+  "verified_directory": "G:\\LAK-Rebuilds\\LAK-Rebuild-20261026T095955Z-f2faba",
+  "candidate": {
+    "schema_version": 1,
+    "kind": "source-model-evidence-candidate",
+    "phase": 13,
+    "phase13_complete": false,
+    "source_git_head": "bf724c9b9808c92fc463e37d5641237a1b52dc5d",
+    "platform": "linux/amd64",
+    "database_snapshot_included": false,
+    "docker_image_bytes_included": false,
+    "secrets_included": false,
+    "runtime_rebuild_verified": false,
+    "created_at_utc": "2026-10-26T09:30:31.439447+00:00",
+    "candidate": "G:\\LAK-Releases\\LAK-Candidate-20261026T093031Z-f36483.zip",
+    "sha256": "b5949a398322cbb44adbbcd460f07e8c9b8e0491598a5e86e08f9ad824f68db7",
+    "file_count": 353,
+    "archive_bytes": 4386758
+  },
+  "data_export": {
+    "phase": 13,
+    "stage": "logical-data-export",
+    "passed": true,
+    "restore_verified": false,
+    "started_at_utc": "2026-10-26T09:49:51.123715+00:00",
+    "previously_running": [
+      "dashboard",
+      "news-airflow",
+      "collector",
+      "applier",
+      "inference-worker"
+    ],
+    "snapshot_method": "Application services stopped; separate consistent logical database dumps. Not an atomic distributed snapshot. Do not write to source through other clients during export.",
+    "kafka_connect_state_included": false,
+    "database_user_credentials_included": false,
+    "airflow_state_included": false,
+    "files": [
+      {
+        "name": "mysql-source.sql",
+        "bytes": 25806538,
+        "sha256": "73a7c059171bdf57d672b51d3eee9bb4fbbb69390e48d7457829b1d21c975929"
+      },
+      {
+        "name": "warehouse.dump",
+        "bytes": 11770732,
+        "sha256": "6d019751cc69276d52ae5e5bd211afffd85f6cb7017b0ff6665d50f6daf7871c"
+      },
+      {
+        "name": "warehouse-toc.txt",
+        "bytes": 21500,
+        "sha256": "2d7708e99a077910f40bf23baf00027abe805f567c268edeb050517cf9c837cb"
+      }
+    ],
+    "restart_errors": [],
+    "export_completed": true,
+    "finished_at_utc": "2026-10-26T09:52:35.087161+00:00",
+    "services_resumed": true
+  },
+  "images_export": {
+    "archive": "G:\\LAK-Releases\\Docker-Images-20261026T093321Z\\images.tar",
+    "exported_at_utc": "2026-10-26T09:37:25.9199080Z",
+    "restore_verified": false,
+    "passed": true,
+    "phase": 13,
+    "image_count": 13,
+    "sha256": "53f959982689f04f6fb731ab1ab3f72e55726555a4cb667251e86327fb715409",
+    "stage": "docker-image-export",
+    "archive_bytes": 2172470272
+  },
+  "new_cdc_epoch": "4f98ca52-2555-4307-9cdb-54b473e1bb5b",
+  "new_epoch_checkpoint_rows": 4,
+  "isolated_rebuild_verified": true,
+  "separate_physical_machine_verified": false,
+  "final_archive_reexecuted": false,
+  "runtime_input_archive_sha256": "b5949a398322cbb44adbbcd460f07e8c9b8e0491598a5e86e08f9ad824f68db7",
+  "limitations": [
+    "same Docker engine, separate volumes/network/credentials/ports",
+    "metadata-only no_data CDC bootstrap after explicit source/DW reconciliation",
+    "two database dumps individually consistent, no distributed atomic snapshot",
+    "998 original source timestamp warnings retained",
+    "final bundle assembled after testing exact candidate/image/data inputs; final ZIP bytes not independently rerun"
+  ],
+  "final_package_completion": "Run finalize_release.py on user machine to verify/copy exact assets and create final ZIP64 bundle with manifest and checksum."
+}

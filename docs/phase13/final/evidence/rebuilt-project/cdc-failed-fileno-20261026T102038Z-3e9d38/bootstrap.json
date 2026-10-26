@@ -1,0 +1,13 @@
+{
+  "phase": 13,
+  "stage": "isolated-cdc-ml-web",
+  "passed": false,
+  "phase13_complete": false,
+  "project": "lak-rebuild-b406a316e7",
+  "directory": "G:\\LAK-Rebuilds\\LAK-Rebuild-20261026T095955Z-f2faba",
+  "original_stack_stopped": false,
+  "started_at_utc": "2026-10-26T10:16:39.376459+00:00",
+  "error_type": "UnsupportedOperation",
+  "safe_message": "fileno",
+  "finished_at_utc": "2026-10-26T10:16:56.117015+00:00"
+}

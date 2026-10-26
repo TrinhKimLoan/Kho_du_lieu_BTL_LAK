@@ -1,0 +1,484 @@
+ Container lak-rebuild-b406a316e7-kafka-1 Running 
+ Container lak-rebuild-b406a316e7-mysql-1 Running 
+ Container lak-rebuild-b406a316e7-connect-1 Running 
+ Container lak-rebuild-b406a316e7-kafka-1 Waiting 
+ Container lak-rebuild-b406a316e7-mysql-1 Waiting 
+ Container lak-rebuild-b406a316e7-mysql-1 Healthy 
+ Container lak-rebuild-b406a316e7-kafka-1 Healthy 
+ Container lak-rebuild-b406a316e7-mysql-1 Waiting 
+ Container lak-rebuild-b406a316e7-kafka-1 Waiting 
+ Container lak-rebuild-b406a316e7-connect-1 Waiting 
+ Container lak-rebuild-b406a316e7-mysql-1 Healthy 
+ Container lak-rebuild-b406a316e7-connect-1 Healthy 
+ Container lak-rebuild-b406a316e7-kafka-1 Healthy 
+time="2026-10-26T17:20:41+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:20:41+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-cdc-tools-run-b66929605312 Creating 
+ Container lak-rebuild-b406a316e7-cdc-tools-run-b66929605312 Created 
+ISOLATED CDC EPOCH PREPARED; restored business facts preserved
+time="2026-10-26T17:21:54+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:21:55+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-cdc-tools-run-2f9c97de3033 Creating 
+ Container lak-rebuild-b406a316e7-cdc-tools-run-2f9c97de3033 Created 
+time="2026-10-26T17:21:57+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:21:57+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-cdc-tools-run-94851fb6526e Creating 
+ Container lak-rebuild-b406a316e7-cdc-tools-run-94851fb6526e Created 
+NEW CONNECTOR REGISTERED: no_data bootstrap after validated logical restore
+ Container lak-rebuild-b406a316e7-postgres-1 Running 
+ Container lak-rebuild-b406a316e7-kafka-1 Running 
+ Container lak-rebuild-b406a316e7-applier-1 Creating 
+ Container lak-rebuild-b406a316e7-collector-1 Creating 
+ Container lak-rebuild-b406a316e7-collector-1 Created 
+ Container lak-rebuild-b406a316e7-applier-1 Created 
+ Container lak-rebuild-b406a316e7-kafka-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-kafka-1 Waiting 
+ Container lak-rebuild-b406a316e7-kafka-1 Healthy 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-applier-1 Starting 
+ Container lak-rebuild-b406a316e7-kafka-1 Healthy 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-collector-1 Starting 
+ Container lak-rebuild-b406a316e7-applier-1 Started 
+ Container lak-rebuild-b406a316e7-collector-1 Started 
+time="2026-10-26T17:22:10+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:22:10+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-cdc-tools-run-c8ff4f8badc8 Creating 
+ Container lak-rebuild-b406a316e7-cdc-tools-run-c8ff4f8badc8 Created 
+{
+  "phase": 4,
+  "command": "snapshot",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:22:12.193755+00:00",
+  "result": {
+    "counts": {
+      "customers": 3282,
+      "products": 15,
+      "orders": 10000
+    },
+    "staging_digests": {
+      "customers": "a013a071cfe99f187830686c6168dd76c6cbbf4903ffa4de610893566360aaa6",
+      "products": "4fd584ee537e0e81714c06705d0193b016ffecc7dff8c484d3ff826ef561eb7b",
+      "orders": "59c12836ebacfbbd8439286700daf042b1a63c435e2c8fc0d1d2033c08ea56ee"
+    },
+    "fact_state_sha256": "8a86593176d87fad40a4a116038aeba8bd2199c85b9e0a0bcab2f5a292b543ea",
+    "money_totals_vnd": {
+      "orders": 10000,
+      "goods": "618293800000.00",
+      "vat": "61829380000.00",
+      "shipping_fee": "1138180904.00",
+      "total_paid": "681261360904.00"
+    },
+    "source_epoch": "4f98ca52-2555-4307-9cdb-54b473e1bb5b",
+    "raw_events": 13807,
+    "pending": 0,
+    "provenance_rows": 43297
+  }
+}
+Evidence: /opt/project/evidence/phase13/cdc/new-epoch-reconciliation.json
+time="2026-10-26T17:22:34+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:22:35+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-cdc-tools-run-8dce35404531 Creating 
+ Container lak-rebuild-b406a316e7-cdc-tools-run-8dce35404531 Created 
+{
+  "phase": 4,
+  "command": "demo",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:22:36.527086+00:00",
+  "result": {
+    "order_id": "DEMO_CDC_7d194e8f_O",
+    "steps": [
+      {
+        "action": "insert",
+        "source_changed": true,
+        "warehouse_deleted": false,
+        "warehouse_quantity": 2
+      },
+      {
+        "action": "update",
+        "source_changed": true,
+        "warehouse_deleted": false,
+        "warehouse_quantity": 3
+      },
+      {
+        "action": "delete",
+        "source_changed": true,
+        "warehouse_deleted": true,
+        "warehouse_quantity": 3
+      }
+    ],
+    "historical_facts_unchanged": true,
+    "pending": 0
+  }
+}
+Evidence: /opt/project/evidence/phase13/cdc/new-cdc-demo.json
+time="2026-10-26T17:23:01+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:23:02+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-inference-tools-run-6591b19064a9 Creating 
+ Container lak-rebuild-b406a316e7-inference-tools-run-6591b19064a9 Created 
+{
+  "phase": 10,
+  "command": "init",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:04.162059+00:00",
+  "result": {
+    "config": {
+      "singleton": true,
+      "rfm_model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+      "delivery_model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+      "reference_date": "2026-01-01",
+      "configured_at": "2026-10-26 06:21:16.081709+00:00"
+    },
+    "phase8_verified": true,
+    "phase9_verified": true,
+    "rfm_bootstrap_jobs": 23,
+    "pending_delivery_jobs": 0,
+    "rf_test": {
+      "bias_hours": -1.391268937223672,
+      "count": 1599,
+      "mae_hours": 18.73291669322565,
+      "rmse_hours": 22.90631103931566
+    },
+    "rf_baseline_test": {
+      "by_shipping_method": {
+        "bias_hours": -1.7858632131193104,
+        "count": 1599,
+        "mae_hours": 18.834618337850046,
+        "rmse_hours": 23.09008261311469
+      },
+      "global": {
+        "bias_hours": -9.791211607949421,
+        "count": 1599,
+        "mae_hours": 47.81122689528178,
+        "rmse_hours": 61.30824964396973
+      }
+    },
+    "rf_improvement_small": true,
+    "models_retrained": false,
+    "delivery_history_not_backfilled_as_live": true
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/cdc/ml-init.json
+time="2026-10-26T17:23:11+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:23:11+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-inference-tools-run-bc30cde50f7e Creating 
+ Container lak-rebuild-b406a316e7-inference-tools-run-bc30cde50f7e Created 
+{
+  "phase": 10,
+  "command": "seed",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:13.817239+00:00",
+  "result": {
+    "suffix": "ML10_1506f4676d",
+    "order_id": "DEMO_ML10_1506f4676d_O",
+    "customer_key": 3347,
+    "pending_jobs_while_worker_stopped": 2,
+    "business_sha256": "f1796f0e78cd9e182db4a10585b6477c04f321dcf8c13048cf485559819f45fd",
+    "registry_sha256": "cbd8bc3fa621b8302994d201e3a222fb2cc56bb68ce37bf4f640238be571faea"
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/cdc/ml-seed.json
+ Container lak-rebuild-b406a316e7-postgres-1 Running 
+ Container lak-rebuild-b406a316e7-inference-worker-1 Creating 
+ Container lak-rebuild-b406a316e7-inference-worker-1 Created 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-inference-worker-1 Starting 
+ Container lak-rebuild-b406a316e7-inference-worker-1 Started 
+ Container lak-rebuild-b406a316e7-inference-worker-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-inference-worker-1 Healthy 
+time="2026-10-26T17:23:30+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:23:31+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-inference-tools-run-e9f62d66c53f Creating 
+ Container lak-rebuild-b406a316e7-inference-tools-run-e9f62d66c53f Created 
+{
+  "phase": 10,
+  "command": "finish",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:33.036476+00:00",
+  "result": {
+    "order_id": "DEMO_ML10_1506f4676d_O",
+    "source_to_ml_insert_update_delete": true,
+    "durable_queue_survived_worker_restart": true,
+    "rfm_monetary_before": "200000.00",
+    "rfm_monetary_after": "300000.00",
+    "rfm_no_history_after_delete": true,
+    "reference_tick_without_new_transaction": true,
+    "reference_tick_demo_only": true,
+    "initial_prediction_immutable": true,
+    "actual_hours": 27.0,
+    "predicted_hours": 58.22026529990601,
+    "queue_replay_idempotent": true,
+    "historical_business_facts_unchanged": true,
+    "no_retraining": true
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/cdc/ml-finish.json
+time="2026-10-26T17:23:47+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:23:47+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-inference-tools-run-8c03d9abc138 Creating 
+ Container lak-rebuild-b406a316e7-inference-tools-run-8c03d9abc138 Created 
+{
+  "phase": 10,
+  "command": "cleanup",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:49.194768+00:00",
+  "result": {
+    "demo_source_removed": true,
+    "evidence_and_prediction_history_preserved": true
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/cdc/ml-cleanup.json
+time="2026-10-26T17:23:56+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:23:56+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-mart-tools-run-a3f20e00e8ce Creating 
+ Container lak-rebuild-b406a316e7-mart-tools-run-a3f20e00e8ce Created 
+{
+  "phase": 7,
+  "command": "refresh",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:58.068278+00:00",
+  "refresh": {
+    "sales_facts": 10000,
+    "news_facts": 2145,
+    "source_sha256": "f1ac79d47ec56c651f7925b2cd770960f029f74614df1fb78e5128354049f782",
+    "refresh_id": "8226cd0c-a785-4860-8006-2c8f4f2b481b",
+    "atomic_snapshot": true
+  },
+  "reconciliation": {
+    "passed": true,
+    "row_counts": {
+      "sales_cells": 9999,
+      "sales_daily": 9658,
+      "product_daily": 8623,
+      "customer_summary": 3282,
+      "delivery_daily": 8850,
+      "news_daily": 604,
+      "news_membership": 63,
+      "news_category_daily": 60
+    },
+    "totals": {
+      "order_count": "10000",
+      "customer_count": 3282,
+      "quantity_sum": "104960",
+      "goods_amount": "618293800000.00",
+      "vat_amount": "61829380000.00",
+      "shipping_fee": "1138180904.00",
+      "total_paid": "681261360904.00",
+      "delivered_orders": "10000",
+      "delivery_hours_sum": "1112905.1775000000000020",
+      "avg_order_goods": "61829380.000000000000",
+      "avg_delivery_hours": "111.2905177500000000"
+    },
+    "cube_grand_total_reconciled": true,
+    "cross_fact_sales_not_duplicated": true,
+    "snapshot": {
+      "singleton": true,
+      "refresh_id": "8226cd0c-a785-4860-8006-2c8f4f2b481b",
+      "source_observed_at": "2026-10-26 10:23:59.358052+00:00",
+      "refreshed_at": "2026-10-26 10:24:01.712389+00:00",
+      "sales_facts": 10000,
+      "news_facts": 2145,
+      "source_sha256": "f1ac79d47ec56c651f7925b2cd770960f029f74614df1fb78e5128354049f782",
+      "age_seconds": "2.359253"
+    },
+    "all_news_totals": {
+      "article_count": "2145",
+      "source_count": 56
+    },
+    "relevant_news_totals": {
+      "article_count": 61,
+      "source_count": 8,
+      "weighted_articles": "61.00000000000000000000"
+    },
+    "sla_late_rate": null,
+    "sla_note": "No verified committed SLA; no SLA late rate is published."
+  },
+  "fixtures": null,
+  "olap_examples": [
+    "roll_up",
+    "drill_down",
+    "slice",
+    "dice",
+    "pivot"
+  ],
+  "source_facts_and_news_unchanged": true
+}
+Evidence: /opt/project/evidence/phase13/cdc/mart-refreshed.json
+time="2026-10-26T17:24:09+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:24:09+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-cdc-tools-run-02ee59c54715 Creating 
+ Container lak-rebuild-b406a316e7-cdc-tools-run-02ee59c54715 Created 
+{
+  "passed": true,
+  "project": "lak-rebuild-b406a316e7",
+  "new_epoch": "4f98ca52-2555-4307-9cdb-54b473e1bb5b",
+  "historical_facts_unchanged": true,
+  "model_registry_unchanged": true,
+  "new_epoch_checkpoint_rows": 4,
+  "connector_running": true,
+  "snapshot_mode": "no_data",
+  "bootstrap_basis": "explicitly restored and reconciled source/DW; fresh binlog position and Kafka offsets; old ledger preserved under old epoch"
+}
+time="2026-10-26T17:24:31+07:00" level=warning msg="No services to build"
+time="2026-10-26T17:24:32+07:00" level=warning msg="No services to build"
+ Container lak-rebuild-b406a316e7-dashboard-tools-run-8f25ee0b175b Creating 
+ Container lak-rebuild-b406a316e7-dashboard-tools-run-8f25ee0b175b Created 
+2026-10-26 10:24:40.557 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+{
+  "phase": 11,
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:24:34.757576+00:00",
+  "browser_visual_verified": false,
+  "queries": {
+    "read_only_queries_passed": true,
+    "overview_olap_reconciled": true,
+    "current_fact_matches_mart": true,
+    "sales_orders": "10000",
+    "customer_assignments": 3282,
+    "shipping_test_rows": 1599,
+    "observed_news_in_default_period": 1247,
+    "connector": {
+      "connector": "RUNNING",
+      "tasks": [
+        {
+          "task": 0,
+          "state": "RUNNING"
+        }
+      ]
+    },
+    "demo_lookup_safe": true,
+    "query_time": "2026-10-26 10:24:35.387783+00:00",
+    "mart_snapshot": {
+      "source_observed_at": "2026-10-26 10:23:59.358052+00:00",
+      "refreshed_at": "2026-10-26 10:24:01.712389+00:00",
+      "sales_facts": 10000,
+      "news_facts": 2145
+    },
+    "pinned_models": {
+      "rfm_model_id": "km-rfm-6ea5a87000cce054c9fa28c9",
+      "delivery_model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+      "reference_date": "2026-01-01"
+    }
+  },
+  "app": {
+    "pages_executed": [
+      "overview",
+      "olap",
+      "customers",
+      "shipping",
+      "news",
+      "detail",
+      "operations",
+      "demo"
+    ],
+    "cold_import_verified": true,
+    "source": "actual warehouse connections; no fixture provider",
+    "ui_test_type": "Streamlit AppTest execution, not a browser visual inspection",
+    "demo_mutations_performed": false
+  }
+}
+
+Evidence: /opt/project/evidence/phase13/cdc/dashboard-checks.json
+ Container lak-rebuild-b406a316e7-postgres-1 Running 
+ Container lak-rebuild-b406a316e7-dashboard-1 Creating 
+ Container lak-rebuild-b406a316e7-dashboard-1 Created 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-dashboard-1 Starting 
+ Container lak-rebuild-b406a316e7-dashboard-1 Started 
+ Container lak-rebuild-b406a316e7-postgres-1 Waiting 
+ Container lak-rebuild-b406a316e7-dashboard-1 Waiting 
+ Container lak-rebuild-b406a316e7-postgres-1 Healthy 
+ Container lak-rebuild-b406a316e7-dashboard-1 Healthy 
+ Volume lak-rebuild-b406a316e7_news_airflow_logs Creating 
+ Volume lak-rebuild-b406a316e7_news_airflow_logs Created 
+ Volume lak-rebuild-b406a316e7_news_airflow_state Creating 
+ Volume lak-rebuild-b406a316e7_news_airflow_state Created 
+ Container lak-rebuild-b406a316e7-news-airflow-1 Creating 
+ Container lak-rebuild-b406a316e7-news-airflow-1 Created 
+ Container lak-rebuild-b406a316e7-news-airflow-1 Starting 
+ Container lak-rebuild-b406a316e7-news-airflow-1 Started 
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: job
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/bin/airflow", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/jobs_command.py", line 52, in check
+    alive_jobs: list[Job] = [job for job in session.scalars(query) if job.is_alive()]
+                                            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1778, in scalars
+    return self.execute(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1717, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: job
+[SQL: SELECT job.id, job.dag_id, job.state, job.job_type, job.start_date, job.end_date, job.latest_heartbeat, job.executor_class, job.hostname, job.unixname 
+FROM job 
+WHERE job.state = ? AND job.job_type = ? AND job.hostname = ? ORDER BY job.latest_heartbeat DESC
+ LIMIT ? OFFSET ?]
+[parameters: (<JobState.RUNNING: 'running'>, 'SchedulerJob', 'cb88fbf4cbd3', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+No alive jobs found.
+Found one alive job.
+dag_id                  | is_paused
+========================+==========
+lak_mart_refresh_phase7 | False    
+                                   
+NAME                                        IMAGE                               COMMAND                  SERVICE            CREATED              STATUS                        PORTS
+lak-rebuild-b406a316e7-applier-1            lak-analytics-cdc-tools:phase4      "python -m src.cdc.c…"   applier            4 minutes ago        Up 4 minutes                  
+lak-rebuild-b406a316e7-collector-1          lak-analytics-cdc-tools:phase4      "python -m src.cdc.c…"   collector          4 minutes ago        Up 4 minutes                  
+lak-rebuild-b406a316e7-connect-1            quay.io/debezium/connect:3.2        "/docker-entrypoint.…"   connect            9 minutes ago        Up 9 minutes                  127.0.0.1:18085->8083/tcp
+lak-rebuild-b406a316e7-dashboard-1          lak-analytics-dashboard:phase11     "python -m streamlit…"   dashboard          About a minute ago   Up About a minute (healthy)   127.0.0.1:18501->8501/tcp
+lak-rebuild-b406a316e7-inference-worker-1   lak-analytics-inference:phase10     "python -m src.infer…"   inference-worker   2 minutes ago        Up 2 minutes (healthy)        
+lak-rebuild-b406a316e7-kafka-1              apache/kafka:3.9.1                  "/__cacert_entrypoin…"   kafka              9 minutes ago        Up 9 minutes (healthy)        9092/tcp
+lak-rebuild-b406a316e7-mysql-1              mysql:8.0.46-oraclelinux9           "docker-entrypoint.s…"   mysql              22 minutes ago       Up 22 minutes (healthy)       127.0.0.1:13310->3306/tcp
+lak-rebuild-b406a316e7-news-airflow-1       lak-analytics-news-airflow:phase6   "/usr/bin/dumb-init …"   news-airflow       About a minute ago   Up About a minute             8080/tcp
+lak-rebuild-b406a316e7-postgres-1           postgres:16.15-trixie               "docker-entrypoint.s…"   postgres           22 minutes ago       Up 22 minutes (healthy)       127.0.0.1:15435->5432/tcp

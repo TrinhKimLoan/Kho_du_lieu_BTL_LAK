@@ -1,0 +1,36 @@
+{
+  "phase": 3,
+  "command": "check",
+  "passed": 1,
+  "checked_at_utc": "2026-10-26T10:04:47.822156+00:00",
+  "result": {
+    "source_epoch": "13168923-bbb9-4cac-ac2b-9af01a53c892",
+    "counts": {
+      "customers": 3282,
+      "products": 15,
+      "orders": 10000
+    },
+    "digests": {
+      "customers": "a013a071cfe99f187830686c6168dd76c6cbbf4903ffa4de610893566360aaa6",
+      "products": "4fd584ee537e0e81714c06705d0193b016ffecc7dff8c484d3ff826ef561eb7b",
+      "orders": "59c12836ebacfbbd8439286700daf042b1a63c435e2c8fc0d1d2033c08ea56ee"
+    },
+    "history_state_sha256": "e3efd13dee43746344c3cc2ad5402744aca705fd3f48dc09530da6775910246a",
+    "provenance_rows": 43297,
+    "money_totals_vnd": {
+      "goods": "618293800000.00",
+      "vat": "61829380000.00",
+      "shipping_fee": "1138180904.00",
+      "total_paid": "681261360904.00"
+    },
+    "demo_orders": 0,
+    "observations": {
+      "catalog_transaction_price_difference": 0,
+      "sent_before_pack_timestamp": 880,
+      "expected_before_sent_timestamp": 118,
+      "late_by_timestamp_unconfirmed_sla": 5170,
+      "late_by_date_unconfirmed_sla": 1987,
+      "order_location_differs_from_customer_profile": 6070
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "project": "lak-rebuild-b406a316e7",
+  "new_epoch": "4f98ca52-2555-4307-9cdb-54b473e1bb5b",
+  "historical_facts_unchanged": true,
+  "model_registry_unchanged": true,
+  "new_epoch_checkpoint_rows": 4,
+  "connector_running": true,
+  "snapshot_mode": "no_data",
+  "bootstrap_basis": "explicitly restored and reconciled source/DW; fresh binlog position and Kafka offsets; old ledger preserved under old epoch"
+}

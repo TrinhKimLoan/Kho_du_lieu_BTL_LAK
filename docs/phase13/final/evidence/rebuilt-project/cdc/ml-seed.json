@@ -1,0 +1,14 @@
+{
+  "phase": 10,
+  "command": "seed",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:13.817239+00:00",
+  "result": {
+    "suffix": "ML10_1506f4676d",
+    "order_id": "DEMO_ML10_1506f4676d_O",
+    "customer_key": 3347,
+    "pending_jobs_while_worker_stopped": 2,
+    "business_sha256": "f1796f0e78cd9e182db4a10585b6477c04f321dcf8c13048cf485559819f45fd",
+    "registry_sha256": "cbd8bc3fa621b8302994d201e3a222fb2cc56bb68ce37bf4f640238be571faea"
+  }
+}

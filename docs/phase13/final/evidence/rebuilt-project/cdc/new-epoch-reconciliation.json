@@ -1,0 +1,30 @@
+{
+  "phase": 4,
+  "command": "snapshot",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:22:12.193755+00:00",
+  "result": {
+    "counts": {
+      "customers": 3282,
+      "products": 15,
+      "orders": 10000
+    },
+    "staging_digests": {
+      "customers": "a013a071cfe99f187830686c6168dd76c6cbbf4903ffa4de610893566360aaa6",
+      "products": "4fd584ee537e0e81714c06705d0193b016ffecc7dff8c484d3ff826ef561eb7b",
+      "orders": "59c12836ebacfbbd8439286700daf042b1a63c435e2c8fc0d1d2033c08ea56ee"
+    },
+    "fact_state_sha256": "8a86593176d87fad40a4a116038aeba8bd2199c85b9e0a0bcab2f5a292b543ea",
+    "money_totals_vnd": {
+      "orders": 10000,
+      "goods": "618293800000.00",
+      "vat": "61829380000.00",
+      "shipping_fee": "1138180904.00",
+      "total_paid": "681261360904.00"
+    },
+    "source_epoch": "4f98ca52-2555-4307-9cdb-54b473e1bb5b",
+    "raw_events": 13807,
+    "pending": 0,
+    "provenance_rows": 43297
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "phase": 9,
+  "command": "verify",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:05:46.555343+00:00",
+  "result": {
+    "model_id": "rf-delivery-4a60b2b333abc46ef35bb5f6",
+    "snapshot_id": "delivery-5ba9a865c6f74af9343621c3",
+    "rows": 9952,
+    "split_counts": {
+      "test": 1599,
+      "train": 6682,
+      "validation": 1671
+    },
+    "test": {
+      "bias_hours": -1.391268937223672,
+      "count": 1599,
+      "mae_hours": 18.73291669322565,
+      "rmse_hours": 22.90631103931566
+    },
+    "baseline_test": {
+      "by_shipping_method": {
+        "bias_hours": -1.7858632131193104,
+        "count": 1599,
+        "mae_hours": 18.834618337850046,
+        "rmse_hours": 23.09008261311469
+      },
+      "global": {
+        "bias_hours": -9.791211607949421,
+        "count": 1599,
+        "mae_hours": 47.81122689528178,
+        "rmse_hours": 61.30824964396973
+      }
+    },
+    "beats_baseline": true,
+    "artifact_relpath": "random_forest_delivery/rf-delivery-4a60b2b333abc46ef35bb5f6",
+    "checksums_verified": true,
+    "database_predictions_verified": true,
+    "active": false
+  }
+}

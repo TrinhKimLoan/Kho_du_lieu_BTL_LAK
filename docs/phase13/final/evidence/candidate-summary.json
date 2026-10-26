@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "source-model-evidence-candidate",
+  "phase": 13,
+  "phase13_complete": false,
+  "source_git_head": "bf724c9b9808c92fc463e37d5641237a1b52dc5d",
+  "platform": "linux/amd64",
+  "database_snapshot_included": false,
+  "docker_image_bytes_included": false,
+  "secrets_included": false,
+  "runtime_rebuild_verified": false,
+  "created_at_utc": "2026-10-26T09:30:31.439447+00:00",
+  "candidate": "G:\\LAK-Releases\\LAK-Candidate-20261026T093031Z-f36483.zip",
+  "sha256": "b5949a398322cbb44adbbcd460f07e8c9b8e0491598a5e86e08f9ad824f68db7",
+  "file_count": 353,
+  "archive_bytes": 4386758
+}

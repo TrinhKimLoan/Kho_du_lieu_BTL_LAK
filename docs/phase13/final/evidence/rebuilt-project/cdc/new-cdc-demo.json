@@ -1,0 +1,31 @@
+{
+  "phase": 4,
+  "command": "demo",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:22:36.527086+00:00",
+  "result": {
+    "order_id": "DEMO_CDC_7d194e8f_O",
+    "steps": [
+      {
+        "action": "insert",
+        "source_changed": true,
+        "warehouse_deleted": false,
+        "warehouse_quantity": 2
+      },
+      {
+        "action": "update",
+        "source_changed": true,
+        "warehouse_deleted": false,
+        "warehouse_quantity": 3
+      },
+      {
+        "action": "delete",
+        "source_changed": true,
+        "warehouse_deleted": true,
+        "warehouse_quantity": 3
+      }
+    ],
+    "historical_facts_unchanged": true,
+    "pending": 0
+  }
+}

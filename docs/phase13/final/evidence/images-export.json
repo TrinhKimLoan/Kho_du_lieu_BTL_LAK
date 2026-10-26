@@ -1,0 +1,11 @@
+﻿{
+    "archive":  "G:\\LAK-Releases\\Docker-Images-20261026T093321Z\\images.tar",
+    "exported_at_utc":  "2026-10-26T09:37:25.9199080Z",
+    "restore_verified":  false,
+    "passed":  true,
+    "phase":  13,
+    "image_count":  13,
+    "sha256":  "53f959982689f04f6fb731ab1ab3f72e55726555a4cb667251e86327fb715409",
+    "stage":  "docker-image-export",
+    "archive_bytes":  2172470272
+}

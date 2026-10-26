@@ -1,0 +1,22 @@
+{
+  "phase": 10,
+  "command": "finish",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T10:23:33.036476+00:00",
+  "result": {
+    "order_id": "DEMO_ML10_1506f4676d_O",
+    "source_to_ml_insert_update_delete": true,
+    "durable_queue_survived_worker_restart": true,
+    "rfm_monetary_before": "200000.00",
+    "rfm_monetary_after": "300000.00",
+    "rfm_no_history_after_delete": true,
+    "reference_tick_without_new_transaction": true,
+    "reference_tick_demo_only": true,
+    "initial_prediction_immutable": true,
+    "actual_hours": 27.0,
+    "predicted_hours": 58.22026529990601,
+    "queue_replay_idempotent": true,
+    "historical_business_facts_unchanged": true,
+    "no_retraining": true
+  }
+}

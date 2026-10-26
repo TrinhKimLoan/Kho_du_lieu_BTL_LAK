@@ -1,0 +1,64 @@
+{
+  "phase": 13,
+  "stage": "A",
+  "command": "check-images",
+  "passed": true,
+  "checked_at_utc": "2026-10-26T09:30:29.252401+00:00",
+  "result": {
+    "images": [
+      {
+        "tag": "apache/kafka:3.9.1",
+        "id": "sha256:4ceccc577f03f51f6af8dbfda55194d0d892f4fa7913ffbded567ce3895622ed"
+      },
+      {
+        "tag": "lak-analytics-cdc-tools:phase4",
+        "id": "sha256:afc8f33905ba66e81ce7c656822e001019e41c239963cd9a5abeb7b3e5d5452b"
+      },
+      {
+        "tag": "lak-analytics-dashboard:phase11",
+        "id": "sha256:3d310c9d2709edf77aa9bff2780418865babb7cf4c97e6293dc1ef773eba9e61"
+      },
+      {
+        "tag": "lak-analytics-delivery-tools:phase9",
+        "id": "sha256:79925d46b468bd79d7d2f32968fca474ce0d760a488ba7e02337d3b0649bf821"
+      },
+      {
+        "tag": "lak-analytics-inference:phase10",
+        "id": "sha256:5d9382bfbf905a10c2ace8bc9c0e3a1153548ca086cf9b2ad47274005ce42446"
+      },
+      {
+        "tag": "lak-analytics-mart-tools:phase7",
+        "id": "sha256:0ff52539bc170094f15cf15879ad4e99e50aff6ebce430d4b5a11a15c363aeb7"
+      },
+      {
+        "tag": "lak-analytics-ml-tools:phase8",
+        "id": "sha256:b6033015119ae31b418fde6964a3eb926b9268e3de78220d85b50984c2540d92"
+      },
+      {
+        "tag": "lak-analytics-news-airflow:phase6",
+        "id": "sha256:f9ef7a46ef5c1526d49836ad5c2dbff10d156a84ee3655da27ab4f68b41196b0"
+      },
+      {
+        "tag": "lak-analytics-news-tools:phase6",
+        "id": "sha256:ffabc48ded79babc5cabca6d5b5820296e1d8db4977486616dc9a82de3ccb8ab"
+      },
+      {
+        "tag": "lak-analytics-source-tools:latest",
+        "id": "sha256:9ddbd468d2d4e26dae4c450f2d53ccb7c0addc9dd40a7566219b61de6e5fc441"
+      },
+      {
+        "tag": "mysql:8.0.46-oraclelinux9",
+        "id": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+      },
+      {
+        "tag": "postgres:16.15-trixie",
+        "id": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97"
+      },
+      {
+        "tag": "quay.io/debezium/connect:3.2",
+        "id": "sha256:bb7a4e3e44afe245fbb5b84b2acb3d8f29cceb9d6ab97d84d32311c7b167126c"
+      }
+    ],
+    "pull_or_build_performed": false
+  }
+}
