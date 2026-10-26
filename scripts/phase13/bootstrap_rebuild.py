@@ -1,8 +1,31 @@
 """Bootstrap CDC and verify fresh inference/web changes in the restored copy only."""
-import argparse,io,json,re,shutil,subprocess,sys,time
+import argparse,json,re,shutil,subprocess,sys,time,tempfile,uuid
 from datetime import datetime,timezone
 from pathlib import Path
 from restore_candidate import FILES,checked
+
+
+def prepare_evidence_folder(folder,project):
+    if folder.exists():
+        report_path=folder/'bootstrap.json'
+        if not report_path.is_file():raise RuntimeError('Existing bootstrap evidence requires review')
+        old=json.loads(report_path.read_text(encoding='utf-8'))
+        allowed={'bootstrap.json','bootstrap.log','runtime.py'}
+        if (old.get('project')!=project or old.get('passed') is not False
+            or old.get('error_type')!='UnsupportedOperation' or old.get('safe_message')!='fileno'
+            or any(p.name not in allowed or not p.is_file() for p in folder.iterdir())):
+            raise RuntimeError('Existing bootstrap evidence is not the pre-SQL fileno failure; send evidence before rerunning')
+        archive=folder.with_name('cdc-failed-fileno-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'-'+uuid.uuid4().hex[:6])
+        folder.rename(archive)
+        print('Previous failure evidence preserved: '+str(archive),flush=True)
+    folder.mkdir(parents=True)
+
+
+def send_sql(command,log,sql):
+    # subprocess requires an actual OS file descriptor for stdin.
+    with tempfile.TemporaryFile(mode='w+b') as stream:
+        stream.write(sql.encode('utf-8'));stream.seek(0)
+        checked(command,log,stream)
 
 
 def main():
@@ -18,8 +41,8 @@ def main():
         if labels.get('com.docker.compose.project')!=project or labels.get('com.docker.compose.service')!=service or not data['State']['Running']:raise RuntimeError('Rebuild database ownership/state differs')
         if not all(x.get('Name','').startswith(project+'_') for x in data['Mounts'] if x['Type']=='volume'):raise RuntimeError('Unexpected shared database volume')
     folder=root/'evidence/phase13/cdc'
-    if folder.exists():raise RuntimeError('CDC bootstrap evidence already exists; send evidence before rerunning')
-    folder.mkdir(parents=True);log=folder/'bootstrap.log';inside='/opt/project/evidence/phase13/cdc'
+    prepare_evidence_folder(folder,project)
+    log=folder/'bootstrap.log';inside='/opt/project/evidence/phase13/cdc'
     shutil.copy2(Path(__file__).with_name('rebuild_cdc_runtime.py'),folder/'runtime.py')
     command=['docker','compose','--project-name',project,'--env-file',str(root/'.runtime/lak.env')]
     for name in FILES:command+=['-f',str(root/'infra'/name)]
@@ -39,7 +62,7 @@ def main():
         password=values['LAK_CDC_PASSWORD']
         if not re.fullmatch('[a-f0-9]{48}',password):raise RuntimeError('Expected separately generated hexadecimal CDC credential')
         sql="CREATE USER 'lak_cdc'@'%' IDENTIFIED BY '"+password+"'; GRANT SELECT ON lak_source.* TO 'lak_cdc'@'%'; GRANT RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT, LOCK TABLES ON *.* TO 'lak_cdc'@'%';"
-        checked(command+['exec','-T','mysql','sh','-c','MYSQL_PWD="$MYSQL_ROOT_PASSWORD" exec mysql -uroot'],log,io.BytesIO(sql.encode()))
+        send_sql(command+['exec','-T','mysql','sh','-c','MYSQL_PWD="$MYSQL_ROOT_PASSWORD" exec mysql -uroot'],log,sql)
         print('Preparing a separate CDC epoch; preserving restored business facts...',flush=True)
         runtime('prepare')
         # Connect REST may need extra startup time even after the container starts.
