@@ -1,4 +1,6 @@
 import unittest
+import subprocess
+import sys
 from datetime import date,datetime,timezone,timedelta
 from decimal import Decimal
 from pathlib import Path
@@ -94,16 +96,15 @@ class DashboardTests(unittest.TestCase):
         for call in repo.all.call_args_list:
             self.assertNotIn(dangerous,call.args[0]);self.assertIn(dangerous,call.args[1])
     def test_all_eight_ui_pages(self):
-        with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.app.perform',return_value={'exists':False}):
-            # AppTest executes the script under a new __main__, so patch its imported source function as well.
-            with patch('src.dashboard.demo.perform',return_value={'exists':False}):
-                at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run()
-                for page in ['overview','olap','customers','shipping','news','detail','operations','demo']:
-                    at.radio(key='page').set_value(page).run()
-                    self.assertFalse(at.exception,repr(at.exception));self.assertFalse(at.error,repr(at.error))
+        with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.ui.perform',return_value={'exists':False}):
+            at=AppTest.from_file(str(BASE/'streamlit_app.py'),default_timeout=30).run()
+            for page in ['overview','olap','customers','shipping','news','detail','operations','demo']:
+                at.radio(key='page').set_value(page).run()
+                self.assertFalse(at.exception,repr(at.exception));self.assertFalse(at.error,repr(at.error))
+
     def test_customer_profile_with_nested_cluster_id(self):
         with patch('src.dashboard.repository.Repository',FakeRepo):
-            at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run()
+            at=AppTest.from_file(str(BASE/'streamlit_app.py'),default_timeout=30).run()
             at.radio(key='page').set_value('customers').run()
             self.assertFalse(at.exception);self.assertFalse(at.error)
             tables=[element.value for element in at.dataframe if 'display_name' in element.value.columns]
@@ -111,9 +112,23 @@ class DashboardTests(unittest.TestCase):
             self.assertEqual(tables[0]['Cụm'].tolist(),[0,1])
             self.assertEqual(tables[0]['customers'].sum(),2)
 
+    def test_cold_import_in_fresh_python_process(self):
+        code="""import sys
+from pathlib import Path
+sys.path.insert(0,sys.argv[1])
+import src.dashboard.ui
+import app.core
+assert Path(app.core.__file__).resolve()==Path(sys.argv[2]).resolve()
+assert callable(src.dashboard.ui.main)
+"""
+        result=subprocess.run([sys.executable,'-c',code,str(BASE/'src/dashboard'),str(BASE/'app/core.py')],
+                              cwd=BASE,capture_output=True,text=True,timeout=45)
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertFalse((BASE/'src/dashboard/app.py').exists())
+
     def test_ui_lookup(self):
-        with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.demo.perform',return_value={'exists':False}):
-            at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run()
+        with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.ui.perform',return_value={'exists':False}):
+            at=AppTest.from_file(str(BASE/'streamlit_app.py'),default_timeout=30).run()
             at.radio(key='page').set_value('detail').run();at.text_input(key='detail-value').set_value('O1')
             at.button(key='FormSubmitter:detail-search-Tra cứu').click().run()
             self.assertFalse(at.error);self.assertFalse(at.exception);self.assertGreater(len(at.dataframe),0)
@@ -123,11 +138,11 @@ class DashboardTests(unittest.TestCase):
             validate_suffix(suffix)
             if command=='status':return {'exists':state['exists']}
             mutations.append(command);state['exists']=command!='delete';return {'action':command}
-        with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.demo.perform',side_effect=source):
-            at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run();at.radio(key='page').set_value('demo').run()
+        with patch('src.dashboard.repository.Repository',FakeRepo),patch('src.dashboard.ui.perform',side_effect=source):
+            at=AppTest.from_file(str(BASE/'streamlit_app.py'),default_timeout=30).run();at.radio(key='page').set_value('demo').run()
             for command in ['insert','update','delete']:at.button(key='demo-'+command).click().run()
             self.assertEqual(mutations,['insert','update','delete']);self.assertFalse(at.error);self.assertFalse(at.exception)
     def test_ui_connection_error_hides_secret(self):
         with patch.dict('os.environ',{'LAK_POSTGRES_PASSWORD':'fixture-sensitive-value'}),patch('src.dashboard.repository.Repository',side_effect=RuntimeError('fixture-sensitive-value')):
-            at=AppTest.from_file(str(BASE/'src/dashboard/app.py'),default_timeout=30).run()
+            at=AppTest.from_file(str(BASE/'streamlit_app.py'),default_timeout=30).run()
             self.assertTrue(at.error);self.assertNotIn('fixture-sensitive-value',at.error[0].value)

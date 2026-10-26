@@ -2,6 +2,8 @@
 import argparse
 import json
 import traceback
+import subprocess
+import sys
 from pathlib import Path
 from datetime import datetime,timezone
 from src.cdc.cli import sanitize
@@ -38,13 +40,16 @@ def check_queries():
 
 def check_app():
     from streamlit.testing.v1 import AppTest
-    app=Path(__file__).with_name('app.py')
+    app=Path(__file__).resolve().parents[2]/'streamlit_app.py'
+    cold=subprocess.run([sys.executable,'-c','from src.dashboard.ui import main; import app.core; assert callable(main)'],
+                        cwd=app.parent,capture_output=True,text=True,timeout=45)
+    if cold.returncode:raise RuntimeError('Cold dashboard import failed: '+sanitize(cold.stderr)[-2000:])
     at=AppTest.from_file(str(app),default_timeout=90).run()
     pages=['overview','olap','customers','shipping','news','detail','operations','demo']
     for page in pages:
         at.radio(key='page').set_value(page).run()
         if at.exception or at.error:raise RuntimeError('Streamlit page failed: '+page+' '+str([e.value for e in at.error]))
-    return {'pages_executed':pages,'source':'actual warehouse connections; no fixture provider',
+    return {'pages_executed':pages,'cold_import_verified':True,'source':'actual warehouse connections; no fixture provider',
             'ui_test_type':'Streamlit AppTest execution, not a browser visual inspection','demo_mutations_performed':False}
 
 

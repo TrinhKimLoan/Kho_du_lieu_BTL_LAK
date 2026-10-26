@@ -4,6 +4,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONPATH=/opt/project
 COPY requirements-phase11.txt /tmp/requirements-phase11.txt
 RUN pip install --no-cache-dir -r /tmp/requirements-phase11.txt
 COPY .streamlit /opt/project/.streamlit
+COPY streamlit_app.py /opt/project/streamlit_app.py
 COPY app /opt/project/app
 COPY config /opt/project/config
 COPY src /opt/project/src
@@ -12,4 +13,4 @@ COPY sql /opt/project/sql
 COPY tests /opt/project/tests
 COPY docs/phase2/data_contract.json /opt/project/docs/phase2/data_contract.json
 EXPOSE 8501
-ENTRYPOINT ["python", "-m", "streamlit", "run", "src/dashboard/app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
+ENTRYPOINT ["python", "-m", "streamlit", "run", "streamlit_app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]

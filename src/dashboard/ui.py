@@ -6,7 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
-from src.dashboard.repository import Repository
+from src.dashboard import repository
 from src.dashboard.formatting import money,compact_money,number,period,csv_bytes,safe_url
 from src.dashboard.demo import perform
 
@@ -372,7 +372,7 @@ def main():
         page=st.radio('Điều hướng',list(PAGES),format_func=lambda x:PAGES[x][2]+'  '+PAGES[x][0],key='page',label_visibility='collapsed')
         if st.button('↻ Làm mới dữ liệu',use_container_width=True,key='refresh'):st.rerun()
     try:
-        with Repository() as repo:
+        with repository.Repository() as repo:
             settings=repo.settings();st.session_state['category_options']=settings['categories']
             with st.sidebar:
                 st.markdown('<div class="lak-label">BỘ LỌC KINH DOANH</div>',unsafe_allow_html=True)

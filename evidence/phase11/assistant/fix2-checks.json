@@ -1,0 +1,11 @@
+{
+  "phase": 11,
+  "fix": "cold-start-app-module-collision",
+  "full_tests": 131,
+  "phase11_tests": 16,
+  "passed": true,
+  "cold_process_before_fix_failed_as_reported": true,
+  "cold_process_after_fix_passed": true,
+  "browser_visual_validated": false,
+  "user_runtime_recheck_required": true
+}

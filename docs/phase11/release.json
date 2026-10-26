@@ -1,9 +1,9 @@
 {
   "phase": 11,
-  "update": "lak-phase11-fix1",
+  "update": "lak-phase11-fix2",
   "required_checkpoint": "Phase 10 passed: run-20261026T061947Z-d698d17d",
   "pages": 8,
-  "new_tests": 15,
+  "new_tests": 16,
   "ui_framework": "Streamlit 1.45.1 / Plotly 6.0.1",
   "deployment": "local Docker localhost:8501",
   "fixture_apptest_validated": true,
@@ -11,5 +11,7 @@
   "docker_runtime_validated": false,
   "browser_visual_validated": false,
   "automatic_retraining": false,
-  "customer_profile_nested_cluster_regression": true
+  "customer_profile_nested_cluster_regression": true,
+  "cold_import_regression": true,
+  "streamlit_entrypoint": "streamlit_app.py"
 }
