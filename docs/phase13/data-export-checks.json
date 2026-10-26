@@ -1,0 +1,15 @@
+{
+  "stage": "13B-data-export",
+  "assistant_verification": {
+    "synthetic_dump_failure_resumes_all_five_services": true,
+    "actual_database_export_run_by_assistant": false
+  },
+  "user_image_export": {
+    "image_count": 13,
+    "bytes": 2172470272,
+    "sha256": "53f959982689f04f6fb731ab1ab3f72e55726555a4cb667251e86327fb715409",
+    "evidence": "G:\\LAK-Releases\\Docker-Images-20261026T093321Z",
+    "restore_verified": false
+  },
+  "phase13_complete": false
+}
