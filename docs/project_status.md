@@ -114,3 +114,10 @@ Bổ sung Random Forest delivery theo hợp đồng Phase 1, snapshot thời gia
 Người dùng xác nhận Phase 9: evidence/phase9/run-20261026T060146Z-fe4c3559, model rf-delivery-4a60b2b333abc46ef35bb5f6, test MAE 18.73291669322565 giờ, baseline 18.834618337850046 giờ. Chênh lệch khoảng 6,1 phút, nhỏ; không tuyên bố hiệu quả vận tải thật.
 
 Phase 10 bổ sung outbox PostgreSQL, worker cố định model, RFM theo thay đổi CDC/ngày logic, dự đoán giao hàng ban đầu bất biến và lịch sử outcome. Unit test Python đạt; SQL/CDC/worker restart/PowerShell chờ script trên máy người dùng. Chưa chốt Phase 10. Xem docs/phase10/run_guide.md.
+
+
+## Phase 10 đã đạt / Phase 11 chờ runtime và rà trình duyệt
+
+Phase 10 được xác nhận trên máy người dùng tại evidence/phase10/run-20261026T061947Z-d698d17d; cleanup passed và lịch sử dự đoán còn giữ.
+
+Phase 11 dựng tám trang Streamlit/Plotly theo kế hoạch, dùng mart/query hiện tại, model ghim và kết quả suy luận Phase 10; thao tác nguồn chỉ cho demo WEB11. Unit/AppTest với fixture đạt; chưa xác minh PostgreSQL/Docker/browser thực tế tại môi trường chuẩn bị. Script triển khai chạy thêm AppTest với DB thật và HTTP health trên máy người dùng. Cần rà hình ảnh trên trình duyệt trước khi chốt. Xem docs/phase11/run_guide.md.

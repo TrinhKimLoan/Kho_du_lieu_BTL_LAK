@@ -76,3 +76,8 @@ Sau Phase 8 đã kiểm thử đạt, chạy `powershell -NoProfile -ExecutionPo
 ## Phase 10 — Suy luận sau CDC
 
 Sau Phase 9 đã đạt, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_phase10.ps1`. Có queue bền vững, worker riêng, ghim model và giữ nguyên dự đoán ban đầu. Xem docs/phase10/run_guide.md; chỉ chốt sau kiểm thử thực tế.
+
+
+## Phase 11 — Website LAK Analytics
+
+Sau Phase 10 đã đạt, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_phase11.ps1`. Website: http://localhost:8501. Tám trang Streamlit/Plotly dùng schema LAK hiện tại, không dùng API legacy. Xem docs/phase11/run_guide.md; chốt sau kiểm thử runtime và rà trên trình duyệt.

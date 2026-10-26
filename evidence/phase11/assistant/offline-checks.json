@@ -1,0 +1,21 @@
+{
+  "phase": 11,
+  "full_python_tests": {
+    "count": 129,
+    "passed": true
+  },
+  "latest_phase11_tests": {
+    "count": 14,
+    "passed": true
+  },
+  "fixture_apptest_all_8_pages": true,
+  "fixture_demo_button_sequence": true,
+  "sql_parameterization_test": true,
+  "csv_formula_guard_test": true,
+  "compose_yaml_parsed": true,
+  "localhost_port": 8501,
+  "postgres_runtime_validated": false,
+  "docker_runtime_validated": false,
+  "browser_visual_validated": false,
+  "browser_preview_limitation": "Managed preview environment could not launch the Streamlit Python runtime; no browser visual claim."
+}

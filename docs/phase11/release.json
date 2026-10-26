@@ -1,0 +1,14 @@
+{
+  "phase": 11,
+  "update": "lak-phase11-v1",
+  "required_checkpoint": "Phase 10 passed: run-20261026T061947Z-d698d17d",
+  "pages": 8,
+  "new_tests": 14,
+  "ui_framework": "Streamlit 1.45.1 / Plotly 6.0.1",
+  "deployment": "local Docker localhost:8501",
+  "fixture_apptest_validated": true,
+  "postgres_runtime_validated": false,
+  "docker_runtime_validated": false,
+  "browser_visual_validated": false,
+  "automatic_retraining": false
+}

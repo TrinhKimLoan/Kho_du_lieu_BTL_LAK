@@ -1,0 +1,35 @@
+x-dashboard: &dashboard
+  image: lak-analytics-dashboard:phase11
+  build:
+    context: ..
+    dockerfile: infra/Dockerfile.lak-dashboard
+  environment:
+    PG_HOST: postgres
+    LAK_POSTGRES_PASSWORD: ${LAK_POSTGRES_PASSWORD:?Keep warehouse credentials}
+    MYSQL_HOST: mysql
+    MYSQL_PORT: '3306'
+    MYSQL_DATABASE: lak_source
+    MYSQL_USER: lak_app
+    MYSQL_PASSWORD: ${LAK_MYSQL_APP_PASSWORD:?Keep source credentials}
+  volumes:
+    - ../evidence:/opt/project/evidence
+services:
+  dashboard:
+    <<: *dashboard
+    profiles: [dashboard]
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - 127.0.0.1:8501:8501
+    healthcheck:
+      test: [CMD, python, -c, "from urllib.request import urlopen; r=urlopen('http://localhost:8501/_stcore/health',timeout=3); raise SystemExit(0 if r.status==200 else 1)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+  dashboard-tools:
+    <<: *dashboard
+    profiles: [tools]
+    entrypoint: [python, -m, src.dashboard.checks]
