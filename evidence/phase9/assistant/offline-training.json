@@ -1,0 +1,436 @@
+{
+  "phase": 9,
+  "offline_original_lak": true,
+  "postgres_validated": false,
+  "docker_validated": false,
+  "observations": {
+    "source_orders": 10000,
+    "eligible_train": 6682,
+    "eligible_validation": 1671,
+    "eligible_test": 1599,
+    "label_not_available_validation": 34,
+    "label_not_available_train": 14
+  },
+  "model_id": "rf-delivery-fa6957e7eb6b7e5b285365f3",
+  "evaluation": {
+    "configuration": {
+      "seed": 42,
+      "n_estimators": 150,
+      "depths": [
+        6,
+        null
+      ],
+      "min_leaves": [
+        5,
+        20
+      ],
+      "permutation_repeats": 5,
+      "selection": "minimum validation MAE, then RMSE, then candidate order",
+      "refit_train_validation": false
+    },
+    "candidates": [
+      {
+        "max_depth": 6,
+        "min_samples_leaf": 5,
+        "validation": {
+          "count": 1671,
+          "mae_hours": 18.659669193074212,
+          "rmse_hours": 23.024045333550845,
+          "bias_hours": -0.22061722984890203
+        }
+      },
+      {
+        "max_depth": 6,
+        "min_samples_leaf": 20,
+        "validation": {
+          "count": 1671,
+          "mae_hours": 18.65256926346203,
+          "rmse_hours": 23.009318605471616,
+          "bias_hours": -0.21273833700373254
+        }
+      },
+      {
+        "max_depth": null,
+        "min_samples_leaf": 5,
+        "validation": {
+          "count": 1671,
+          "mae_hours": 18.890308359847243,
+          "rmse_hours": 23.361561357056726,
+          "bias_hours": -0.2115283620262458
+        }
+      },
+      {
+        "max_depth": null,
+        "min_samples_leaf": 20,
+        "validation": {
+          "count": 1671,
+          "mae_hours": 18.719260071737615,
+          "rmse_hours": 23.075586352342615,
+          "bias_hours": -0.1996034390812878
+        }
+      }
+    ],
+    "selected_candidate": 1,
+    "split_counts": {
+      "train": 6682,
+      "validation": 1671,
+      "test": 1599
+    },
+    "test": {
+      "count": 1599,
+      "mae_hours": 18.73291669322565,
+      "rmse_hours": 22.90631103931566,
+      "bias_hours": -1.391268937223672
+    },
+    "baseline": {
+      "global_median": 102.18569444444444,
+      "by_shipping_method": {
+        "FAST": 47.735,
+        "NORMAL": 107.61194444444445,
+        "SLOW": 191.44972222222222
+      }
+    },
+    "baselines": {
+      "validation": {
+        "global": {
+          "count": 1671,
+          "mae_hours": 47.86964982711617,
+          "rmse_hours": 61.429013740982654,
+          "bias_hours": -9.471814532216245
+        },
+        "by_shipping_method": {
+          "count": 1671,
+          "mae_hours": 18.713037435999734,
+          "rmse_hours": 23.163095558914023,
+          "bias_hours": -0.4379423498902849
+        }
+      },
+      "test": {
+        "global": {
+          "count": 1599,
+          "mae_hours": 47.81122689528178,
+          "rmse_hours": 61.30824964396973,
+          "bias_hours": -9.791211607949421
+        },
+        "by_shipping_method": {
+          "count": 1599,
+          "mae_hours": 18.834618337850046,
+          "rmse_hours": 23.09008261311469,
+          "bias_hours": -1.7858632131193104
+        }
+      }
+    },
+    "test_used_for_selection": false,
+    "preprocessing_fit_rows": 6682,
+    "refit_on_holdout": false,
+    "split_ranges": {
+      "train": {
+        "dispatch_min": "2020-01-01T16:17:21.000000",
+        "dispatch_max": "2023-12-29T14:40:41.000000",
+        "received_max": "2023-12-31T22:42:20.000000"
+      },
+      "validation": {
+        "dispatch_min": "2024-01-01T11:23:58.000000",
+        "dispatch_max": "2024-12-30T09:37:29.000000",
+        "received_max": "2024-12-31T19:01:39.000000"
+      },
+      "test": {
+        "dispatch_min": "2025-01-01T09:16:07.000000",
+        "dispatch_max": "2025-12-22T14:09:20.000000",
+        "received_max": "2025-12-31T13:20:15.000000"
+      }
+    },
+    "beats_shipping_baseline_test_mae": true,
+    "test_error_groups": {
+      "delivery_district": [
+        {
+          "group": "Bình Chánh",
+          "forest": {
+            "count": 174,
+            "mae_hours": 18.319864011646352,
+            "rmse_hours": 22.921941113091712,
+            "bias_hours": -0.5652930433550247
+          },
+          "baseline": {
+            "count": 174,
+            "mae_hours": 18.01962643678161,
+            "rmse_hours": 22.73709794895043,
+            "bias_hours": -1.0779054916985953
+          },
+          "small_group": false
+        },
+        {
+          "group": "Bình Thạnh",
+          "forest": {
+            "count": 162,
+            "mae_hours": 17.501817710997763,
+            "rmse_hours": 21.25106460128188,
+            "bias_hours": -1.330187221258025
+          },
+          "baseline": {
+            "count": 162,
+            "mae_hours": 18.072175925925926,
+            "rmse_hours": 21.703408284567832,
+            "bias_hours": -1.9579612482853215
+          },
+          "small_group": false
+        },
+        {
+          "group": "Gò Vấp",
+          "forest": {
+            "count": 147,
+            "mae_hours": 17.92340825299055,
+            "rmse_hours": 23.01576971614247,
+            "bias_hours": -0.4868123955927925
+          },
+          "baseline": {
+            "count": 147,
+            "mae_hours": 17.734404761904763,
+            "rmse_hours": 22.96717404095007,
+            "bias_hours": -1.1423374905517765
+          },
+          "small_group": false
+        },
+        {
+          "group": "Quận 1",
+          "forest": {
+            "count": 154,
+            "mae_hours": 18.32715643611808,
+            "rmse_hours": 22.668492253836703,
+            "bias_hours": -2.66089570487393
+          },
+          "baseline": {
+            "count": 154,
+            "mae_hours": 18.54740079365079,
+            "rmse_hours": 22.989708635823835,
+            "bias_hours": -3.236563852813853
+          },
+          "small_group": false
+        },
+        {
+          "group": "Quận 7",
+          "forest": {
+            "count": 155,
+            "mae_hours": 19.289454767751472,
+            "rmse_hours": 23.42807789953455,
+            "bias_hours": -5.467521557241829
+          },
+          "baseline": {
+            "count": 155,
+            "mae_hours": 19.40329211469534,
+            "rmse_hours": 23.586676301212343,
+            "bias_hours": -5.8775179211469535
+          },
+          "small_group": false
+        },
+        {
+          "group": "Thủ Đức",
+          "forest": {
+            "count": 502,
+            "mae_hours": 19.47971664550806,
+            "rmse_hours": 23.458685944545696,
+            "bias_hours": -1.006667990882083
+          },
+          "baseline": {
+            "count": 502,
+            "mae_hours": 19.604303895528993,
+            "rmse_hours": 23.683516607448375,
+            "bias_hours": -1.3260170429393532
+          },
+          "small_group": false
+        },
+        {
+          "group": "Tân Bình",
+          "forest": {
+            "count": 128,
+            "mae_hours": 20.40805653068994,
+            "rmse_hours": 24.21552202899891,
+            "bias_hours": -0.3274793131456126
+          },
+          "baseline": {
+            "count": 128,
+            "mae_hours": 20.22062282986111,
+            "rmse_hours": 24.32189545608546,
+            "bias_hours": -0.30854383680555486
+          },
+          "small_group": false
+        },
+        {
+          "group": "Tân Phú",
+          "forest": {
+            "count": 177,
+            "mae_hours": 17.474267796232102,
+            "rmse_hours": 21.394545723068664,
+            "bias_hours": -0.1961459076408135
+          },
+          "baseline": {
+            "count": 177,
+            "mae_hours": 17.814008160703075,
+            "rmse_hours": 21.75714313109044,
+            "bias_hours": -0.3860232266164465
+          },
+          "small_group": false
+        }
+      ],
+      "shipping_method": [
+        {
+          "group": "FAST",
+          "forest": {
+            "count": 550,
+            "mae_hours": 17.824774549707058,
+            "rmse_hours": 20.416796292426536,
+            "bias_hours": -1.8214436068765425
+          },
+          "baseline": {
+            "count": 550,
+            "mae_hours": 17.91780101010101,
+            "rmse_hours": 20.560150119314102,
+            "bias_hours": -2.5210121212121215
+          },
+          "small_group": false
+        },
+        {
+          "group": "NORMAL",
+          "forest": {
+            "count": 607,
+            "mae_hours": 12.017955695845616,
+            "rmse_hours": 12.875594316023111,
+            "bias_hours": -0.5463609718502775
+          },
+          "baseline": {
+            "count": 607,
+            "mae_hours": 12.13633122826286,
+            "rmse_hours": 13.463538667086661,
+            "bias_hours": -1.2188554823357105
+          },
+          "small_group": false
+        },
+        {
+          "group": "SLOW",
+          "forest": {
+            "count": 442,
+            "mae_hours": 29.084635028847618,
+            "rmse_hours": 33.93831740895081,
+            "bias_hours": -2.0162984998313
+          },
+          "baseline": {
+            "count": 442,
+            "mae_hours": 29.17423328305681,
+            "rmse_hours": 33.9678129827951,
+            "bias_hours": -1.6497586726998508
+          },
+          "small_group": false
+        }
+      ],
+      "quantity_band": [
+        {
+          "group": "Hàng nhiều",
+          "forest": {
+            "count": 798,
+            "mae_hours": 18.455434604265132,
+            "rmse_hours": 22.60230662491848,
+            "bias_hours": -2.1796969712143968
+          },
+          "baseline": {
+            "count": 798,
+            "mae_hours": 18.608464216095793,
+            "rmse_hours": 22.855189576875723,
+            "bias_hours": -2.430563213589529
+          },
+          "small_group": false
+        },
+        {
+          "group": "Hàng vừa",
+          "forest": {
+            "count": 568,
+            "mae_hours": 19.002562759643126,
+            "rmse_hours": 23.214625716661885,
+            "bias_hours": -2.154965279940843
+          },
+          "baseline": {
+            "count": 568,
+            "mae_hours": 19.04746478873239,
+            "rmse_hours": 23.24876565557646,
+            "bias_hours": -2.550447965571205
+          },
+          "small_group": false
+        },
+        {
+          "group": "Hàng ít",
+          "forest": {
+            "count": 233,
+            "mae_hours": 19.02592845831306,
+            "rmse_hours": 23.18226430346193,
+            "bias_hours": 3.170727173454234
+          },
+          "baseline": {
+            "count": 233,
+            "mae_hours": 19.090301621363853,
+            "rmse_hours": 23.4986968644634,
+            "bias_hours": 2.286045541249405
+          },
+          "small_group": false
+        }
+      ]
+    },
+    "permutation_importance_test": [
+      {
+        "feature": "quantity",
+        "mae_increase_hours": 0.02059692300864526,
+        "std_hours": 0.01922985131257998
+      },
+      {
+        "feature": "goods_amount",
+        "mae_increase_hours": 0.028101788774580427,
+        "std_hours": 0.030060462609843498
+      },
+      {
+        "feature": "dispatch_month",
+        "mae_increase_hours": -0.007699526790255362,
+        "std_hours": 0.010972421533014903
+      },
+      {
+        "feature": "dispatch_weekday",
+        "mae_increase_hours": 0.00778094531265765,
+        "std_hours": 0.016693669135024465
+      },
+      {
+        "feature": "dispatch_hour",
+        "mae_increase_hours": 0.2866741696004169,
+        "std_hours": 0.06697583863755192
+      },
+      {
+        "feature": "shipping_method",
+        "mae_increase_hours": 47.51743121520852,
+        "std_hours": 0.7540481296291499
+      },
+      {
+        "feature": "quantity_band",
+        "mae_increase_hours": 0.0014454892664993225,
+        "std_hours": 0.0029895138144835913
+      },
+      {
+        "feature": "warehouse_name",
+        "mae_increase_hours": 0.0057213074238156025,
+        "std_hours": 0.014580738268619641
+      },
+      {
+        "feature": "vehicle_type",
+        "mae_increase_hours": -0.0020401675555923758,
+        "std_hours": 0.0030404689537739636
+      },
+      {
+        "feature": "delivery_district",
+        "mae_increase_hours": -0.006049472075282125,
+        "std_hours": 0.011280714989467717
+      }
+    ],
+    "limitations": [
+      "Simulated historical orders; no evidence of real-world predictive validity.",
+      "Feature availability at dispatch is an assumption; Excel contains no input-time audit.",
+      "Current historical warehouse rows are used; post-hoc corrections cannot be reconstructed as-of original prediction time.",
+      "No confidence interval or guaranteed delivery deadline; performance may reflect the data generator.",
+      "Permutation importance is descriptive on test, not used to select features or retune the model. Correlated predictors can share importance."
+    ]
+  }
+}

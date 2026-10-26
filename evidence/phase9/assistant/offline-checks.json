@@ -1,0 +1,12 @@
+{
+  "phase": 9,
+  "python_unit_tests": {
+    "count": 103,
+    "passed": true,
+    "new_tests": 10
+  },
+  "offline_training": "offline-training.json",
+  "postgres_runtime_validated": false,
+  "docker_runtime_validated": false,
+  "powershell_runtime_validated": false
+}

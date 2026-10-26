@@ -1,0 +1,17 @@
+services:
+  delivery-tools:
+    profiles: [tools]
+    image: lak-analytics-delivery-tools:phase9
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.lak-ml
+    entrypoint: [python, -m, src.delivery.cli]
+    environment:
+      PG_HOST: postgres
+      LAK_POSTGRES_PASSWORD: ${LAK_POSTGRES_PASSWORD:?Keep phase4 credentials}
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    volumes:
+      - ../evidence:/opt/project/evidence
+      - ../data/models:/opt/project/data/models

@@ -100,3 +100,10 @@ Giữ hai thuật toán và phần tin tức theo yêu cầu trực tiếp của
 người dùng xác nhận. Không làm phân công nhóm, báo cáo/slide để sau sản phẩm.
 Nguồn gốc/giấy phép Excel và timezone/ý nghĩa thời gian gốc chưa xác minh;
 các lựa chọn vận hành được công bố trong business_definitions và thiết kế.
+
+
+## Phase 9 — chuẩn bị gói nối tiếp
+
+Dịch vụ đã khởi động lại trên máy người dùng; PostgreSQL/MySQL/Kafka healthy, Connect/collector/applier/Airflow running. Phase 8 model/evidence còn nguyên theo kiểm tra thư mục; script Phase 9 sẽ xác minh tiếp model registry và predictions K-Means.
+
+Bổ sung Random Forest delivery theo hợp đồng Phase 1, snapshot thời gian, baseline, đánh giá test/nhóm/importance, model phiên bản và bảng sai số. Đã kiểm tra Python và huấn luyện offline trên Excel. PostgreSQL/PowerShell/Docker Phase 9 chờ máy người dùng; chưa chốt. Chi tiết: docs/phase9/run_guide.md.

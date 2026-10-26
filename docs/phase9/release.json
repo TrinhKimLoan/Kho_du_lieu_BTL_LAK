@@ -1,0 +1,11 @@
+{
+  "phase": 9,
+  "update": "lak-phase9-v1",
+  "common_git_anchor": "3ec2598",
+  "required_checkpoint": "Phase 8 passed; services restarted",
+  "new_unit_tests": 10,
+  "offline_original_lak_training": true,
+  "postgres_runtime_validated": false,
+  "docker_runtime_validated": false,
+  "powershell_runtime_validated": false
+}

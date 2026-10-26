@@ -66,3 +66,8 @@ riêng `infra/compose.lak.yaml`, không dùng docker-compose.yml LAK cũ.
 Pha 4 nối CDC đầu cuối, dùng lại nguồn MySQL của pha 3 và thêm volume kho/Kafka.
 verify_phase0 xác minh byte checkpoint gốc; không dùng làm gate chung sau khi
 các pha sau đã chủ động sửa tệp, ví dụ .gitignore trong pha 3.
+
+
+## Phase 9 — Random Forest giao hàng
+
+Sau Phase 8 đã kiểm thử đạt, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_phase9.ps1`. Script xác minh Phase 8 còn nguyên trong DB/artifact trước khi train RF. Xem docs/phase9/run_guide.md. PostgreSQL/Compose Phase 9 chờ kiểm thử tại máy triển khai.
